@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/770~twin1", "benchmark": "wave 2", "text": "\"\"\"\nA numerologist is compiling a table of curious totals. For a given count n, she takes the first n odd natural numbers, raises each one to the fourth power, and adds those powers together. Write a python function that computes this sum for her.\nassert odd_num_sum(2) == 82\n\"\"\""}

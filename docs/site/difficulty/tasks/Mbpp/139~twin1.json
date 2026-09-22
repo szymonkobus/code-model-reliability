@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/139~twin1", "benchmark": "wave 2", "text": "\"\"\"\nA landscaper is laying decorative edging around circular flower beds and needs to know how much material each bed requires. Write a function to find the circumference of a circle.\nassert math.isclose(circle_circumference(10), 62.830000000000005, rel_tol=0.001)\n\"\"\""}

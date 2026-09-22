@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/287~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a python function that takes an integer n and gives you back the sum of the squares of the first n even natural numbers.\nassert square_Sum(2) == 20\n\"\"\""}

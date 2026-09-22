@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/247~twin1", "benchmark": "wave 2", "text": "\"\"\"\nImplement a function that returns the length of the longest palindromic subsequence in the given string.\nassert lps(\"TENS FOR TENS\") == 5\n\"\"\""}

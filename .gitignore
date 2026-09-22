@@ -1,0 +1,20 @@
+# environments and caches
+.venv/
+venv*/
+__pycache__/
+*.pyc
+.cache/
+.pytest_cache/
+.ipynb_checkpoints/
+# fit outputs and logs produced by running the engine locally
+analysis/fitting/waves/*/results/
+analysis/fitting/waves/*/logs/
+*.log
+# figures regenerate from results/
+figures/*.png
+# local secrets never belong here; keys come from the environment
+*.env
+*.key
+*.pem
+*-api-key*
+*.token

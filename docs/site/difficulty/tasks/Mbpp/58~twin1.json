@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/58~twin1", "benchmark": "wave 2", "text": "\"\"\"\nAn accountant reviewing a ledger keeps running into pairs of entries and needs to know, for any two of them, whether one is a credit and the other a debit. Write a python function to check whether the given two integers have opposite sign or not.\nassert opposite_Signs(1,-2) == True\n\"\"\""}

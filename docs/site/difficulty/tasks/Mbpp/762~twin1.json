@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/762~twin1", "benchmark": "wave 2", "text": "\"\"\"\nA calendar-printing shop is preparing page layouts and needs to know which pages get the shorter grid. Write a function to check whether the given month number contains 30 days or not. Months are given as number from 1 to 12.\nassert check_monthnumber_number(6)==True\n\"\"\""}

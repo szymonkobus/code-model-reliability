@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/725~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a function that extracts the values enclosed between double quotation marks \" \" in the given string.\nassert extract_quotation('Cortex \"A53\" Based \"multi\" tasking \"Processor\"') == ['A53', 'multi', 'Processor']\n\"\"\""}

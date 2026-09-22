@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/222~twin1", "benchmark": "wave 2", "text": "\"\"\"\nDefine a function that determines whether all elements contained in a given tuple are of the same data type, returning a Boolean value indicating the result of this determination.\nassert check_type((5, 6, 7, 3, 5, 6) ) == True\n\"\"\""}

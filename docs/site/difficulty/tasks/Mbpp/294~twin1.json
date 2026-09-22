@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/294~twin1", "benchmark": "wave 2", "text": "\"\"\"\nSo here's the situation: you've got a list that's a bit of a mixed bag — some entries are numbers, some are strings, whatever. Your job is to write a function that digs through that heterogeneous list and finds the maximum value in it.\nassert max_val(['Python', 3, 2, 4, 5, 'version'])==5\n\"\"\""}

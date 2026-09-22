@@ -1,0 +1,1 @@
+{"task_id": "EasyTail/E4/count_class/count_uppercase_letters", "benchmark": "wave 2", "text": "def count_uppercase_letters(s):\n    \"\"\"Count how many characters of s are uppercase letters (A-Z). Return the count as an int.\n    >>> count_uppercase_letters('')\n    0\n    >>> count_uppercase_letters('aA zZ 09 !?')\n    2\n    \"\"\"\n"}

@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/586~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a python function to split a list at the nth element and append the first part to the end.\nassert split_Arr([12,10,5,6,52,36],2) == [5,6,52,36,12,10]\n\"\"\""}

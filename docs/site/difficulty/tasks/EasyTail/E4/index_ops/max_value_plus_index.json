@@ -1,0 +1,1 @@
+{"task_id": "EasyTail/E4/index_ops/max_value_plus_index", "benchmark": "wave 2", "text": "def max_value_plus_index(nums):\n    \"\"\"Return the maximum of nums[i] + i over all positions (None for an empty list).\n    >>> max_value_plus_index([0, 1, 2])\n    4\n    >>> max_value_plus_index([5, 4, 3])\n    5\n    >>> max_value_plus_index([])\n    \"\"\"\n"}

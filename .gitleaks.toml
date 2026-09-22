@@ -1,0 +1,16 @@
+# gitleaks configuration for this repository: the default rules, plus allowlists for two shapes that are
+# data, not credentials: 64-hex content hashes (task versions, manifests) and model or arm identifiers
+# (family token followed by size, variant and protocol, e.g. a Qwen or Gemma stem), which the generic
+# high-entropy rule otherwise flags. The compressed task parts are not scanned as text.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "content hashes and model identifiers are not credentials"
+regexes = [
+  '''\b[0-9a-f]{64}\b''',
+  '''(?i)\b(?:gemma|qwen|deepseek|glm|kimi|moonlight|claude|gpt|gemini|llama)[A-Za-z0-9._-]*''',
+]
+paths = [
+  '''tasks/wave2(?:-parked)?/tasks-part-\d+\.jsonl\.gz''',
+]

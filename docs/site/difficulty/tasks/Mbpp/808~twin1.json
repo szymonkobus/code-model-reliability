@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/808~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a function that determines whether the given tuple contains the value k.\nassert check_K((10, 4, 5, 6, 8), 6) == True\n\"\"\""}

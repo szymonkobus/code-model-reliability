@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/255~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a function that accepts a list together with a length n, generates every combination (with repetition) of the elements of the list, and returns a list containing one tuple for each such combination.\nassert combinations_colors( [\"Red\",\"Green\",\"Blue\"],1)==[('Red',), ('Green',), ('Blue',)]\n\"\"\""}

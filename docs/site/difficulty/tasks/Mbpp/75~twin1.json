@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/75~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a function that, given a list of tuples and a value k, returns the tuples from the list whose elements are all divisible by k.\nassert find_tuples([(6, 24, 12), (7, 9, 6), (12, 18, 21)], 6) == [(6, 24, 12)]\n\"\"\""}

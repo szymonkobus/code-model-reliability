@@ -1,0 +1,324 @@
+{
+ "dataset": "board_top",
+ "population": "wave 1+2",
+ "golden": false,
+ "n_arms_fit": 59,
+ "n_tasks": 1297,
+ "n_cells": 70157,
+ "n_frame_tasks": 1753,
+ "axis_definition": "equal-weight mean failure rate over the panel arms holding the task, one Jeffreys pseudo-observation per task, one axis per fit (docs/method.md)",
+ "axis_smoothing": {
+  "recipe_used": "per-task",
+  "resolution_limit": "a count-based position is reliable within about +/-log(2N+1) log-odds; beyond it the joint fit places the task",
+  "moved_positions": {
+   "n_tasks": 1297,
+   "median_abs_logodds": 0.041049680113800946,
+   "max_abs_logodds": 2.9169073429209487,
+   "n_moved_over_0p5": 64,
+   "per_task_in": "axis_export.csv columns z_hat_per_task / z_hat_per_arm / moved_logodds"
+  },
+  "recipe": "one Jeffreys pseudo-observation per task on the task's total attempts: q = (N*pbar + 1/2)/(N+1) with pbar the equal-weight mean of the raw per-arm frequencies; se from the estimator's own variance (see docs/method.md)"
+ },
+ "estimator": "estimator-v1",
+ "engine": {
+  "bayes_full_md5": "b1c1f41ee0f6e38362c5b3f62cfa5e52",
+  "target_accept": 0.995
+ },
+ "arms": [
+  {
+   "arm": "Qwen--Qwen2.5-0.5B-Instruct_temp_0.8",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen2.5-1.5B-Instruct_temp_0.8",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen2.5-14B-Instruct_temp_0.8",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen2.5-32B-Instruct_temp_0.8",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen2.5-3B-Instruct_temp_0.8",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen2.5-7B-Instruct_temp_0.8",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen2.5-Coder-0.5B-Instruct_temp_0.8",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen2.5-Coder-1.5B-Instruct_temp_0.8",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen2.5-Coder-14B-Instruct_temp_0.8",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen2.5-Coder-32B-Instruct_temp_0.8",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen2.5-Coder-3B-Instruct_temp_0.8",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen2.5-Coder-7B-Instruct_temp_0.8",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen3-0.6B_temp_0.8",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen3-0.6B_think_temp_0.6",
+   "n_tasks": 1294,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen3-1.7B_temp_0.8",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen3-1.7B_think_temp_0.6",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen3-14B_temp_0.8",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen3-14B_think_temp_0.6",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen3-30B-A3B_temp_0.8",
+   "n_tasks": 1296,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen3-30B-A3B_think_temp_0.6",
+   "n_tasks": 145,
+   "in_panel": false
+  },
+  {
+   "arm": "Qwen--Qwen3-32B_temp_0.8",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen3-32B_think_temp_0.6",
+   "n_tasks": 1287,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen3-4B-Instruct-2507_temp_0.8",
+   "n_tasks": 1296,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen3-4B_temp_0.8",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen3-4B_think_temp_0.6",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen3-8B_temp_0.8",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen3-8B_think_temp_0.6",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen3-Coder-30B-A3B-Instruct_temp_0.8",
+   "n_tasks": 1296,
+   "in_panel": true
+  },
+  {
+   "arm": "claude-haiku-4-5-thinking_batch",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "claude-haiku-4-5_batch",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "claude-opus-5-thinking_batch",
+   "n_tasks": 1295,
+   "in_panel": true
+  },
+  {
+   "arm": "claude-opus-5_batch",
+   "n_tasks": 1284,
+   "in_panel": true
+  },
+  {
+   "arm": "claude-sonnet-5-thinking_batch",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "claude-sonnet-5_batch",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "deepseek-ai--DeepSeek-Coder-V2-Instruct_temp_0.8",
+   "n_tasks": 456,
+   "in_panel": false
+  },
+  {
+   "arm": "deepseek-ai--DeepSeek-Coder-V2-Lite-Instruct_temp_0.8",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "deepseek-ai--DeepSeek-R1-0528_think_temp_0.6",
+   "n_tasks": 431,
+   "in_panel": false
+  },
+  {
+   "arm": "deepseek-ai--DeepSeek-R1-Distill-Llama-8B_think_temp_0.6",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "deepseek-ai--DeepSeek-R1-Distill-Qwen-1.5B_think_temp_0.6",
+   "n_tasks": 1296,
+   "in_panel": true
+  },
+  {
+   "arm": "deepseek-ai--DeepSeek-R1-Distill-Qwen-14B_think_temp_0.6",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "deepseek-ai--DeepSeek-R1-Distill-Qwen-32B_think_temp_0.6",
+   "n_tasks": 1295,
+   "in_panel": true
+  },
+  {
+   "arm": "deepseek-ai--DeepSeek-R1-Distill-Qwen-7B_think_temp_0.6",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "deepseek-ai--DeepSeek-V3-0324_temp_0.8",
+   "n_tasks": 431,
+   "in_panel": false
+  },
+  {
+   "arm": "deepseek-ai--DeepSeek-V3.2_temp_0.6",
+   "n_tasks": 673,
+   "in_panel": false
+  },
+  {
+   "arm": "deepseek-ai--DeepSeek-V3.2_think_temp_0.6",
+   "n_tasks": 431,
+   "in_panel": false
+  },
+  {
+   "arm": "deepseek-ai--deepseek-coder-1.3b-instruct_temp_0.8",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "deepseek-ai--deepseek-coder-33b-instruct_temp_0.8",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "deepseek-ai--deepseek-coder-6.7b-instruct_temp_0.8",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "gemini-3.5-flash-lite_batch",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "gemini-3.6-flash_batch",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "google--gemma-4-12B-it_temp_0.8@768-marker",
+   "n_tasks": 1295,
+   "in_panel": true
+  },
+  {
+   "arm": "google--gemma-4-31B-it_temp_0.8@768-marker",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "gpt-5-mini_batch",
+   "n_tasks": 1297,
+   "in_panel": true
+  },
+  {
+   "arm": "gpt-5-nano_batch",
+   "n_tasks": 1296,
+   "in_panel": true
+  },
+  {
+   "arm": "moonshotai--Kimi-Dev-72B_temp_0.8",
+   "n_tasks": 1252,
+   "in_panel": true
+  },
+  {
+   "arm": "moonshotai--Kimi-K2-Instruct_temp_0.8",
+   "n_tasks": 811,
+   "in_panel": false
+  },
+  {
+   "arm": "moonshotai--Kimi-Linear-48B-A3B-Instruct_temp_0.8",
+   "n_tasks": 731,
+   "in_panel": false
+  },
+  {
+   "arm": "moonshotai--Moonlight-16B-A3B-Instruct_temp_0.8",
+   "n_tasks": 1288,
+   "in_panel": true
+  },
+  {
+   "arm": "zai-org--GLM-4.7-Flash_temp_0.8",
+   "n_tasks": 1289,
+   "in_panel": true
+  }
+ ]
+}

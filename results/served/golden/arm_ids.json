@@ -1,0 +1,16 @@
+{
+ "arms": [
+  "Qwen--Qwen3-0.6B_temp_0.8",
+  "Qwen--Qwen3-0.6B_think_temp_0.6",
+  "Qwen--Qwen3-1.7B_temp_0.8",
+  "Qwen--Qwen3-1.7B_think_temp_0.6",
+  "Qwen--Qwen3-4B_temp_0.8",
+  "Qwen--Qwen3-4B_think_temp_0.6",
+  "Qwen--Qwen3-8B_temp_0.8",
+  "Qwen--Qwen3-8B_think_temp_0.6",
+  "claude-haiku-4-5-thinking_batch",
+  "claude-haiku-4-5_batch",
+  "claude-sonnet-5-thinking_batch",
+  "claude-sonnet-5_batch"
+ ]
+}

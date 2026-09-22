@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/17~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a function that, given the side length of a square as input, returns the perimeter of that square.\nassert square_perimeter(10)==40\n\"\"\""}

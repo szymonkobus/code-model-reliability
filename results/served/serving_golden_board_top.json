@@ -1,0 +1,12 @@
+{
+ "view": "golden_board_top",
+ "fit_dir": "results/served/golden",
+ "dataset": "board_top",
+ "population": "board_top",
+ "golden": true,
+ "n_arms_served": 12,
+ "n_arms": 12,
+ "n_tasks": 1292,
+ "n_cells": 15501,
+ "set_sha256": "b8c1e660acdf1a051580b2e89bc3beef65fb09ed2008302b14618c33991683d3"
+}

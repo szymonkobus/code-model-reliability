@@ -1,0 +1,89 @@
+{
+ "dataset": "board_top",
+ "population": "wave 1+2",
+ "golden": true,
+ "n_arms_fit": 12,
+ "n_tasks": 1292,
+ "n_cells": 15501,
+ "n_frame_tasks": 1748,
+ "axis_definition": "equal-weight mean failure rate over the panel arms holding the task, one Jeffreys pseudo-observation per task, one axis per fit (docs/method.md)",
+ "axis_smoothing": {
+  "recipe_used": "per-task",
+  "resolution_limit": "a count-based position is reliable within about +/-log(2N+1) log-odds; beyond it the joint fit places the task",
+  "moved_positions": {
+   "n_tasks": 1292,
+   "median_abs_logodds": 0.03693814491812475,
+   "max_abs_logodds": 2.9458105963491397,
+   "n_moved_over_0p5": 101,
+   "per_task_in": "axis_export.csv columns z_hat_per_task / z_hat_per_arm / moved_logodds"
+  },
+  "recipe": "one Jeffreys pseudo-observation per task on the task's total attempts: q = (N*pbar + 1/2)/(N+1) with pbar the equal-weight mean of the raw per-arm frequencies; se from the estimator's own variance (see docs/method.md)"
+ },
+ "estimator": "estimator-v1",
+ "engine": {
+  "bayes_full_md5": "b1c1f41ee0f6e38362c5b3f62cfa5e52",
+  "target_accept": 0.995
+ },
+ "arms": [
+  {
+   "arm": "Qwen--Qwen3-0.6B_temp_0.8",
+   "n_tasks": 1292,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen3-0.6B_think_temp_0.6",
+   "n_tasks": 1289,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen3-1.7B_temp_0.8",
+   "n_tasks": 1292,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen3-1.7B_think_temp_0.6",
+   "n_tasks": 1292,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen3-4B_temp_0.8",
+   "n_tasks": 1292,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen3-4B_think_temp_0.6",
+   "n_tasks": 1292,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen3-8B_temp_0.8",
+   "n_tasks": 1292,
+   "in_panel": true
+  },
+  {
+   "arm": "Qwen--Qwen3-8B_think_temp_0.6",
+   "n_tasks": 1292,
+   "in_panel": true
+  },
+  {
+   "arm": "claude-haiku-4-5-thinking_batch",
+   "n_tasks": 1292,
+   "in_panel": true
+  },
+  {
+   "arm": "claude-haiku-4-5_batch",
+   "n_tasks": 1292,
+   "in_panel": true
+  },
+  {
+   "arm": "claude-sonnet-5-thinking_batch",
+   "n_tasks": 1292,
+   "in_panel": true
+  },
+  {
+   "arm": "claude-sonnet-5_batch",
+   "n_tasks": 1292,
+   "in_panel": true
+  }
+ ]
+}

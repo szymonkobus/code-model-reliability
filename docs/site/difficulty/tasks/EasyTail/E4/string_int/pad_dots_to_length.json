@@ -1,0 +1,1 @@
+{"task_id": "EasyTail/E4/string_int/pad_dots_to_length", "benchmark": "wave 2", "text": "def pad_dots_to_length(s, n):\n    \"\"\"Return s extended with '.' characters on the RIGHT until its length is at least n (s unchanged if already long enough).\n    >>> pad_dots_to_length('abc', 5)\n    'abc..'\n    >>> pad_dots_to_length('abcdef', 3)\n    'abcdef'\n    \"\"\"\n"}

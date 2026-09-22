@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/99~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a function that takes a decimal number and gives you back its binary equivalent as a string. Make sure the string has no leading zeros.\nassert decimal_to_binary(8) == '1000'\n\"\"\""}

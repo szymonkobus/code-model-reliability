@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/297~twin1", "benchmark": "wave 2", "text": "\"\"\"\nHey, could you write a function that takes a nested list structure and flattens it out?\nassert flatten_list([0, 10, [20, 30], 40, 50, [60, 70, 80], [90, 100, 110, 120]])==[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120]\n\"\"\""}

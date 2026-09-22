@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/737~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a function that determines, by means of a regular expression, whether the given string begins with a vowel.\nassert check_str(\"annie\")\n\"\"\""}

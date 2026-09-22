@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/171~twin1", "benchmark": "wave 2", "text": "\"\"\"\nA landscaper is fencing a garden bed shaped like a regular pentagon and needs to know how much fencing to buy. Write a function that, given the length of one of the pentagon's sides, returns the perimeter of the regular pentagon.\nassert perimeter_pentagon(5) == 25\n\"\"\""}

@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/97~twin1", "benchmark": "wave 2", "text": "\"\"\"\nHey, could you write a function that takes a list of lists, flattens it out, and then counts how many times each element shows up? The counts should come back as a dictionary.\nassert frequency_lists([[1, 2, 3, 2], [4, 5, 6, 2], [7, 8, 9, 5]])=={1: 1, 2: 3, 3: 1, 4: 1, 5: 2, 6: 1, 7: 1, 8: 1, 9: 1}\n\"\"\""}

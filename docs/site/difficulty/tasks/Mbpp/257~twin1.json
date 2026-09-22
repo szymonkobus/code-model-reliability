@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/257~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a function that accepts two numbers as arguments and returns a tuple whose first element is the second number and whose second element is the first number.\nassert swap_numbers(10,20)==(20,10)\n\"\"\""}

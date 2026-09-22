@@ -1,0 +1,1 @@
+{"task_id": "leetcode/maximum-frequency-of-an-element-after-performing-operations-i", "benchmark": "wave 2", "text": "Statement not redistributed: the upstream terms permit pointers only. The task's source row is recorded in tasks/wave2/restricted.jsonl or tasks/wave2-parked/restricted.jsonl of the repository, and tasks/rebuild_restricted.py rebuilds it.", "statement": "pointer"}

@@ -1,0 +1,12 @@
+{
+ "view": "top",
+ "fit_dir": "results/served/top",
+ "dataset": "top",
+ "population": "top",
+ "golden": false,
+ "n_arms_served": 55,
+ "n_arms": 55,
+ "n_tasks": 866,
+ "n_cells": 45014,
+ "set_sha256": "3fa1dd2406a169d6dda9ecfca5ff09c78858ca955d27c455e766b3b159c2b0cf"
+}

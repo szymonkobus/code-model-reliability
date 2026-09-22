@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/102~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a function that converts a string given in snake case into the corresponding camel case string.\nassert snake_to_camel('python_program')=='PythonProgram'\n\"\"\""}

@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/412~twin1", "benchmark": "wave 2", "text": "\"\"\"\nA librarian is tidying up a numbered inventory and wants every odd entry gone. Write a python function to remove odd numbers from a given list.\nassert remove_odd([1,2,3]) == [2]\n\"\"\""}

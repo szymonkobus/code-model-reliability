@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/440~twin1", "benchmark": "wave 2", "text": "\"\"\"\nLocate the first adverb in a given sentence and return it together with its positions.\nassert find_adverb_position(\"clearly!! we can see the sky\")==(0, 7, 'clearly')\n\"\"\""}

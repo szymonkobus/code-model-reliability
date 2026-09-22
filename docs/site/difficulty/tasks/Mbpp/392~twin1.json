@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/392~twin1", "benchmark": "wave 2", "text": "\"\"\"\nCompute and return the maximum sum obtainable by applying the given equation f(n) = max( (f(n/2) + f(n/3) + f(n/4) + f(n/5)), n).\nassert get_max_sum(60) == 106\n\"\"\""}

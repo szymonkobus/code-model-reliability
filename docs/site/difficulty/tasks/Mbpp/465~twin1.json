@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/465~twin1", "benchmark": "wave 2", "text": "\"\"\"\nImplement a function that removes empty items from a given dictionary.\nassert drop_empty({'c1': 'Red', 'c2': 'Green', 'c3':None})=={'c1': 'Red', 'c2': 'Green'}\n\"\"\""}

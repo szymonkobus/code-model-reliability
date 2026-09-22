@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/119~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a python function that, given a sorted array, returns the element occurring exactly once in that array.\nassert search([1,1,2,2,3]) == 3\n\"\"\""}

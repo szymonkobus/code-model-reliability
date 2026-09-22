@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/450~twin1", "benchmark": "wave 2", "text": "\"\"\"\nExtract strings of the specified size from a given list of string values.\nassert extract_string(['Python', 'list', 'exercises', 'practice', 'solution'] ,8)==['practice', 'solution']\n\"\"\""}

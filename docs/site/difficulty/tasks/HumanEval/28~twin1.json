@@ -1,0 +1,1 @@
+{"task_id": "HumanEval/28~twin1", "benchmark": "wave 2", "text": "from typing import List\n\n\ndef concatenate(strings: List[str]) -> str:\n    \"\"\" Return the concatenation of the strings in the given list as a single string.\n    >>> concatenate([])\n    ''\n    >>> concatenate(['a', 'b', 'c'])\n    'abc'\n    \"\"\"\n"}

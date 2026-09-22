@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/579~twin1", "benchmark": "wave 2", "text": "\"\"\"\nSay you've got two tuples and you want to know which elements they don't have in common — write a function that finds the dissimilar elements in the given two tuples.\nassert find_dissimilar((3, 4, 5, 6), (5, 7, 4, 10)) == (3, 6, 7, 10)\n\"\"\""}

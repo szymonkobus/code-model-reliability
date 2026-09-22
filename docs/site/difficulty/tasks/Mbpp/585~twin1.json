@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/585~twin1", "benchmark": "wave 2", "text": "\"\"\"\nSo here's what I need: a function that digs through a dataset and pulls out the n priciest items in it.\nassert expensive_items([{'name': 'Item-1', 'price': 101.1},{'name': 'Item-2', 'price': 555.22}],1)==[{'name': 'Item-2', 'price': 555.22}]\n\"\"\""}

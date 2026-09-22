@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/311~twin1", "benchmark": "wave 2", "text": "\"\"\"\nHey, could you write a Python function for me? It should take a number and set the left most unset bit in it.\nassert set_left_most_unset_bit(10) == 14\n\"\"\""}

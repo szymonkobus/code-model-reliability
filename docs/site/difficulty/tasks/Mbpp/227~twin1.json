@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/227~twin1", "benchmark": "wave 2", "text": "\"\"\"\nSo here's what we need: write a function that takes three numbers and gives back the smallest one of the bunch.\nassert min_of_three(10,20,0)==0\n\"\"\""}

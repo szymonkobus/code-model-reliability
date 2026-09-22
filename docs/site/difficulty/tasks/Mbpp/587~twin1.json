@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/587~twin1", "benchmark": "wave 2", "text": "\"\"\"\nA warehouse inventory system records item counts in a mutable list while stock is being tallied, but the archival layer requires an immutable snapshot before the record can be filed. Write a function to convert a list to a tuple.\nassert list_tuple([5, 10, 7, 4, 15, 3])==(5, 10, 7, 4, 15, 3)\n\"\"\""}

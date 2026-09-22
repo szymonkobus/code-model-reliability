@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/309~twin1", "benchmark": "wave 2", "text": "\"\"\"\nHey, could you write me a Python function that takes two numbers and tells me which one is bigger? Basically, given the pair, it should hand back the larger of the two.\nassert maximum(5,10) == 10\n\"\"\""}

@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/606~twin1", "benchmark": "wave 2", "text": "\"\"\"\nA surveyor's old field instrument reports every angle it measures in degrees, but the mapping software that processes those readings only understands radians. Write a function to convert degrees to radians.\nassert radian_degree(90)==1.5707963267948966\n\"\"\""}

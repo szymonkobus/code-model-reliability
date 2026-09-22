@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/742~twin1", "benchmark": "wave 2", "text": "\"\"\"\nAn artisan who crafts polyhedral paperweights keeps a small helper routine on hand for one recurring job: given a tetrahedron, work out its area. Write a function to caluclate the area of a tetrahedron.\nassert area_tetrahedron(3)==15.588457268119894\n\"\"\""}

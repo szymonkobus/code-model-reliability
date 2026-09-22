@@ -1,0 +1,1 @@
+{"task_id": "EasyTail/E4/digit_ops/digit_range", "benchmark": "wave 2", "text": "def digit_range(n):\n    \"\"\"Given a positive integer n (n >= 1), return the largest decimal digit of n minus the smallest decimal digit of n. Return the result as an int.\n    >>> digit_range(1)\n    0\n    >>> digit_range(10)\n    1\n    \"\"\"\n"}

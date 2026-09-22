@@ -1,0 +1,1 @@
+{"task_id": "EasyTail/E4/two_lists/indices_where_equal", "benchmark": "wave 2", "text": "def indices_where_equal(a, b):\n    \"\"\"a and b are lists of ints of the same length (possibly empty). Return the list of indices i (ascending) where a[i] == b[i].\n    >>> indices_where_equal([], [])\n    []\n    >>> indices_where_equal([1, -2, 0], [1, 2, 0])\n    [0, 2]\n    \"\"\"\n"}

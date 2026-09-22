@@ -1,0 +1,1 @@
+{"task_id": "HumanEval/114~twin1", "benchmark": "wave 2", "text": "def minSubArraySum(nums):\n    \"\"\"\n    Take an array of integers nums and return the minimum sum of any non-empty\n    sub-array of nums.\n    Example\n    minSubArraySum([2, 3, 4, 1, 2, 4]) == 1\n    minSubArraySum([-1, -2, -3]) == -6\n    \"\"\"\n"}

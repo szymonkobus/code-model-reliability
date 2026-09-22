@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/284~twin1", "benchmark": "wave 2", "text": "\"\"\"\nHey, can you write a function for me? It should take two things: a list and an element. What I want it to do is check whether every single item in that list is equal to the element you passed in.\nassert check_element([\"green\", \"orange\", \"black\", \"white\"],'blue')==False\n\"\"\""}

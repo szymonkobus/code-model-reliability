@@ -1,0 +1,1 @@
+{"task_id": "EasyTail/E4/runs/longest_equal_run", "benchmark": "wave 2", "text": "def longest_equal_run(s):\n    \"\"\"Return the length of the longest run of consecutive EQUAL characters in s (0 for the empty string).\n    >>> longest_equal_run('')\n    0\n    >>> longest_equal_run('aabbbcc')\n    3\n    \"\"\"\n"}

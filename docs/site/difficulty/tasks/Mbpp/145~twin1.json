@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/145~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a python function to determine the maximum difference between any two elements of a given array.\nassert max_Abs_Diff((2,1,5,3)) == 4\n\"\"\""}

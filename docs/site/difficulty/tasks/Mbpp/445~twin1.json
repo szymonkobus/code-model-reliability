@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/445~twin1", "benchmark": "wave 2", "text": "\"\"\"\nDefine a function that performs index wise multiplication of the tuple elements in the two given tuples.\nassert index_multiplication(((1, 3), (4, 5), (2, 9), (1, 10)),((6, 7), (3, 9), (1, 1), (7, 3)) ) == ((6, 21), (12, 45), (2, 9), (7, 30))\n\"\"\""}

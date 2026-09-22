@@ -1,0 +1,196 @@
+{
+ "evoeval/difficult_1": {
+  "current_content_sha256": "444ef9eae349e7e3e0a71c288396cec8af918422f7982b0c18c19ac2e4fd5f06",
+  "superseded_short_hashes": [
+   "d3562521643878ef"
+  ],
+  "reimport_delta": {
+   "changed_fields": [
+    "base_input",
+    "expected_output"
+   ],
+   "prompt_changed": false,
+   "canonical_changed": false,
+   "test_delta": "added",
+   "base_inputs": [
+    0,
+    2
+   ],
+   "plus_inputs": [
+    61,
+    61
+   ]
+  },
+  "pinned_on": "2026-09-05"
+ },
+ "evoeval/difficult_3": {
+  "current_content_sha256": "2d1c34c93ab4953e4560a593ed43e5ff06434aa617e9b269e5256db5a6137f5f",
+  "superseded_short_hashes": [
+   "c718712d31c92069"
+  ],
+  "reimport_delta": {
+   "changed_fields": [
+    "base_input",
+    "plus_input",
+    "expected_output"
+   ],
+   "prompt_changed": false,
+   "canonical_changed": false,
+   "test_delta": "moved (plus -> base, same total)",
+   "base_inputs": [
+    0,
+    3
+   ],
+   "plus_inputs": [
+    54,
+    51
+   ]
+  },
+  "pinned_on": "2026-09-05"
+ },
+ "evoeval/combine_55": {
+  "current_content_sha256": "cd6831d6ff20141e383c893c843d424a8ae971a9ed5b9a5acce22002beb968f7",
+  "superseded_short_hashes": [
+   "20a45f6ea4dba58b"
+  ],
+  "reimport_delta": {
+   "changed_fields": [
+    "base_input",
+    "plus_input",
+    "expected_output"
+   ],
+   "prompt_changed": false,
+   "canonical_changed": false,
+   "test_delta": "moved (plus -> base, same total)",
+   "base_inputs": [
+    0,
+    2
+   ],
+   "plus_inputs": [
+    81,
+    79
+   ]
+  },
+  "pinned_on": "2026-09-05"
+ },
+ "evoeval/subtle_43": {
+  "current_content_sha256": "a728bece330021a674558a070666f2fe990c232da02425eac17e0f1b32a2ec4d",
+  "superseded_short_hashes": [
+   "2c3563c89ad62a11"
+  ],
+  "reimport_delta": {
+   "changed_fields": [
+    "plus_input",
+    "expected_output"
+   ],
+   "prompt_changed": false,
+   "canonical_changed": false,
+   "test_delta": "removed",
+   "base_inputs": [
+    5,
+    5
+   ],
+   "plus_inputs": [
+    978,
+    973
+   ]
+  },
+  "pinned_on": "2026-09-12"
+ },
+ "leetcode/check-if-the-rectangle-corner-is-reachable": {
+  "current_content_sha256": "1049eb9574ed6cbd3825661af4b4318d2bb00395256be8c5e0e43b7f15aca201",
+  "superseded_short_hashes": [
+   "d71818ebc64c06dc"
+  ],
+  "reimport_delta": {
+   "changed_fields": [
+    "plus_input",
+    "expected_output"
+   ],
+   "prompt_changed": false,
+   "canonical_changed": false,
+   "test_delta": "removed",
+   "base_inputs": [
+    4,
+    4
+   ],
+   "plus_inputs": [
+    101,
+    100
+   ]
+  },
+  "pinned_on": "2026-09-12"
+ },
+ "leetcode/count-subarrays-of-length-three-with-a-condition": {
+  "current_content_sha256": "c90c636bc9e52b4e18cae4465faa3f3e054f740bd9dd75dace7dbde17e21f9d7",
+  "superseded_short_hashes": [
+   "b34ef3344a3f6192"
+  ],
+  "reimport_delta": {
+   "changed_fields": [
+    "plus_input",
+    "expected_output"
+   ],
+   "prompt_changed": false,
+   "canonical_changed": false,
+   "test_delta": "removed",
+   "base_inputs": [
+    2,
+    2
+   ],
+   "plus_inputs": [
+    118,
+    117
+   ]
+  },
+  "pinned_on": "2026-09-12"
+ },
+ "leetcode/distribute-elements-into-two-arrays-i": {
+  "current_content_sha256": "6b9e34f4b4b44659f31997d2cb81a68e9b03947e6c78338203e34021ed2f029d",
+  "superseded_short_hashes": [
+   "d15f94da3cfe0923"
+  ],
+  "reimport_delta": {
+   "changed_fields": [
+    "plus_input",
+    "expected_output"
+   ],
+   "prompt_changed": false,
+   "canonical_changed": false,
+   "test_delta": "removed",
+   "base_inputs": [
+    2,
+    2
+   ],
+   "plus_inputs": [
+    99,
+    97
+   ]
+  },
+  "pinned_on": "2026-09-12"
+ },
+ "leetcode/number-of-changing-keys": {
+  "current_content_sha256": "a4933b303ad212c2ea5993d7b70cfec2e8774326c57ed3c91f684c969bf9b936",
+  "superseded_short_hashes": [
+   "acf0769fef86ef78"
+  ],
+  "reimport_delta": {
+   "changed_fields": [
+    "plus_input",
+    "expected_output"
+   ],
+   "prompt_changed": false,
+   "canonical_changed": false,
+   "test_delta": "removed",
+   "base_inputs": [
+    2,
+    2
+   ],
+   "plus_inputs": [
+    71,
+    70
+   ]
+  },
+  "pinned_on": "2026-09-12"
+ }
+}

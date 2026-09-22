@@ -1,0 +1,1 @@
+{"task_id": "EasyTail/E4/string_int/first_n_uppercased", "benchmark": "wave 2", "text": "def first_n_uppercased(s, n):\n    \"\"\"Return the first n characters of s converted to uppercase, followed by the rest of s unchanged (n may exceed len(s)).\n    >>> first_n_uppercased('hello', 2)\n    'HEllo'\n    >>> first_n_uppercased('hi', 10)\n    'HI'\n    \"\"\"\n"}

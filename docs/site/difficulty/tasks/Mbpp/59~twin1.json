@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/59~twin1", "benchmark": "wave 2", "text": "\"\"\"\nCould you write a function that gives back the nth octagonal number?\nassert is_octagonal(5) == 65\n\"\"\""}

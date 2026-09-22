@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/271~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a python function that accepts an integer n and computes the sum obtained by raising each of the first n even natural numbers to the fifth power and adding the results.\nassert even_Power_Sum(2) == 1056\n\"\"\""}

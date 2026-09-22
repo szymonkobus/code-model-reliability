@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/598", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to check whether the given number is armstrong or not.\nassert armstrong_number(153)==True\n\"\"\"\n"}

@@ -1,0 +1,5 @@
+{
+ "excluded_arms": {},
+ "cleared_arms": [],
+ "note": "arms excluded from the difficulty-axis population for a protocol defect, with the kind of defect; empty when no published arm is excluded"
+}

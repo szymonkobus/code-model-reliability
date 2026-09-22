@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/603~twin1", "benchmark": "wave 2", "text": "\"\"\"\nImplement a function that returns all lucid numbers less than or equal to a given integer.\nassert get_ludic(10) == [1, 2, 3, 5, 7]\n\"\"\""}

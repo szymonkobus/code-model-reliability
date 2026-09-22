@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/446~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a python function that counts the occurrence of all elements of a list in a tuple.\nassert count_Occurrence(('a', 'a', 'c', 'b', 'd'),['a', 'b'] ) == 3\n\"\"\""}

@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/93", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to calculate the value of 'a' to the power 'b'.\nassert power(3,4) == 81\n\"\"\"\n"}

@@ -1,0 +1,1 @@
+{"task_id": "EasyTail/E4/digit_ops/sum_of_digits", "benchmark": "wave 2", "text": "def sum_of_digits(n):\n    \"\"\"Given a positive integer n (n >= 1), return the sum of the decimal digits of n. Return the result as an int.\n    >>> sum_of_digits(1)\n    1\n    >>> sum_of_digits(999)\n    27\n    \"\"\"\n"}

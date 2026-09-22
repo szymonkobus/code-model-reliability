@@ -1,0 +1,1 @@
+{"task_id": "EasyTail/E4/two_lists/count_first_larger", "benchmark": "wave 2", "text": "def count_first_larger(a, b):\n    \"\"\"a and b are lists of ints of the same length (possibly empty). Return how many positions i have a[i] strictly greater than b[i].\n    >>> count_first_larger([], [])\n    0\n    >>> count_first_larger([0, 13], [8, -4])\n    1\n    \"\"\"\n"}

@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/782~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a python function to find the sum of all odd length subarrays. \nassert odd_length_sum([1,2,4]) == 14\n\"\"\""}

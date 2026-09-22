@@ -1,0 +1,1 @@
+{"task_id": "evoeval/subtle_49", "benchmark": "wave 2", "text": "\ndef modp(n: int, p: int, q: int):\n    \"\"\"Return 2^(n+q) modulo p (be aware of numerics).\n    >>> modp(3, 5, 1)\n    1\n    >>> modp(1101, 101, 2)\n    8\n    >>> modp(0, 101, 1)\n    2\n    >>> modp(3, 11, 2)\n    10\n    >>> modp(100, 101, 1)\n    2\n    \"\"\"\n"}

@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/643~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a function that checks whether a string contains 'z', excluding the start and end of the word.\nassert text_match_wordz_middle(\"pythonzabc.\")==True\n\"\"\""}

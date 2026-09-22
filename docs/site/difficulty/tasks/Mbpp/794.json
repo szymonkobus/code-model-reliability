@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/794", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function that matches a string that has an 'a' followed by anything, ending in 'b'.\nassert text_starta_endb(\"aabbbb\")\n\"\"\"\n"}

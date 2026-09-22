@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/739~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a Python function that, given a positive integer n, returns the index of the smallest triangular number whose decimal representation contains exactly n digits.\nassert find_Index(2) == 4\n\"\"\""}

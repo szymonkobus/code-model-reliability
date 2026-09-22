@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/74~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a function to determine whether the given sequence conforms to the sequence specified in the patterns array.\nassert is_samepatterns([\"red\",\"green\",\"green\"], [\"a\", \"b\", \"b\"])==True\n\"\"\""}

@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/638~twin1", "benchmark": "wave 2", "text": "\"\"\"\nImplement a function that, given the wind velocity in km/h and a temperature in celsius, computes the wind chill index rounded to the next integer.\nassert wind_chill(120,35)==40\n\"\"\""}

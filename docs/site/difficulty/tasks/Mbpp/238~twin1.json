@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/238~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a Python function that, given a string, returns the count of its non-empty substrings.\nassert number_of_substrings(\"abc\") == 6\n\"\"\""}

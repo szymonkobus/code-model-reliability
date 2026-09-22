@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/415~twin1", "benchmark": "wave 2", "text": "\"\"\"\nSo here's what I need: a Python function that looks through a given array of integers and picks out a pair with the highest product.\nassert max_Product([1,2,3,4,7,0,8,4]) == (7,8)\n\"\"\""}

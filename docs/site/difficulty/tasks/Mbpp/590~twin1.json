@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/590~twin1", "benchmark": "wave 2", "text": "\"\"\"\nA navigation instructor is preparing course materials on coordinate systems and needs a small helper routine for the demonstrations. Write a function to convert polar coordinates to rectangular coordinates.\nassert polar_rect(3,4)==((5.0, 0.9272952180016122), (-2+2.4492935982947064e-16j))\n\"\"\""}

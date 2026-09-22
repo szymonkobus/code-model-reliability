@@ -1,0 +1,1 @@
+{"task_id": "EasyTail/E4/count_class/count_lowercase_letters", "benchmark": "wave 2", "text": "def count_lowercase_letters(s):\n    \"\"\"Count how many characters of s are lowercase letters (a-z). Return the count as an int.\n    >>> count_lowercase_letters('')\n    0\n    >>> count_lowercase_letters('aA zZ 09 !?')\n    2\n    \"\"\"\n"}

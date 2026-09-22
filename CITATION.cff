@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this benchmark, its task sets or its result tables, please cite this repository."
+title: "code-model-reliability: capability and reliability of code models measured as difficulty crossings"
+type: software
+authors:
+  - name: "The code-model-reliability maintainers"
+version: 1.0.0
+date-released: 2026-09-22
+license: MIT
+abstract: >
+  A benchmark of code-model capability and reliability. Capability is the task difficulty at which a
+  model's failure rate crosses one half; reliability is the difficulty at which it crosses one in a
+  hundred. Both are read from a Bayesian failure-versus-difficulty curve fitted to many attempts per task
+  on two task sets, wave 1 and wave 2. The repository holds the task sets, the generation and judging
+  code, the fitting engine, the published result tables with the per-task cells behind them, and offline
+  figure scripts.

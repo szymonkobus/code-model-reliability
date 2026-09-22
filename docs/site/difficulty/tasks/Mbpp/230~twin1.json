@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/230~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a function that takes in a string and character, replaces blank spaces in the string with the character, and returns the string.\nassert replace_blank(\"hello people\",'@')==(\"hello@people\")\n\"\"\""}

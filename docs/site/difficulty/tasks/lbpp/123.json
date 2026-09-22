@@ -1,0 +1,1 @@
+{"task_id": "lbpp/123", "benchmark": "wave 2", "text": "import math\n\ndef perfect_square_cube(input: float) -> bool:\n    \"\"\"Write a function \"def perfect_square_cube(input: int) -> bool\" that takes a float as input and determine whether it is both a perfect square\n    and a perfect cube. Write it in Python.\n    \"\"\"\n"}

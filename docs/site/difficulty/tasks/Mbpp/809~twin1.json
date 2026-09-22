@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/809~twin1", "benchmark": "wave 2", "text": "\"\"\"\nHere's the idea: you've got two tuples, and I want a function that tells me whether every single element in the second tuple is smaller than the element sitting at the same position in the first tuple.\nassert check_smaller((1, 2, 3), (2, 3, 4)) == False\n\"\"\""}

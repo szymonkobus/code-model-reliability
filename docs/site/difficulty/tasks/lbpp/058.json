@@ -1,0 +1,1 @@
+{"task_id": "lbpp/058", "benchmark": "wave 2", "text": "def find_largest_prime_M(n: int) -> int:\n    \"\"\"Given an integer N > 2, write a python program to find the largest prime number M less than N for which the absolute difference between N and the digit reversal of M is minimized.\n    \"\"\"\n"}

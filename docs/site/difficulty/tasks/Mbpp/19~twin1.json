@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/19~twin1", "benchmark": "wave 2", "text": "\"\"\"\nImplement a function to determine whether a given array of integers contains any duplicate element.\nassert test_duplicate(([1,2,3,4,5]))==False\n\"\"\""}

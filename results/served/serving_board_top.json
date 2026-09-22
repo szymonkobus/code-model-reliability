@@ -1,0 +1,12 @@
+{
+ "view": "board_top",
+ "fit_dir": "results/served/board_top",
+ "dataset": "board_top",
+ "population": "board_top",
+ "golden": false,
+ "n_arms_served": 59,
+ "n_arms": 59,
+ "n_tasks": 1297,
+ "n_cells": 70157,
+ "set_sha256": "030de536de924512b3a12ac6165f2d93dd52736ffe1e1c3717cabe089fd516ea"
+}

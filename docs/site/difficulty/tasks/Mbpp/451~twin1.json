@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/451~twin1", "benchmark": "wave 2", "text": "\"\"\"\nImplement a function that removes all whitespaces from the given string.\nassert remove_whitespaces(' Google    Flutter ') == 'GoogleFlutter'\n\"\"\""}

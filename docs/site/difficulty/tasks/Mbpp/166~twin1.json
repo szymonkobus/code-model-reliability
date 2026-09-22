@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/166~twin1", "benchmark": "wave 2", "text": "\"\"\"\nHey, could you write a function for me? Given a list of integers, I want to know how many pairs of them XOR together to give an even number — the function should count those pairs and return that count.\nassert find_even_pair([5, 4, 7, 2, 1]) == 4\n\"\"\""}

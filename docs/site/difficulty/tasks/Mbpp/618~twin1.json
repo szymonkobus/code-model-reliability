@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/618~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a function that performs element-wise division of two lists.\nassert div_list([4,5,6],[1, 2, 3])==[4.0,2.5,2.0]\n\"\"\""}

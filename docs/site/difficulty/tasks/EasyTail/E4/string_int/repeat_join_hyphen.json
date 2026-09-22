@@ -1,0 +1,1 @@
+{"task_id": "EasyTail/E4/string_int/repeat_join_hyphen", "benchmark": "wave 2", "text": "def repeat_join_hyphen(s, n):\n    \"\"\"Return s repeated n times joined by single hyphens (empty string for n == 0; s itself for n == 1).\n    >>> repeat_join_hyphen('ab', 0)\n    ''\n    >>> repeat_join_hyphen('ab', 1)\n    'ab'\n    \"\"\"\n"}

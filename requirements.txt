@@ -1,0 +1,10 @@
+# Analysis, fitting and figures. Python >= 3.10.
+# The fitting engine (analysis/fitting/bayes_full.py) carries the same pins in its PEP 723 header, so
+# `uv run analysis/fitting/bayes_full.py ...` resolves them without this file.
+numpy==2.4.6
+scipy==1.17.1
+matplotlib
+numpyro==0.21.0
+jax==0.10.2
+# Generation on a GPU cluster (vLLM plus the pinned judge harness) has its own requirements file:
+#   runs/generate/cluster/requirements.txt, with the judge harness pinned by commit in runs/generate/cluster/setup_env.sh
