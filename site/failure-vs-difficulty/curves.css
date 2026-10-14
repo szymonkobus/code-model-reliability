@@ -1,0 +1,52 @@
+/* curves.css — the failure-against-difficulty page's own styles; kit.css carries the shared controls. */
+:root { --bg:#faf6ec; --panel:#f2ecdf; --border:#e0d9c8; --inset:#eae3d2;
+  --border2:#cfc5ac; --ink:#1a1a1a; --ink-2:#52514e; --ink-3:#8b8477; }
+body { -webkit-text-size-adjust:100%; text-size-adjust:100%;
+  background:var(--bg); color:var(--ink); margin:0 auto; max-width:76rem;
+  padding:1rem 1.2rem 4rem;
+  font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+h1 { font-size:1.45rem; margin:.2rem 0 .1rem; }
+.sub { color:var(--ink-2); font-size:.9rem; margin:0 0 .6rem; }
+#headline { font-size:1.02rem; color:#1f1e1b; margin:.15rem 0 .3rem; line-height:1.45; min-height:1.5em; }
+#setline { font-size:.85rem; margin:.1rem 0 .4rem; }
+#narrate { font-size:.85rem; margin:.3rem 0 .2rem; font-variant-numeric:tabular-nums; }
+#linekey { font-size:.8rem; margin:.2rem 0 .4rem; }
+#chartrow { display:flex; flex-direction:column; gap:.6rem; align-items:stretch; }
+#chartcol { flex:1 1 auto; min-width:0; }
+@media (min-width:1200px) { #chartrow { flex-direction:row; align-items:flex-start; } #chartcontrols { flex:0 0 24rem; margin:0; } #chartcontrols .kit-filter-row { gap:.35rem .9rem; padding:.3rem 0; margin:.2rem 0 .5rem; flex-wrap:wrap; } }
+#chartbox { position:relative; background:#fcfaf3; border:1px solid var(--border); border-radius:10px; }
+#chartbox:focus-visible { outline:2px solid #0b57d0; outline-offset:2px; }
+svg { width:100%; height:auto; display:block; touch-action:pan-y; }
+#chart { width:auto; height:auto; max-width:100%; max-height:calc(100vh - 170px); margin:0 auto; }
+#controls .kit-switch-seg { flex-wrap:wrap; max-width:100%; }
+.kit-switch-seg button[disabled] { opacity:.4; cursor:not-allowed; }
+.pinlevel { display:inline-flex; align-items:center; gap:.25rem; font-size:.85rem; color:var(--ink-2); }
+.pinlevel input { width:4.2em; font:inherit; padding:.15rem .3rem; border:1px solid var(--border2); border-radius:6px; background:#fffdf6; text-align:right; }
+#exportrow { display:flex; justify-content:flex-end; align-items:center; gap:.4rem; margin:.35rem 0 0; }
+.group { border:1px solid #e3ddd0; border-radius:10px; padding:.45rem .7rem .35rem; margin:.45rem 0; }
+.grouplabel { font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3); margin:0 0 .25rem; }
+#armsbar { display:flex; flex-wrap:wrap; align-items:flex-start; gap:.35rem 1.1rem; }
+.chips { display:flex; flex-wrap:wrap; gap:4px 12px; margin:.5rem 0; font-size:.8rem; align-items:center; }
+.chips .fam { border:none; background:none; cursor:pointer; font:inherit; font-weight:700; padding:2px 4px; }
+.chips .chip { border-radius:10px; padding:1px 8px; background:none; border:1px solid; cursor:pointer; font:inherit; font-size:.78rem; }
+.chips .chip.off { opacity:.3; }
+.chips .chip.think { border-style:dashed; }
+.chips .chip.nofit { border-style:dotted; }
+.chips .chip.partial { opacity:.45; border-style:dotted; }
+.chips .chip.partialshown { border-style:dotted; }
+.chips .chip[disabled] { cursor:default; }
+.chips .util { border:1px solid var(--border2); border-radius:5px; background:none; padding:2px 9px; cursor:pointer; font:inherit; font-size:.78rem; color:var(--ink-2); }
+.chip .flag { margin-left:.3rem; color:#b3261e; font-size:.85em; }
+.chips-run .runlabel { font-weight:600; font-size:.85rem; margin-right:.35rem; }
+#datanote { background:#fff4d6; border:1px solid #e6cf8a; border-radius:8px; padding:.35rem .7rem; margin:.2rem 0 .4rem; font-size:.85rem; color:var(--ink-2); }
+details.about { background:var(--panel); border:1px solid var(--border); border-radius:8px; padding:.15rem .7rem; margin:.5rem 0; font-size:.9rem; }
+details.about summary { cursor:pointer; padding:.35rem 0; }
+#crossings { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+#crossings p { color:var(--ink-2); font-size:.85rem; }
+table { border-collapse:collapse; font-size:.85rem; margin:.6rem 0; font-variant-numeric:tabular-nums; }
+th, td { text-align:left; padding:.22rem .7rem .22rem 0; border-bottom:1px solid var(--border); white-space:nowrap; }
+th { color:var(--ink-2); font-weight:600; }
+td.num { text-align:right; }
+.legendkey { display:inline-block; width:14px; height:3px; border-radius:2px; margin-right:.3rem; vertical-align:3px; }
+.defs li { margin:.2rem 0; }
+@media (max-width:600px) { #chartcontrols .kit-switch, .chips-run { margin-top:.4rem; padding-top:.4rem; border-top:1px solid #e3ddd0; } }

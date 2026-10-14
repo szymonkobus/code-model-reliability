@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/778", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to pack consecutive duplicates of a given list elements into sublists.\nassert pack_consecutive_duplicates([0, 0, 1, 2, 3, 4, 4, 5, 6, 6, 6, 7, 8, 9, 4, 4])==[[0, 0], [1], [2], [3], [4, 4], [5], [6, 6, 6], [7], [8], [9], [4, 4]]\n\"\"\"\n"}

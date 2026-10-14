@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/798", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the sum of an array.\nassert _sum([1, 2, 3]) == 6\n\"\"\"\n"}

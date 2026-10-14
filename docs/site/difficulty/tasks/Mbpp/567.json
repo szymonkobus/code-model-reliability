@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/567", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to check whether a specified list is sorted or not.\nassert issort_list([1,2,4,6,8,10,12,14,16,17])==True\n\"\"\"\n"}

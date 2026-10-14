@@ -1,0 +1,6 @@
+{"justification": null, "label": "regular", "set": "wave_1", "source_round": "round-1", "task_id": "fx/w1_a"}
+{"justification": null, "label": "tricky", "set": "wave_1", "source_round": "round-1", "task_id": "fx/w1_b"}
+{"justification": null, "label": "regular", "set": "wave_2", "source_round": "round-1", "task_id": "fx/add_two"}
+{"justification": "The examples show lower-case words only, while the extended tests include upper-case vowels the statement does name.", "label": "tricky", "set": "wave_2", "source_round": "round-1", "task_id": "fx/count_vowels"}
+{"justification": null, "label": "regular", "set": "wave_2", "source_round": "round-1", "task_id": "fxp/is_even"}
+{"justification": "The statement does not say what happens when lo is greater than hi, and one extended test exercises it.", "label": "underspecification", "set": "wave_2_parked", "source_round": "round-1", "task_id": "fx/clip"}

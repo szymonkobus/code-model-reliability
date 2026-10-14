@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/459", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to remove uppercase substrings from a given string.\nassert remove_uppercase('cAstyoUrFavoRitETVshoWs') == 'cstyoravoitshos'\n\"\"\"\n"}

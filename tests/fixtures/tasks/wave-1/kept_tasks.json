@@ -1,0 +1,12 @@
+{
+ "keep_labels": [
+  "regular",
+  "tricky"
+ ],
+ "count": 2,
+ "sha256_sorted": "547d31d4c9bb742c2fe9aa4d6d0c76fe7109e13be38c9766a04c6556f3cb50a5",
+ "tasks": [
+  "fx/w1_a",
+  "fx/w1_b"
+ ]
+}

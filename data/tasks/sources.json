@@ -1,0 +1,111 @@
+{
+ "sources": [
+  {
+   "id": "ccplus",
+   "name": "Code-Contests-Plus (ByteDance-Seed/Code-Contests-Plus, ccplus_1x)",
+   "families": [
+    "ccplus"
+   ],
+   "redistribution": "text",
+   "what_it_is": "Code-Contests-Plus (ByteDance Seed), the ccplus_1x configuration: Codeforces contest problems with validator-generated tests; the reference is a correct submission from the dataset",
+   "licence_as_recorded": "cc-by-4.0 (the dataset); upstream: Codeforces problem material, redistributed by the dataset under CC BY 4.0"
+  },
+  {
+   "id": "openr1",
+   "name": "open-r1/codeforces (verifiable)",
+   "families": [
+    "openr1"
+   ],
+   "redistribution": "text",
+   "what_it_is": "open-r1/codeforces, the verifiable configuration: Codeforces contest problems; the reference is a Python submission from open-r1/codeforces-submissions",
+   "licence_as_recorded": "cc-by-4.0 (the dataset); upstream: Codeforces problem material, redistributed by the dataset under CC BY 4.0"
+  },
+  {
+   "id": "leetcode",
+   "name": "LeetCodeDataset (newfacade/LeetCodeDataset)",
+   "families": [
+    "leetcode"
+   ],
+   "redistribution": "pointer",
+   "what_it_is": "LeetCodeDataset (newfacade): LeetCode problems with starter code, a completion and tests; the reference is the dataset's completion",
+   "licence_as_recorded": "apache-2.0 (the dataset card) over LeetCode material"
+  },
+  {
+   "id": "lcb",
+   "name": "LiveCodeBench (livecodebench/code_generation_lite, v6)",
+   "families": [
+    "lcb"
+   ],
+   "redistribution": "pointer",
+   "what_it_is": "LiveCodeBench code_generation_lite v6; the rows used are LeetCode problems, joined by their slug to LeetCodeDataset's completion as the reference",
+   "licence_as_recorded": "cc (the dataset card) over LeetCode material"
+  },
+  {
+   "id": "evoeval",
+   "name": "EvoEval (evoeval/EvoEval_combine, _creative, _difficult, _subtle, _tool_use)",
+   "families": [
+    "evoeval"
+   ],
+   "redistribution": "text",
+   "what_it_is": "EvoEval, five subsets: problems derived by generation from HumanEval; the reference is the dataset's canonical solution",
+   "licence_as_recorded": "apache-2.0 (the dataset)"
+  },
+  {
+   "id": "lbpp",
+   "name": "LBPP (CohereLabs/lbpp, python)",
+   "families": [
+    "lbpp"
+   ],
+   "redistribution": "text",
+   "what_it_is": "LBPP (Cohere Labs), the Python split: problems hand-written by competitive programmers; the reference is the dataset's completion",
+   "licence_as_recorded": "apache-2.0 (the dataset)"
+  },
+  {
+   "id": "humaneval",
+   "name": "HumanEval (openai/openai_humaneval); wave 1 ships as ids, its reworded copies in wave 2 as text",
+   "families": [
+    "humaneval",
+    "twin:humaneval"
+   ],
+   "redistribution": "text",
+   "what_it_is": "HumanEval (OpenAI): wave 1's copy with the judge harness's extended inputs; the reworded copies in wave 2 paraphrase its prompts and inherit everything else byte for byte",
+   "licence_as_recorded": "MIT (the HuggingFace dataset card, read 14 Oct 2026); the evalplus additions under the evalplus repository's licence"
+  },
+  {
+   "id": "mbpp",
+   "name": "MBPP (google-research-datasets/mbpp); wave 1 ships as ids, its reworded copies in wave 2 as text",
+   "families": [
+    "mbpp",
+    "twin:mbpp"
+   ],
+   "redistribution": "text",
+   "what_it_is": "MBPP (Google Research): wave 1's copy with the judge harness's extended inputs; the reworded copies in wave 2 paraphrase its prompts and inherit everything else byte for byte",
+   "licence_as_recorded": "CC-BY-4.0 (the HuggingFace dataset card, read 14 Oct 2026); the evalplus additions under the evalplus repository's licence"
+  },
+  {
+   "id": "easytail",
+   "name": "EasyTail: generated for this project by seeded template code",
+   "families": [
+    "EasyTail"
+   ],
+   "redistribution": "ours",
+   "what_it_is": "this project's easy-tail generator (easytail_gen_config_v1): a programmatic core by seeded template code (entry point, canonical solution, input generator, base and extended inputs) and a rendered or templated surface",
+   "licence_as_recorded": "none inherited: the project's own text, solution and tests"
+  },
+  {
+   "id": "targeted",
+   "name": "Targeted: generated for this project by a model and screened",
+   "families": [
+    "Targeted"
+   ],
+   "redistribution": "ours",
+   "what_it_is": "this project's targeted generator (targeted_gen_config_v1): a model-generated specification, reference and input generator, accepted when three independent solutions agree byte for byte, then screened and placed by a ladder of models",
+   "licence_as_recorded": "none inherited: the project's own text, solution and tests"
+  }
+ ],
+ "redistribution_keys": {
+  "text": "full text with attribution",
+  "pointer": "identity and provenance; the text rebuilds from the upstream",
+  "ours": "full text under this repository's data licence"
+ }
+}

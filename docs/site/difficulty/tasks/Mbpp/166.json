@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/166", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function that counts the number of pairs of integers in a list that xor to an even number.\nassert find_even_pair([5, 4, 7, 2, 1]) == 4\n\"\"\"\n"}

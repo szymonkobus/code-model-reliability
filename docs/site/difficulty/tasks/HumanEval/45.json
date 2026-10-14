@@ -1,1 +1,0 @@
-{"task_id": "HumanEval/45", "benchmark": "humaneval", "text": "\n\ndef triangle_area(a, h):\n    \"\"\"Given length of a side and high return area for a triangle.\n    >>> triangle_area(5, 3)\n    7.5\n    \"\"\"\n"}

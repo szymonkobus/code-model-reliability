@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/69~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a function to determine whether a given list contains the specified sublist, returning True if it does and False otherwise.\nassert is_sublist([2,4,3,5,7],[3,7])==False\n\"\"\""}

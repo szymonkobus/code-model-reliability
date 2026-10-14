@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/637", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to check whether the given amount has no profit and no loss\nassert noprofit_noloss(1500,1200)==False\n\"\"\"\n"}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/583", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function which returns nth catalan number.\nassert catalan_number(10)==16796\n\"\"\"\n"}

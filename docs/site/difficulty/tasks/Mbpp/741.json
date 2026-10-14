@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/741", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to check whether all the characters are same or not.\nassert all_Characters_Same(\"python\") == False\n\"\"\"\n"}

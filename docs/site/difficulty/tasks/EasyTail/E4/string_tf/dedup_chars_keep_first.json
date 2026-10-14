@@ -1,1 +1,0 @@
-{"task_id": "EasyTail/E4/string_tf/dedup_chars_keep_first", "benchmark": "wave 2", "text": "def dedup_chars_keep_first(s):\n    \"\"\"Return s with duplicate characters removed, keeping only the FIRST occurrence of each character (case-sensitive).\n    >>> dedup_chars_keep_first('')\n    ''\n    >>> dedup_chars_keep_first('a')\n    'a'\n    \"\"\"\n"}

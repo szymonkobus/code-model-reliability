@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/641", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find the nth nonagonal number.\nassert is_nonagonal(10) == 325\n\"\"\"\n"}

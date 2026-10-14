@@ -1,1 +1,0 @@
-{"task_id": "HumanEval/45~twin1", "benchmark": "wave 2", "text": "\ndef triangle_area(a, h):\n    \"\"\"Given the length of a side of a triangle and the corresponding height, return the area of the triangle.\n    >>> triangle_area(5, 3)\n    7.5\n    \"\"\"\n"}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/732~twin1", "benchmark": "wave 2", "text": "\"\"\"\nDefine a function that substitutes a colon for every occurrence of a space, comma, or period within a given string.\nassert replace_specialchar('Python language, Programming language.')==('Python:language::Programming:language:')\n\"\"\""}

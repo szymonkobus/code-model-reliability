@@ -1,0 +1,5 @@
+stem	arm	model_id	model_name	family
+Qwen--Qwen3-8B	Qwen--Qwen3-8B_temp_0.8	Qwen/Qwen3-8B	Qwen3 8B	Qwen3
+Qwen--Qwen3-8B	Qwen--Qwen3-8B_think_temp_0.6	Qwen/Qwen3-8B	Qwen3 8B (thinking)	Qwen3
+claude-haiku-4-5-thinking	claude-haiku-4-5-thinking_batch	claude-haiku-4-5-thinking	Haiku 4.5 (thinking)	Claude
+claude-haiku-4-5	claude-haiku-4-5_batch	claude-haiku-4-5	Haiku 4.5	Claude

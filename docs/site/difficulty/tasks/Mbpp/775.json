@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/775", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to check whether every odd index contains odd numbers of a given list.\nassert odd_position([2,1,4,3,6,7,6,3]) == True\n\"\"\"\n"}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/89", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find the closest smaller number than n.\nassert closest_num(11) == 10\n\"\"\"\n"}

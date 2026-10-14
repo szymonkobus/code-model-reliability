@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/580", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to remove uneven elements in the nested mixed tuple.\nassert extract_even((4, 5, (7, 6, (2, 4)), 6, 8)) == (4, (6, (2, 4)), 6, 8)\n\"\"\"\n"}

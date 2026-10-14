@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/160", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function that returns integers x and y that satisfy ax + by = n as a tuple, or return None if no solution exists.\nassert find_solution(2, 3, 7) == (2, 1)\n\"\"\"\n"}

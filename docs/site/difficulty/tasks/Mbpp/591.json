@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/591", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to interchange the first and last elements in a list.\nassert swap_List([12, 35, 9, 56, 24]) == [24, 35, 9, 56, 12]\n\"\"\"\n"}

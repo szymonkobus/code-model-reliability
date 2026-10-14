@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/558", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the sum of the per-digit difference between two integers.\nassert digit_distance_nums(1,2) == 1\n\"\"\"\n"}

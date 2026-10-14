@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/581", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the surface area of a square pyramid with a given base edge and height.\nassert surface_Area(3,4) == 33\n\"\"\"\n"}

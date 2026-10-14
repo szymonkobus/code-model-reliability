@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/599", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find sum and average of first n natural numbers.\nassert sum_average(10)==(55, 5.5)\n\"\"\"\n"}

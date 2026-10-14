@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/563~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a function that pulls out the values sitting between quotation marks in a string.\nassert extract_values('\"Python\", \"PHP\", \"Java\"')==['Python', 'PHP', 'Java']\n\"\"\""}

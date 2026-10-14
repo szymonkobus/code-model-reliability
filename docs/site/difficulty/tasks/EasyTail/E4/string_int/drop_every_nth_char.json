@@ -1,1 +1,0 @@
-{"task_id": "EasyTail/E4/string_int/drop_every_nth_char", "benchmark": "wave 2", "text": "def drop_every_nth_char(s, n):\n    \"\"\"Return s with every n-th character removed (positions n, 2n, 3n, ... in 1-based counting; n >= 2 per the input contract).\n    >>> drop_every_nth_char('abcdef', 2)\n    'ace'\n    >>> drop_every_nth_char('abc', 5)\n    'abc'\n    \"\"\"\n"}

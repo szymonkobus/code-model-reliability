@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/388", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the highest power of 2 that is less than or equal to n.\nassert highest_Power_of_2(10) == 8\n\"\"\"\n"}

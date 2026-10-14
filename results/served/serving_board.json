@@ -1,9 +1,0 @@
-{
- "view": "board",
- "fit_dir": "results/served/old",
- "n_arms_served": 59,
- "n_arms": 59,
- "n_tasks": 431,
- "n_cells": 25143,
- "set_sha256": "63db7d7176e6506a52d4a849e10bcbf44378156a49f5e3949cc9b38aa4c576a4"
-}

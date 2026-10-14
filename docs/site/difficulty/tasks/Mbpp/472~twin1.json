@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/472~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a Python function to determine whether the given list contains consecutive numbers.\nassert check_Consecutive([1,2,3,4,5]) == True\n\"\"\""}

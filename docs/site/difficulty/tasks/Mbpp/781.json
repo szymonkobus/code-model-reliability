@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/781", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to check whether the count of divisors is even. \nassert count_divisors(10)\n\"\"\"\n"}

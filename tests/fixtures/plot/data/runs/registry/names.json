@@ -1,0 +1,6 @@
+{
+ "pattern": "<base> · <training>, <task set>[, <re-draw word>][, <variant words>] · N steps (DECISION 218); a re-draw every 25 steps is the default and is not said; the base model's own row is '<base> · checkpoint 0' with the chip 'checkpoint 0'",
+ "slug_rule": "lower case; every run of characters that is not a letter or a digit becomes one hyphen; no leading or trailing hyphen",
+ "runs": {},
+ "bases": {}
+}

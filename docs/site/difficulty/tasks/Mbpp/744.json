@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/744", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to check if the given tuple has any none value or not.\nassert check_none((10, 4, 5, 6, None)) == True\n\"\"\"\n"}

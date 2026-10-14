@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/14", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the volume of a triangular prism.\nassert find_Volume(10,8,6) == 240\n\"\"\"\n"}

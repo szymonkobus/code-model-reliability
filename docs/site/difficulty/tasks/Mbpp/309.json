@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/309", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the maximum of two numbers.\nassert maximum(5,10) == 10\n\"\"\"\n"}

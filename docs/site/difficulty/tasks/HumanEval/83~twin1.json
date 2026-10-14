@@ -1,1 +1,0 @@
-{"task_id": "HumanEval/83~twin1", "benchmark": "wave 2", "text": "def starts_one_ends(n):\n    \"\"\"\n    Given a positive integer n, return the quantity of n-digit positive\n    integers whose leading digit is 1 or whose trailing digit is 1.\n    \"\"\"\n"}

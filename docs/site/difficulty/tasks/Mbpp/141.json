@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/141", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to sort a list of elements.\nassert pancake_sort([15, 79, 25, 38, 69]) == [15, 25, 38, 69, 79]\n\"\"\"\n"}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/125~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a function that, given a binary string, determines the maximum value of the difference between the count of 0s and the count of 1s taken over all sub-strings of that string, and returns this maximum difference.\nassert find_length(\"11000010001\") == 6\n\"\"\""}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/760", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to check whether a list of numbers contains only one distinct element or not.\nassert unique_Element([1,1,1]) == True\n\"\"\"\n"}

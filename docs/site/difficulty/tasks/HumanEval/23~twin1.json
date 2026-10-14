@@ -1,1 +1,0 @@
-{"task_id": "HumanEval/23~twin1", "benchmark": "wave 2", "text": "\ndef strlen(string: str) -> int:\n    \"\"\" Return the length of the given string.\n    >>> strlen('')\n    0\n    >>> strlen('abc')\n    3\n    \"\"\"\n"}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/422", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the average of cubes of first n natural numbers.\nassert find_Average_Of_Cube(2) == 4.5\n\"\"\"\n"}

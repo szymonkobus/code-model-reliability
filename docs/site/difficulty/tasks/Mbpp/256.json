@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/256", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function that takes in a non-negative number and returns the number of prime numbers less than the given non-negative number.\nassert count_Primes_nums(5) == 2\n\"\"\"\n"}

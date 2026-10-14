@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/283", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function takes in an integer and check whether the frequency of each digit in the integer is less than or equal to the digit itself.\nassert validate(1234) == True\n\"\"\"\n"}

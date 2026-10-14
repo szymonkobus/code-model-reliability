@@ -1,1 +1,0 @@
-{"task_id": "EasyTail/E4/count_class/count_nonzero_digit_chars", "benchmark": "wave 2", "text": "def count_nonzero_digit_chars(s):\n    \"\"\"Count how many characters of s are nonzero digit characters (1-9). Return the count as an int.\n    >>> count_nonzero_digit_chars('')\n    0\n    >>> count_nonzero_digit_chars('aA zZ 09 !?')\n    1\n    \"\"\"\n"}

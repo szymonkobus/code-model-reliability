@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/127", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to multiply two integers.\nassert multiply_int(10,20)==200\n\"\"\"\n"}

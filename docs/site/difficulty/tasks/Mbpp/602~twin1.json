@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/602~twin1", "benchmark": "wave 2", "text": "\"\"\"\nA proofreader at a small print shop scans each manuscript line for typing stutters and wants a quick automated check. Write a python function to find the first repeated character in a given string.\nassert first_repeated_char(\"abcabc\") == \"a\"\n\"\"\""}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/77", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find whether a number is divisible by 11.\nassert is_Diff (12345) == False\n\"\"\"\n"}

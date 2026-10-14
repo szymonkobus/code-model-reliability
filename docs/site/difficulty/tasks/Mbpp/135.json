@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/135", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find the nth hexagonal number.\nassert hexagonal_num(10) == 190\n\"\"\"\n"}

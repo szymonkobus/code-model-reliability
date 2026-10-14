@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/744~twin1", "benchmark": "wave 2", "text": "\"\"\"\nHey, could you write a function that looks at a tuple and tells you whether it contains any None value or not?\nassert check_none((10, 4, 5, 6, None)) == True\n\"\"\""}

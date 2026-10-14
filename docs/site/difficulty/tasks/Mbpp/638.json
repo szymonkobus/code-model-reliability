@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/638", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to calculate the wind chill index rounded to the next integer given the wind velocity in km/h and a temperature in celsius.\nassert wind_chill(120,35)==40\n\"\"\"\n"}

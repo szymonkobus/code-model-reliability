@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/71~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a function that sorts a list of elements into ascending order.\nassert comb_sort([5, 15, 37, 25, 79]) == [5, 15, 25, 37, 79]\n\"\"\""}

@@ -1,0 +1,1 @@
+{"atol": 0, "base_input": [[2], [3]], "canonical_solution": "    return n % 2 == 0\n", "entry_point": "is_even", "expected_output": null, "plus_input": [[0], [-4], [-7], [1000000000], [42]], "prompt": "def is_even(n: int) -> bool:\n    \"\"\"Return True when n is even.\n\n    >>> is_even(2)\n    True\n    \"\"\"\n", "task_id": "fxp/is_even"}

@@ -1,1 +1,0 @@
-{"task_id": "lbpp/094", "benchmark": "wave 2", "text": "def maximum_bit_swap_distance(n: int) -> int:\n    \"\"\"Given an unsigned 64 bit integer, write a python program to find the maximum distance between any two indices i and j such that swapping the bits at positions i and j increases the value of the integer.\n    \"\"\"\n"}

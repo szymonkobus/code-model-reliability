@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/70~twin1", "benchmark": "wave 2", "text": "\"\"\"\nImplement a function that determines whether or not all of the given tuples have equal length.\nassert get_equal([(11, 22, 33), (44, 55, 66)]) == True\n\"\"\""}

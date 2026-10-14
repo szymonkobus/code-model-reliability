@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/91~twin1", "benchmark": "wave 2", "text": "\"\"\"\nSay you've got a list of strings and some other string — I want a function that tells you whether that string shows up as a substring inside any of the strings in the list.\nassert find_substring([\"red\", \"black\", \"white\", \"green\", \"orange\"],\"ack\")==True\n\"\"\""}

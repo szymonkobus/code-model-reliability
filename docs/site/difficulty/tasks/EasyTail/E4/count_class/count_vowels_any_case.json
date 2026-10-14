@@ -1,1 +1,0 @@
-{"task_id": "EasyTail/E4/count_class/count_vowels_any_case", "benchmark": "wave 2", "text": "def count_vowels_any_case(s):\n    \"\"\"Count how many characters of s are vowels (a, e, i, o, u, in either case). Return the count as an int.\n    >>> count_vowels_any_case('')\n    0\n    >>> count_vowels_any_case('aA zZ 09 !?')\n    2\n    \"\"\"\n"}

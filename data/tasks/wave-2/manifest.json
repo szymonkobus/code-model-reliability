@@ -1,0 +1,48 @@
+{
+ "set": "wave 2",
+ "set_key": "wave_2",
+ "members": 869,
+ "kept_by_audit": 858,
+ "full_text_tasks": 774,
+ "pointer_tasks": 95,
+ "pointers_by_reason": {
+  "upstream-terms": 95
+ },
+ "pointers_reissued_with_inputs_removed": 49,
+ "pointer_rebuild": "convert the upstream row with the converter the pointer names (cmr tasks convert), then remove the inputs listed under rebuild, matched by value; the content hash then equals the certified one",
+ "io_modes": {
+  "function": 586,
+  "stdio": 283
+ },
+ "records_with_plus_inputs_removed": 63,
+ "records_with_input_shapes": 31,
+ "sha256_sorted_members": "44e8473769d2c4e2a78c337a054b774c1c8b4dc6dea15db753873f27d9829bc6",
+ "sha256_sorted_kept": "532d0efad8a5b0c6a0f6664f9f4a765346fc635f1634f3913fe74883b5f174d8",
+ "hash_recipe": "sha256(json.dumps({task_id, prompt, entry_point, canonical_solution, base_input, plus_input, atol, expected_output}, sort_keys=True))",
+ "record_fields": [
+  "task_id",
+  "prompt",
+  "entry_point",
+  "canonical_solution",
+  "base_input",
+  "plus_input",
+  "atol",
+  "expected_output",
+  "content_sha256",
+  "kept_by_audit",
+  "io_mode",
+  "provenance"
+ ],
+ "record_fields_where_they_apply": {
+  "plus_inputs_removed": "an extended test input that carries a boolean at an argument position where no example input carries one is removed before judging; a reworded copy inherits its parent's list; matched by value",
+  "input_shapes": "the declared shape per positional argument; the inputs are converted to these shapes (tuples, sets) before the call"
+ },
+ "parts": [
+  {
+   "file": "tasks-part-01.jsonl.gz",
+   "records": 774,
+   "bytes": 28264572,
+   "sha256": "4c62a0c181c6ddf325a947fd98b9f4dd43dd3772a06553a31da5b30e6c97f167"
+  }
+ ]
+}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/791~twin1", "benchmark": "wave 2", "text": "\"\"\"\nA data-cleaning pipeline sometimes receives a tuple whose entries include other tuples nested inside it, and the downstream stage can only handle flat values. Write a function to remove tuples from the given tuple.\nassert remove_nested((1, 5, 7, (4, 6), 10)) == (1, 5, 7, 10)\n\"\"\""}

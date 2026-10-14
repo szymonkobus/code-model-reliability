@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/135~twin1", "benchmark": "wave 2", "text": "\"\"\"\nCould you write a function that figures out the nth hexagonal number for me?\nassert hexagonal_num(10) == 190\n\"\"\""}

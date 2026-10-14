@@ -1,0 +1,22 @@
+{"attempt": 1, "killed_at_cap": false, "outcomes": "PPPPPPW", "status": "fail", "suite": "plus", "task_id": "fixture/has_close_pair", "time_outs": []}
+{"attempt": 6, "killed_at_cap": false, "outcomes": "PTP", "status": "fail", "suite": "base", "task_id": "fixture/has_close_pair", "time_outs": [1]}
+{"attempt": 6, "killed_at_cap": false, "outcomes": "TPPPPPP", "status": "fail", "suite": "plus", "task_id": "fixture/has_close_pair", "time_outs": [0]}
+{"attempt": 10, "killed_at_cap": false, "outcomes": "PPPPPPW", "status": "fail", "suite": "plus", "task_id": "fixture/has_close_pair", "time_outs": []}
+{"attempt": 11, "killed_at_cap": false, "outcomes": "PTP", "status": "fail", "suite": "base", "task_id": "fixture/has_close_pair", "time_outs": [1]}
+{"attempt": 11, "killed_at_cap": false, "outcomes": "TPPPPPP", "status": "fail", "suite": "plus", "task_id": "fixture/has_close_pair", "time_outs": [0]}
+{"attempt": 2, "killed_at_cap": false, "outcomes": "WWW", "status": "fail", "suite": "base", "task_id": "fixture/half_box_volume", "time_outs": []}
+{"attempt": 2, "killed_at_cap": false, "outcomes": "PWWWP", "status": "fail", "suite": "plus", "task_id": "fixture/half_box_volume", "time_outs": []}
+{"attempt": 4, "killed_at_cap": false, "outcomes": "WWW", "status": "fail", "suite": "base", "task_id": "fixture/half_box_volume", "time_outs": []}
+{"attempt": 4, "killed_at_cap": false, "outcomes": "PWWWP", "status": "fail", "suite": "plus", "task_id": "fixture/half_box_volume", "time_outs": []}
+{"attempt": 5, "killed_at_cap": false, "outcomes": "TPPPT", "status": "fail", "suite": "plus", "task_id": "fixture/half_box_volume", "time_outs": [0, 4]}
+{"attempt": 6, "killed_at_cap": false, "outcomes": "WWW", "status": "fail", "suite": "base", "task_id": "fixture/half_box_volume", "time_outs": []}
+{"attempt": 6, "killed_at_cap": false, "outcomes": "PWWWP", "status": "fail", "suite": "plus", "task_id": "fixture/half_box_volume", "time_outs": []}
+{"attempt": 8, "killed_at_cap": false, "outcomes": "WWW", "status": "fail", "suite": "base", "task_id": "fixture/half_box_volume", "time_outs": []}
+{"attempt": 8, "killed_at_cap": false, "outcomes": "PWWWP", "status": "fail", "suite": "plus", "task_id": "fixture/half_box_volume", "time_outs": []}
+{"attempt": 10, "killed_at_cap": false, "outcomes": "WWW", "status": "fail", "suite": "base", "task_id": "fixture/half_box_volume", "time_outs": []}
+{"attempt": 10, "killed_at_cap": false, "outcomes": "PWWWP", "status": "fail", "suite": "plus", "task_id": "fixture/half_box_volume", "time_outs": []}
+{"attempt": 3, "killed_at_cap": false, "outcomes": "PPTPP", "status": "fail", "suite": "plus", "task_id": "fixture/sorted_lines", "time_outs": [2]}
+{"attempt": 8, "killed_at_cap": false, "outcomes": "PPTPP", "status": "fail", "suite": "plus", "task_id": "fixture/sorted_lines", "time_outs": [2]}
+{"attempt": 10, "killed_at_cap": false, "outcomes": "PPTPP", "status": "fail", "suite": "plus", "task_id": "fixture/sorted_lines", "time_outs": [2]}
+{"attempt": 11, "killed_at_cap": false, "outcomes": "WPW", "status": "fail", "suite": "base", "task_id": "fixture/sorted_lines", "time_outs": []}
+{"attempt": 11, "killed_at_cap": false, "outcomes": "WPPWW", "status": "fail", "suite": "plus", "task_id": "fixture/sorted_lines", "time_outs": []}

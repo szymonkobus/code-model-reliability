@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/126", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the sum of common divisors of two given numbers.\nassert sum(10,15) == 6\n\"\"\"\n"}

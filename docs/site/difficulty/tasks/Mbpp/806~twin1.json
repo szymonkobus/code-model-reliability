@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/806~twin1", "benchmark": "wave 2", "text": "\"\"\"\nCompose a function that ascertains the maximum run of uppercase characters occurring within the supplied string.\nassert max_run_uppercase('GeMKSForGERksISBESt') == 5\n\"\"\""}

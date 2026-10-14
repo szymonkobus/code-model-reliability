@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/631", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to replace whitespaces with an underscore and vice versa in a given string.\nassert replace_spaces('Jumanji The Jungle') == 'Jumanji_The_Jungle'\n\"\"\"\n"}

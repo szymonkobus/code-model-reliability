@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/799", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to that rotate left bits by d bits a given number. We assume that the number is 32 bit.\nassert left_rotate(16,2) == 64\n\"\"\"\n"}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/99", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to convert the given decimal number to its binary equivalent, represented as a string with no leading zeros.\nassert decimal_to_binary(8) == '1000'\n\"\"\"\n"}

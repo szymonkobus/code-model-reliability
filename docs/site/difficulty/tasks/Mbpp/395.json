@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/395", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the first non-repeated character in a given string.\nassert first_non_repeating_character(\"abcabc\") == None\n\"\"\"\n"}

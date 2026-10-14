@@ -1,1 +1,0 @@
-{"task_id": "lbpp/087", "benchmark": "wave 2", "text": "def get_longest_increasing_sequence(elements: list[int], k: int) -> int:\n    \"\"\"Given an array and an integer k, write a Python program to determine the longest contiguous increasing subarray that you can get by removing at most one segment of at most k contiguous integers from the array.\n    \"\"\"\n"}

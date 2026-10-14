@@ -1,107 +1,121 @@
 # code-model-reliability
 
-A benchmark of how capable and how reliable code models are, measured on two task sets, wave 1 and wave 2.
+How capable and how reliable are code models? This repository measures both on one scale of task difficulty:
 
-- **Capability** is the task difficulty at which a model's failure rate crosses one half.
-- **Reliability** is the task difficulty at which its failure rate crosses one in a hundred.
+- **Capability (D50)** is the task difficulty at which a model's failure rate crosses one half.
+- **Reliability (D99)** is the task difficulty at which its failure rate crosses one in a hundred.
 
-Both are read from a Bayesian failure-versus-difficulty curve fitted to many attempts per task: every model runs
-every task 128 times on wave 1 and 32 to 256 times on wave 2 (answers truncated at the output
-limit were re-run to completion, so some tasks carry more attempts), every attempt is judged by executable tests, and
-the judged counts per task are the data the curves are fitted to. This repository holds the task sets, the generation
-and judging code, the fitting engine, the published result tables with the per-task cells behind them, and offline
-figure scripts. It is a snapshot import; the sections below say what each part is and how far it has been exercised.
+Both are read from a Bayesian failure-against-difficulty curve fitted to many judged attempts per task on two
+task sets, wave 1 (the kept tasks of two public Python benchmarks) and wave 2 (new tasks built for the whole
+difficulty range), together wave 1+2. A model runs every task many times, every attempt is judged by executable
+tests, the judged counts per task are the cells the curve is fitted to, and the two crossings are read from the
+curve. The published fit covers 63 arms (a model under one generation protocol) on 1,297 tasks,
+75,305 cells and 8.1 million attempts.
+
+Every number in this file is written by the build from the data it ships beside; `docs/numbers.json` lists them.
+
+## What is here
+
+```
+src/code_model_reliability/        the pipeline, one sub-package per stage (below); cmr is its command, short for code-model-reliability
+data/tasks/                        the task sets: membership, texts or pointers, certificates, attribution, labels
+data/runs/registry/                the arms, the models, the protocols, the names of the models trained here
+data/runs/pooling_rules.json       how several judgings of one task pool into a cell
+data/results/published/<fit>/      the published fit: cells, difficulty scale, crossings, gates, per-arm summaries
+data/results/per-attempt/          the verdict files of record of every published arm on the wave 1 tasks of the published fit, one row per attempt
+docs/                              method, data contract, the task sets, judging, generation, figures and pages, glossary
+docs/site/                         the two pages, built from the published fit
+site/                              the two page shells as source
+cluster/                           Slurm templates for generation, judging, fitting and the tests
+studies/                           the studies a published number or rule rests on, each with its recomputing script
+tests/                             the tests, on a three-task fixture set with a stand-in for a model
+```
+
+## The pipeline
+
+`cmr <stage>` runs each stage; `pip install -e .` installs the package and the command (Python 3.11 or later).
+
+| stage | what it does | reads | writes | runs where |
+|---|---|---|---|---|
+| `tasks` | the task sets, their provenance and verification (`cmr tasks summary`, `verify`, `attribution-table`), and the pointer tasks' recovery from their upstream datasets (`cmr tasks convert`, `rebuild-restricted`) | `data/tasks/` | nothing | anywhere |
+| `generate` | a model answers every task many times under one protocol (`cmr generate run --model … --tasks … --protocol …`) | the task set, a model | samples per arm | a GPU machine (`cluster/generate.sbatch`), or a provider's batch interface (`cmr generate api …`) |
+| `judge` | every attempt runs against its task's tests under the pinned harness (`cmr judge --tasks … --samples … --out …`) | the samples | verdicts per arm with their settings | a CPU machine (`cluster/judge.sbatch`) |
+| `land` | verdicts become cells and the arm registry (`cmr land cells …`, `cmr land registry …`) | the verdicts | `cells.csv`, the registry | anywhere |
+| `fit` | the difficulty scale, the failure curve per arm, its gates and crossings (`cmr fit all --cells … --fit-dir …`) | `cells.csv` | a fit directory | a CPU machine, hours an arm with the published settings (`cluster/fit.sbatch`) |
+| `plot` | the two figures (`cmr plot`) and the two pages (`cmr site`: the shells under `site/` plus the data bundles) | the published tables | `figures/`, `docs/site/` | anywhere |
+
+`docs/data-contract.md` names every file between the stages and its shape; `docs/method.md` defines the quantities
+and the estimator; `docs/tasks.md` says how the task sets were built, screened, certified and audited;
+`docs/judging.md` and `docs/generate.md` say what the judge and the generation ran with; `docs/plot.md` says what
+the figures and the pages show and how they are built; `docs/glossary.md` defines every term once.
 
 ## The task sets
 
-| set | tasks | what it is |
-|---|---|---|
-| wave 1 | 431 | the tasks kept from two public Python benchmarks after the task audit |
-| wave 2 | 869 | the new tasks in the published fits (861 kept by the audit) |
-| wave 2 parked | 893 | new tasks run with the same protocol but kept out of the fits for now (885 kept by the audit) |
-| wave 1+2 | 1297 | the population the published fit stands on |
+Every task was read by its description, tests and reference and given one audit label (regular, tricky,
+underspecification or contradiction; `docs/tasks.md`); the regular and tricky tasks are kept. The published fit
+stands on the 1,297 tasks that had judged attempts when it was cut: the 1,288 kept tasks of wave 1
+and wave 2, and 9 tasks the audit set aside after the cut, listed with their labels under
+`tasks_fit_not_kept` in `docs/numbers.json`; a fit on the kept tasks alone is `cmr fit` over their cells.
 
-The split of the new tasks into wave 2 and wave 2 parked is fixed by a frozen membership list (`tasks/sets.json`, with a
-hash of every list); wave 2 never includes the parked tasks, and the new tasks together are 1762.
+| set | tasks | kept by the audit | what it is |
+|---|---|---|---|
+| wave 1 | 430 | 430 | the tasks kept from two public Python benchmarks; shipped as ids, the texts from the pinned harness |
+| wave 2 | 869 | 858 | the new tasks in the published fit; 774 as full text, 95 as pointers whose upstream terms do not permit republishing statements |
+| wave 2 parked | 893 | 879 | new tasks run with the same protocol but kept out of the fit; 654 as text, 239 as pointers |
 
-## What is measured, in one table
+`data/tasks/sets.json` is the membership of record with a hash per list; `cmr tasks verify` checks every record and
+list against it; `cmr tasks rebuild-restricted` recovers the pointer tasks from their upstream datasets. Where
+every task comes from, and under which licence its text travels, is in `data/tasks/attribution.jsonl` and the
+table in `DATA-LICENSE.md`.
 
-The published fit on wave 1+2 covers 59 arms (a model under one generation protocol) on
-1297 tasks, 70157 cells of judged attempts, 7.4 million
-attempts in all. Its crossings are in `results/served/board_top/crossings_of_record.csv`, one row per arm:
+## What ships of the data, and what does not
 
-| column | meaning |
-|---|---|
-| `d50_of_record_z` | capability: the difficulty at which the fitted failure curve crosses one half |
-| `d1_of_record_z` | reliability: the difficulty at which the fitted average failure rate crosses one in a hundred |
-| `d1_of_record_cri80_lo`, `d1_of_record_cri80_hi` | the 80% credible interval of the reliability crossing |
-| `d1_of_record_status` | `point` (the crossing lies inside the observed difficulty range), `bound` (the curve is still above one in a hundred at the easiest task, so the value is a bound), or `unresolved` (the interval is wider than the reporting bandwidth) |
+Shipped, under `data/`: the task sets as above; the arm registry (every published arm with its model, protocol,
+judging settings and extractor), the models, the protocol table and the names of record of the models trained in
+this project whose arms the published fit carries — no arm outside the published fit appears in any table, so every
+row leads to a published result; the published fit, `data/results/published/e0f5112bec34/`: its cells (failures out of attempts per arm and task), the
+difficulty scale with its panel, the crossings table, the gates, and a draw-free summary per arm (the fitted curve
+with its band, the per-level crossings and their densities) that the figures and pages read; and the verdict files
+of record of every published arm on the wave 1 tasks of the published fit, `data/results/per-attempt/`, one row per
+attempt (pass or fail on the base tests and on the extended tests, from which the pass@k figures recompute). Where
+a cell was topped up after its verdict file of record was judged, its count in the cells exceeds its rows there, and
+the manifest beside the tables says by how much per arm.
 
-Difficulty is in the fit's internal unit: standard deviations of the task-difficulty scale defined in `docs/method.md`,
-larger meaning harder. `figures/capability_vs_reliability.py` draws the table.
+Not shipped, with the reason: the text of the models' attempts (several gigabytes; the providers set different
+terms on redistributing their models' output, and the judged outcomes suffice to re-fit every curve); the
+per-attempt verdicts of wave 2 (several judgings pool into one cell there, and the cells carry the counts); the
+posterior draws of the fits (11 MB an arm, regenerated by `cmr fit`); and the task texts whose upstream terms do
+not permit republishing them, which ship as pointers.
 
-## Reproduce
+## Reproducing a published row
 
-Three levels, from cheap to expensive.
-
-1. **Re-fit from the published cells** (CPU only; about 5.0 hours per arm on four cores with the
-   settings the published fits used, `--chains 4 --warmup 2000 --samples 8000 --target-accept 0.995`; the engine's
-   defaults are quicker and rougher):
+1. **Re-fit one arm from the published cells** (CPU only). `<arm>` is an id from the first column of
+   `crossings.csv`, for example `Qwen--Qwen2.5-7B-Instruct_temp_0.8`:
    ```
-   pip install -r requirements.txt
-   python3 analysis/fitting/cells_to_npz.py --fit board_top --arm <arm> --out /tmp/arm.npz
-   uv run analysis/fitting/bayes_full.py --run --eiv on --inputs /tmp/arm.npz --out /tmp/arm.posterior.json \
-       --chains 4 --warmup 2000 --samples 8000 --target-accept 0.995
+   pip install -e '.[fit]'
+   cmr fit inputs --cells data/results/published/e0f5112bec34/cells.csv --axis data/results/published/e0f5112bec34/axis.csv --fit-dir fits/mine
+   cmr fit run --inputs fits/mine/inputs/<arm>.npz --out fits/mine/posterior_summary_<arm>.json --eiv on
+   cmr fit crossings --results fits/mine --out-dir fits/mine
    ```
-   `<arm>` is a value of the `arm` column of `cells.csv` (`cells_to_npz.py --list` prints them). The engine's PEP 723
-   header pins numpy, scipy, numpyro and jax; `uv run` resolves them. Compare `estimands.d50.median_z` (capability) and
-   `estimands_avg.d1.median_z` (the reliability reading of record; `estimands.d1` is the median-task reading) with the
-   arm's row in `crossings_of_record.csv`.
-2. **Re-draw the figures**: `python3 figures/capability_vs_reliability.py` and
-   `python3 figures/failure_vs_difficulty_cells.py --arm <arm>` read `results/` and write PNGs into `figures/`.
-3. **Re-generate and re-judge**: `runs/generate/cluster` holds the vLLM job runner and the environment builder that pins
-   the judge harness by commit; `runs/generate/api` holds the batch generators for API models (keys from environment
-   variables); `runs/judge` holds the judge as invoked. These are the scripts as run on a Slurm cluster and read the
-   cluster's host, base directory and environment from variables (`runs/README.md` lists them); they need pointing at
-   your own environment before they run.
+   `--eiv on` carries each task's difficulty uncertainty into the fit (the errors-in-variables term, `docs/method.md`),
+   as the published fits did. The engine's defaults are the published settings (four chains, two thousand warm-up
+   and eight thousand kept draws, target acceptance 0.995); with them a fit takes hours an arm on four cores, and
+   the crossings match the published row up to Monte Carlo error, exactly when the pinned libraries are used.
+   `--chains 2 --warmup 300 --samples 300` gives a rough answer in minutes.
+2. **Re-draw the figures and the pages**: `cmr plot --data data --out figures` and `cmr site --data data --out docs/site`.
+3. **Re-generate and re-judge**: `cmr generate` on a GPU machine or through a provider's batch interface, then
+   `cmr judge` and `cmr land`; `docs/generate.md` and `docs/judging.md` give the settings every published attempt
+   was produced and judged with, and `data/runs/registry/protocols.tsv` the protocol of every arm.
 
-## Layout
+## Tests
 
-```
-docs/            method, data contract, how the new tasks were built, related work, two stand-alone site copies
-tasks/           sets.json (the membership of record); wave1, wave2, wave2-parked; labels; certificates; the rebuild script
-runs/            the arm registry; generation, judging and landing code
-analysis/        the difficulty axis, the fitting engine and its gates, the fitting-method comparison, task-set scripts
-results/         per published fit: crossings, gates, meta, manifest, cells; per-task tables; per-attempt verdicts; pass rates
-figures/         offline figure scripts
-deep-dives/      scripts of the studies behind the published numbers, one folder per question
-```
+`pip install -e '.[test,fit]'` then `pytest tests` runs the unit tests of every stage on the fixture set under
+`tests/fixtures/` (a three-task set with a deterministic stand-in for a model) and the end-to-end smoke
+(`tests/test_pipeline.py`: generate, judge, land, fit at short chains, plot, site). The judge's tests need the
+pinned harness (`pip install -e '.[judge]'`); the engine's own tests run when `CMR_FIT_ENGINE_TESTS=1` is set,
+on a cluster node with `cluster/tests.sbatch` or on any machine with the fit extra and some minutes.
 
-## What ships of each set
+## Licences and citation
 
-- **Wave 1**: task ids and audit labels (`tasks/wave1`, `tasks/labels`); the texts come from the pinned judge
-  harness. `results/per-attempt` holds the verdict of every attempt of every published arm on wave 1
-  (4.0 million rows; 59 arms on the first source benchmark,
-  58 on the second, one arm having run the first only).
-- **Wave 2** (`tasks/wave2`): 774 tasks as full text in `tasks-part-*.jsonl.gz` and 95
-  (11%) as task ids, content hashes and upstream pointers in `restricted.jsonl`, because their
-  upstream source does not permit republishing statements. 866 of the 869 had judged cells
-  in the published fit at the snapshot.
-- **Wave 2 parked** (`tasks/wave2-parked`): 654 tasks as full text and 239 as pointers
-  (238 for the same licence reason, 1 because a random test-input string
-  tripped the content scrub).
-- `tasks/rebuild_restricted.py` rebuilds and verifies every pointer task from the upstream datasets; `docs/wave2.md`
-  describes how the new tasks were acquired, screened, certified and audited.
-
-## Status of this import
-
-Snapshot taken on 16 September 2026 by an allowlist copy and re-cut on 22 September: 3030 files, 128 MB.
-Code is as it ran, with the environment it ran in read from variables and working notes removed. The project's
-operations code (landing loops, pollers, page composers, store readers) is not included. Scripts are included where they
-document a computation of record even when their inputs are not: a script that reads a fit's posterior draws, a study's
-intermediate tables or the run store fails on its first read here, and each folder's README says which inputs are not
-included. The fitting engine, the figure scripts and the task exports were exercised on this tree; the generation and
-judging scripts were not.
-Licences: `LICENSE` (code, MIT) and `DATA-LICENSE.md` (tasks and tables, CC BY 4.0, with the per-source attribution
-table). Every number in this file and in the other Markdown files is computed from the tree by the build and recorded
-in `docs/numbers.json`.
+`LICENSE` (code, MIT), `DATA-LICENSE.md` (tasks, labels and result tables, CC BY 4.0, with the per-source
+attribution table), `CITATION.cff`.

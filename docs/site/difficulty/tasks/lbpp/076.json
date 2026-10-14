@@ -1,1 +1,0 @@
-{"task_id": "lbpp/076", "benchmark": "wave 2", "text": "def is_leeep_year(year):\n    \"\"\"Define a `leeep` year as year that can be divided by 3 without leaving a remainder, except for years that can be divided by 75 but not by 300. Return a python function is_leeep_year(year) that returns True if and only if `year` is a leeep year\n    \"\"\"\n"}

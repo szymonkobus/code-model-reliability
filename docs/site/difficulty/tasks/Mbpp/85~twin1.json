@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/85~twin1", "benchmark": "wave 2", "text": "\"\"\"\nA glassblower's studio catalogs its spherical ornaments by how much gilding leaf each one needs, which comes down to the outer surface of the glass. Write a function to find the surface area of a sphere.\nassert math.isclose(surfacearea_sphere(10), 1256.6370614359173, rel_tol=0.001)\n\"\"\""}

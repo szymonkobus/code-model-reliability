@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/406", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find whether the parity of a given number is odd.\nassert find_Parity(12) == False\n\"\"\"\n"}

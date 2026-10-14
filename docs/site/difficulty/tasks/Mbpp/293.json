@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/293", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find the third side of a right angled triangle.\nassert otherside_rightangle(7,8)==10.63014581273465\n\"\"\"\n"}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/476", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the sum of the largest and smallest value in a given array.\nassert big_sum([1,2,3]) == 4\n\"\"\"\n"}

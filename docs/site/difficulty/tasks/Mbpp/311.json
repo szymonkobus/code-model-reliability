@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/311", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to set the left most unset bit.\nassert set_left_most_unset_bit(10) == 14\n\"\"\"\n"}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/172~twin1", "benchmark": "wave 2", "text": "\"\"\"\nHey, could you write a function that takes a string and tells you how many times the substring 'std' shows up in it?\nassert count_occurance(\"letstdlenstdporstd\") == 3\n\"\"\""}

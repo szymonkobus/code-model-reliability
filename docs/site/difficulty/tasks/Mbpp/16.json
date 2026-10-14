@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/16", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to that returns true if the input string contains sequences of lowercase letters joined with an underscore and false otherwise.\nassert text_lowercase_underscore(\"aab_cbbbc\")==(True)\n\"\"\"\n"}

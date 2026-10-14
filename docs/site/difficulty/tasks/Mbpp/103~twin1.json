@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/103~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a function that computes the Eulerian number a(n, m).\nassert eulerian_num(3, 1) == 4\n\"\"\""}

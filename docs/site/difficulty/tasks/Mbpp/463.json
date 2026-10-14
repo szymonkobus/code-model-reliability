@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/463", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find the maximum product subarray of the given array.\nassert max_subarray_product([1, -2, -3, 0, 7, -8, -2]) == 112\n\"\"\"\n"}

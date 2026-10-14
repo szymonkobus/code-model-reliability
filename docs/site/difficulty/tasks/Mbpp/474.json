@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/474", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to replace characters in a string.\nassert replace_char(\"polygon\",'y','l')==(\"pollgon\")\n\"\"\"\n"}

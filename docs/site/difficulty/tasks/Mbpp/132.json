@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/132", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to convert a tuple to a string.\nassert tup_string(('e', 'x', 'e', 'r', 'c', 'i', 's', 'e', 's'))==(\"exercises\")\n\"\"\"\n"}

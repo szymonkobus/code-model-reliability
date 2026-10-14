@@ -1,0 +1,22 @@
+{
+ "set": "wave 2",
+ "set_key": "wave_2",
+ "members": 3,
+ "kept_by_audit": 3,
+ "full_text_tasks": 2,
+ "pointer_tasks": 1,
+ "pointers_by_reason": {
+  "upstream-terms": 1
+ },
+ "sha256_sorted_members": "8e565238205c5102accbcf2f775ffb28d36a99fe2359b54e7f91c96db448cab3",
+ "sha256_sorted_kept": "8e565238205c5102accbcf2f775ffb28d36a99fe2359b54e7f91c96db448cab3",
+ "hash_recipe": "sha256(json.dumps({task_id, prompt, entry_point, canonical_solution, base_input, plus_input, atol, expected_output}, sort_keys=True))",
+ "parts": [
+  {
+   "file": "tasks-part-01.jsonl",
+   "records": 2,
+   "bytes": 1408,
+   "sha256": "4a1a0aa1dec52f870c81d0469df62401ab4a4470bfe96dc412d1ee989006c390"
+  }
+ ]
+}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/171", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find the perimeter of a regular pentagon from the length of its sides.\nassert perimeter_pentagon(5) == 25\n\"\"\"\n"}

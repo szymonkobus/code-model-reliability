@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/458", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find the area of a rectangle.\nassert rectangle_area(10,20)==200\n\"\"\"\n"}

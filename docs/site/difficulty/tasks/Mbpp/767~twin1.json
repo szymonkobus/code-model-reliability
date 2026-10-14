@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/767~twin1", "benchmark": "wave 2", "text": "\"\"\"\nAn accountant is reconciling a ledger and wants to know how many ways two entries can be combined to hit a target total. Write a python function to count the number of pairs whose sum is equal to ‘sum’. The funtion gets as input a list of numbers and the sum,\nassert get_pairs_count([1,1,1,1],2) == 6\n\"\"\""}

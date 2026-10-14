@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/477", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to convert the given string to lower case.\nassert is_lower(\"InValid\") == \"invalid\"\n\"\"\"\n"}

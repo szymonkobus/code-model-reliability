@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/420~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a python function to find the cube sum of first n even natural numbers.\nassert cube_Sum(2) == 72\n\"\"\""}

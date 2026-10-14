@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/577", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the last digit in factorial of a given number.\nassert last_Digit_Factorial(4) == 4\n\"\"\"\n"}

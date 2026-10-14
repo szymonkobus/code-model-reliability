@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/788", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to create a new tuple from the given string and list.\nassert new_tuple([\"WEB\", \"is\"], \"best\") == ('WEB', 'is', 'best')\n\"\"\"\n"}

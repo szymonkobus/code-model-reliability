@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/764", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to count number of digits in a given string.\nassert number_ctr('program2bedone') == 1\n\"\"\"\n"}

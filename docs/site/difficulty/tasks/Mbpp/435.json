@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/435", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the last digit of a given number.\nassert last_Digit(123) == 3\n\"\"\"\n"}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/763", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the minimum difference between any two elements in a given array. \nassert find_min_diff((1,5,3,19,18,25),6) == 1\n\"\"\"\n"}

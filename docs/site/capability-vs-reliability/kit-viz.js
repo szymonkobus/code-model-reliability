@@ -1,11 +1,7 @@
-
-
-
+/* kit-viz.js — the pages' shared tooltip, crosshair and hover helpers (Kit.tooltip, Kit.crosshair, Kit.hoverMarks). Copied beside each page by the site build. */
 (function (global) {
   'use strict';
   var Kit = global.Kit = global.Kit || {};
-
-
   var tipEl = null;
   function ensureTip() {
     if (tipEl) return tipEl;
@@ -16,7 +12,6 @@
     return tipEl;
   }
   Kit.tooltip = {
-
     show: function (clientX, clientY, rows, title) {
       var el = ensureTip();
       el.textContent = '';
@@ -54,8 +49,6 @@
     },
     hide: function () { if (tipEl) tipEl.style.display = 'none'; },
   };
-
-
   Kit.crosshair = function (cfg) {
     var box = typeof cfg.container === 'string'
       ? document.querySelector(cfg.container) : cfg.container;
@@ -63,7 +56,7 @@
     line.className = 'kit-crosshair';
     box.appendChild(line);
     if (!box.hasAttribute('tabindex')) box.tabIndex = 0;
-    var idx = -1;
+    var idx = -1, pinned = false;
 
     function nearest(px) {
       var best = 0, bd = Infinity;
@@ -104,7 +97,9 @@
       showAt(i, null);
     }
     box.addEventListener('pointermove', onMove);
-    box.addEventListener('pointerleave', hide);
+    box.addEventListener('pointerleave', function () { if (!pinned) hide(); });
+    box.addEventListener('pointerdown', function (ev) { if (ev.pointerType === 'touch') { pinned = true; onMove(ev); } });
+    document.addEventListener('pointerdown', function (ev) { if (pinned && !box.contains(ev.target)) { pinned = false; hide(); } });
     box.addEventListener('keydown', onKey);
     box.addEventListener('focus', function () { if (idx < 0) showAt(0, null); });
     box.addEventListener('blur', hide);
@@ -115,8 +110,6 @@
       line.remove(); Kit.tooltip.hide();
     } };
   };
-
-
   Kit.hoverMarks = function (container, selector, fn) {
     var box = typeof container === 'string'
       ? document.querySelector(container) : container;

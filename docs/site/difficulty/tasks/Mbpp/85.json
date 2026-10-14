@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/85", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find the surface area of a sphere.\nassert math.isclose(surfacearea_sphere(10), 1256.6370614359173, rel_tol=0.001)\n\"\"\"\n"}

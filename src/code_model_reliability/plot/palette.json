@@ -1,0 +1,50 @@
+{
+  "about": "The palette of record for every figure and page: one hue per model family, a lightness ladder within the family (lighter is smaller, darker is larger, by the model's rank in the registry), a pinned rung for a model that joined after its family's ladder was drawn, and for a training run one lineage hue darkening along training. A colour is the family hue's hue and saturation at the rung's lightness (HLS). The ground is the colour every figure and page draws on; every rung clears a contrast of 3:1 against it. The families are listed in legend order.",
+  "ground": "#fcfaf3",
+  "ink": "#1a1a1a",
+  "secondary": "#52514e",
+  "muted": "#898781",
+  "grid": "#e1e0d9",
+  "baseline": "#c3c2b7",
+  "default_ladder": {"top": 0.68, "bottom": 0.28, "single": 0.48},
+  "families": {
+    "Qwen2.5-Coder": {"hue": "#2a78d6", "ladder": [0.59, 0.53, 0.47, 0.40, 0.34, 0.28], "match": "qwen[-\\s]?2\\.5[-\\s]?coder"},
+    "Qwen2.5": {"hue": "#3a63e8", "ladder": [0.67, 0.59, 0.51, 0.44, 0.36, 0.28], "match": "qwen[-\\s]?2\\.5(?![-\\s]?coder)", "aliases": ["Qwen2.5-Instruct"]},
+    "Qwen3": {"hue": "#5257e6", "ladder": [0.63, 0.55, 0.47, 0.40, 0.32, 0.24, 0.12], "match": "qwen[-\\s]?3(?![.\\d])(?![-\\s]?coder)"},
+    "Qwen3-Coder": {"hue": "#4066bf", "ladder": [0.57], "match": "qwen[-\\s]?3[-\\s]?coder"},
+    "Qwen3.5": {"hue": "#1a8fdc", "ladder": [0.50], "match": "qwen[-\\s]?3\\.5"},
+    "Claude": {"hue": "#1baf7a", "ladder": [0.36, 0.325, 0.29, 0.255, 0.22], "match": "claude|\\bhaiku\\b|\\bsonnet\\b|\\bopus\\b|\\bfable\\b"},
+    "GLM": {"hue": "#8a7ba8", "ladder": null, "match": "\\bglm\\b"},
+    "Kimi": {"hue": "#0e8291", "ladder": [0.37, 0.34, 0.31, 0.27, 0.24], "match": "\\bkimi\\b|moonshot|moonlight"},
+    "DeepSeek-Coder": {"hue": "#b32fd6", "ladder": [0.63, 0.52, 0.40], "match": "deepseek[-\\s]?coder(?![-\\s]?v2)"},
+    "DeepSeek-Coder-V2": {"hue": "#c93ad6", "ladder": [0.56, 0.40], "match": "deepseek[-\\s]?coder[-\\s]?v2"},
+    "DeepSeek-V3": {"hue": "#dc3eb2", "ladder": [0.565, 0.425, 0.285], "match": "deepseek[-\\s]?v3|deepseek[-\\s]?r1[-\\s]?0528"},
+    "DeepSeek-R1-Distill": {"hue": "#e04fd0", "ladder": [0.60, 0.53, 0.46, 0.39, 0.32], "match": "r1[-\\s]?distill|\\bds[-\\s]?r1d\\b"},
+    "GPT-5": {"hue": "#c81e2e", "ladder": [0.60, 0.40, 0.28], "match": "\\bgpt[-\\s]?5"},
+    "Gemini": {"hue": "#ea7410", "ladder": [0.46, 0.39, 0.32], "match": "\\bgemini\\b"},
+    "Gemma-4": {"hue": "#d97706", "ladder": [0.43, 0.33, 0.22], "match": "\\bgemma\\b"},
+    "Mistral": {"hue": "#a17884", "ladder": [0.5510, 0.4180], "match": "\\bmistral\\b"},
+    "OLMo-2": {"hue": "#008300", "ladder": [0.32, 0.22], "match": "\\bolmo[-\\s]?2\\b"},
+    "Olmo 3": {"hue": "#5e7326", "ladder": [0.39, 0.351, 0.313, 0.274, 0.236, 0.197, 0.159, 0.12], "match": "\\bolmo[-\\s]?3(?:\\.\\d+)?\\b"}
+  },
+  "pinned": {
+    "google/gemma-4-26B-A4B-it": 0.22,
+    "Qwen/Qwen3.5-4B": 0.40,
+    "Qwen/Qwen3-4B-Instruct-2507": 0.18,
+    "Qwen/Qwen3-30B-A3B": 0.71
+  },
+  "series_ramps": {
+    "about": "A training run's positions take the run's base model's family and, where given, the lineage hue; the lightness falls linearly in the step from L0 at the first step to L1 at the last; checkpoint 0 is the base model itself and takes start_light. A run named here is matched by its key in names.json.",
+    "deepseek-coder-6.7b": {"family": "DeepSeek-Coder", "hue": "#b32fd6", "base": "deepseek-ai/deepseek-coder-6.7b-instruct", "ramp": {"first": 25, "last": 500, "L0": 0.3522, "L1": 0.12}, "start_light": 0.52},
+    "r1-distill-qwen-7b": {"family": "DeepSeek-R1-Distill", "hue": "#e04fd0", "base": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B", "ramp": {"first": 25, "last": 250, "L0": 0.22, "L1": 0.10}, "start_light": 0.53},
+    "olmo-3.1-7b-rl-zero-code": {"family": "Olmo 3", "hue": null, "base": null, "ramp": {"first": 50, "last": 1950, "L0": 0.39, "L1": 0.15}, "start_light": null},
+    "olmo-3-7b-think": {"family": "Olmo 3", "hue": null, "base": null, "lights": {"25": 0.39, "50": 0.35, "100": 0.31, "200": 0.27, "400": 0.23, "800": 0.19, "1375": 0.15}, "start_light": null},
+    "olmo-3.1-7b-rl-zero-math": {"family": "Olmo 3", "hue": null, "base": null, "lights": {"100": 0.39, "400": 0.351, "800": 0.313, "1200": 0.274, "1600": 0.236, "2000": 0.197, "2400": 0.159, "2800": 0.12}, "start_light": null}
+  },
+  "lines": {
+    "about": "Dash patterns in units of the line width: a thinking model's line is dashed and its marker open; a fine-tune's line is dotted; a reinforcement-learning run's line is long-dash-dot-dot; every other arm draws solid with a filled circle.",
+    "thinking": [4, 2],
+    "fine_tune": [1, 2],
+    "rl": [8, 2, 1, 2, 1, 2]
+  }
+}

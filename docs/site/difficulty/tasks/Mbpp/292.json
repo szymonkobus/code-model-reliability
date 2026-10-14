@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/292", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find quotient of two numbers (rounded down to the nearest integer).\nassert find(10,3) == 3\n\"\"\"\n"}

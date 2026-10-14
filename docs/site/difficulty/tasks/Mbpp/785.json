@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/785", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to convert tuple string to integer tuple.\nassert tuple_str_int(\"(7, 8, 9)\") == (7, 8, 9)\n\"\"\"\n"}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/740~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a function that converts the given tuple into a key-value dictionary by pairing adjacent elements.\nassert tuple_to_dict((1, 5, 7, 10, 13, 5)) == {1: 5, 7: 10, 13: 5}\n\"\"\""}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/285", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function that checks whether a string contains the 'a' character followed by two or three 'b' characters.\nassert text_match_two_three(\"ac\")==(False)\n\"\"\"\n"}

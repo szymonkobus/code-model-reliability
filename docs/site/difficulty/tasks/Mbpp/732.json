@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/732", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to replace all occurrences of spaces, commas, or dots with a colon.\nassert replace_specialchar('Python language, Programming language.')==('Python:language::Programming:language:')\n\"\"\"\n"}

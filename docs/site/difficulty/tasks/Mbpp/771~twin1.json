@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/771~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a function that determines whether the given expression is balanced or not.\nassert check_expression(\"{()}[{}]\") == True\n\"\"\""}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/791", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to remove tuples from the given tuple.\nassert remove_nested((1, 5, 7, (4, 6), 10)) == (1, 5, 7, 10)\n\"\"\"\n"}

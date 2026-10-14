@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/441~twin1", "benchmark": "wave 2", "text": "\"\"\"\nSo let's say you've got a cube and you know how long its sides are. Write a function that figures out the cube's surface area based on that given size.\nassert surfacearea_cube(5)==150\n\"\"\""}

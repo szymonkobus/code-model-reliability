@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/455", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to check whether the given month number contains 31 days or not.\nassert check_monthnumb_number(5)==True\n\"\"\"\n"}

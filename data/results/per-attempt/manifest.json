@@ -1,0 +1,912 @@
+{
+ "what": "one row per judged attempt of every published arm on the wave 1 tasks the published fit has cells for, from the verdict file of record per arm and benchmark; attempt is the position in that file's list for the task; published_attempts counts the attempts the published cells carry, which exceed the rows where a cell was topped up on another route",
+ "files": {
+  "humaneval": {
+   "file": "wave1_humaneval.csv.gz",
+   "sha256": "1cf995c28cc15a98fccdc5c46819f87296fd6c78e4e9ad1fa75a5e64850beb30",
+   "bytes": 3359700,
+   "fields": [
+    "arm",
+    "task_id",
+    "attempt",
+    "base_status",
+    "plus_status"
+   ],
+   "arms": 63,
+   "rows": 1168768,
+   "per_arm": [
+    {
+     "arm": "Qwen--Qwen2.5-0.5B-Instruct_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18816,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen2.5-1.5B-Instruct_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18816,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen2.5-14B-Instruct_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18816,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen2.5-32B-Instruct_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18816,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen2.5-3B-Instruct_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18816,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen2.5-7B-Instruct_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18816,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen2.5-Coder-0.5B-Instruct_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18816,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen2.5-Coder-1.5B-Instruct_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18816,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen2.5-Coder-14B-Instruct_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18816,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen2.5-Coder-32B-Instruct_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18816,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen2.5-Coder-3B-Instruct_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18816,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen2.5-Coder-7B-Instruct_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18816,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-0.6B_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18816,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-0.6B_think_temp_0.6",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18592,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-1.7B_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18688,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-1.7B_think_temp_0.6",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18624,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-14B_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18816,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-14B_think_temp_0.6",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18592,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-30B-A3B_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18592,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-30B-A3B_think_temp_0.6",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18560,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-32B_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18816,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-32B_think_temp_0.6",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18624,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-4B-Instruct-2507_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18592,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-4B_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18688,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-4B_think_temp_0.6",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18592,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-8B_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18688,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-8B_think_temp_0.6",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18592,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-Coder-30B-A3B-Instruct_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18592,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "claude-haiku-4-5-thinking_batch",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18688,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "claude-haiku-4-5_batch",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18688,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "claude-haiku-5-5-thinking_batch",
+     "tasks": 144,
+     "rows": 18432,
+     "published_attempts": 18432,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "claude-haiku-5-5_batch",
+     "tasks": 144,
+     "rows": 18432,
+     "published_attempts": 18432,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "claude-opus-5-thinking_batch",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18592,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "claude-opus-5_batch",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18592,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "claude-sonnet-5-5-thinking_batch",
+     "tasks": 144,
+     "rows": 18432,
+     "published_attempts": 18432,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "claude-sonnet-5-5_batch",
+     "tasks": 144,
+     "rows": 18432,
+     "published_attempts": 18432,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "claude-sonnet-5-thinking_batch",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18688,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "claude-sonnet-5_batch",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18688,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--DeepSeek-Coder-V2-Instruct_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18560,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--DeepSeek-Coder-V2-Lite-Instruct_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18688,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--DeepSeek-R1-0528_think_temp_0.6",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18560,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--DeepSeek-R1-Distill-Llama-8B_think_temp_0.6",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18592,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--DeepSeek-R1-Distill-Qwen-1.5B_think_temp_0.6",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18624,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--DeepSeek-R1-Distill-Qwen-14B_think_temp_0.6",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18624,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--DeepSeek-R1-Distill-Qwen-32B_think_temp_0.6",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18624,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--DeepSeek-R1-Distill-Qwen-7B_think_temp_0.6",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18624,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--DeepSeek-V3-0324_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18560,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--DeepSeek-V3.2_temp_0.6",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18560,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--DeepSeek-V3.2_think_temp_0.6",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18560,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--deepseek-coder-1.3b-instruct_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18816,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--deepseek-coder-33b-instruct_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18816,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--deepseek-coder-6.7b-instruct_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18816,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "gemini-3.5-flash-lite_batch",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18688,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "gemini-3.6-flash_batch",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18816,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "google--gemma-4-12B-it_temp_0.8@768-marker",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18592,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "google--gemma-4-31B-it_temp_0.8@768-marker",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18592,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "gpt-5-mini_batch",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18816,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "gpt-5-nano_batch",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18816,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "moonshotai--Kimi-Dev-72B_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18624,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "moonshotai--Kimi-K2-Instruct_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18592,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "moonshotai--Kimi-Linear-48B-A3B-Instruct_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18592,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "moonshotai--Moonlight-16B-A3B-Instruct_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18624,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "zai-org--GLM-4.7-Flash_temp_0.8",
+     "tasks": 145,
+     "rows": 18560,
+     "published_attempts": 18624,
+     "published_cells_without_rows": []
+    }
+   ]
+  },
+  "mbpp": {
+   "file": "wave1_mbpp.csv.gz",
+   "sha256": "11a795429dd0998c0f10ccc3f571a652a9899c3c63a914c2d06182a972b13e38",
+   "bytes": 6551617,
+   "fields": [
+    "arm",
+    "task_id",
+    "attempt",
+    "base_status",
+    "plus_status"
+   ],
+   "arms": 62,
+   "rows": 2269696,
+   "per_arm": [
+    {
+     "arm": "Qwen--Qwen2.5-0.5B-Instruct_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38240,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen2.5-1.5B-Instruct_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38272,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen2.5-14B-Instruct_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38240,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen2.5-32B-Instruct_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38240,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen2.5-3B-Instruct_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38240,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen2.5-7B-Instruct_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38240,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen2.5-Coder-0.5B-Instruct_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38208,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen2.5-Coder-1.5B-Instruct_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38240,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen2.5-Coder-14B-Instruct_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38176,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen2.5-Coder-32B-Instruct_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38112,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen2.5-Coder-3B-Instruct_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38112,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen2.5-Coder-7B-Instruct_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38240,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-0.6B_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38272,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-0.6B_think_temp_0.6",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 37312,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-1.7B_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38272,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-1.7B_think_temp_0.6",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 37664,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-14B_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38176,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-14B_think_temp_0.6",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 37216,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-30B-A3B_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 37152,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-32B_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38144,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-32B_think_temp_0.6",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 37312,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-4B-Instruct-2507_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 37152,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-4B_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38208,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-4B_think_temp_0.6",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 37312,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-8B_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38240,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-8B_think_temp_0.6",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 37408,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Qwen--Qwen3-Coder-30B-A3B-Instruct_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 37088,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "claude-haiku-4-5-thinking_batch",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38016,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "claude-haiku-4-5_batch",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38016,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "claude-haiku-5-5-thinking_batch",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 36608,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "claude-haiku-5-5_batch",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 36608,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "claude-opus-5-thinking_batch",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 36832,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "claude-opus-5_batch",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 36832,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "claude-sonnet-5-5-thinking_batch",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 36608,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "claude-sonnet-5-5_batch",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 36608,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "claude-sonnet-5-thinking_batch",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38016,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "claude-sonnet-5_batch",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38016,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--DeepSeek-Coder-V2-Instruct_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 36640,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--DeepSeek-Coder-V2-Lite-Instruct_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38112,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--DeepSeek-R1-0528_think_temp_0.6",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 36608,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--DeepSeek-R1-Distill-Llama-8B_think_temp_0.6",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 37056,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--DeepSeek-R1-Distill-Qwen-1.5B_think_temp_0.6",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 37120,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--DeepSeek-R1-Distill-Qwen-14B_think_temp_0.6",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 36992,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--DeepSeek-R1-Distill-Qwen-32B_think_temp_0.6",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 37184,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--DeepSeek-R1-Distill-Qwen-7B_think_temp_0.6",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 37472,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--DeepSeek-V3-0324_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 36608,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--DeepSeek-V3.2_temp_0.6",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38016,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--DeepSeek-V3.2_think_temp_0.6",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 36608,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--deepseek-coder-1.3b-instruct_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38016,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--deepseek-coder-33b-instruct_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38016,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "deepseek-ai--deepseek-coder-6.7b-instruct_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38016,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "gemini-3.5-flash-lite_batch",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38016,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "gemini-3.6-flash_batch",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38016,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "google--gemma-4-12B-it_temp_0.8@768-marker",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 36960,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "google--gemma-4-31B-it_temp_0.8@768-marker",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 36960,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "gpt-5-mini_batch",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38016,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "gpt-5-nano_batch",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38016,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "moonshotai--Kimi-Dev-72B_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 36992,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "moonshotai--Kimi-K2-Instruct_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 38016,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "moonshotai--Kimi-Linear-48B-A3B-Instruct_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 36992,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "moonshotai--Moonlight-16B-A3B-Instruct_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 37088,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "zai-org--GLM-4.7-Flash_temp_0.8",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 37088,
+     "published_cells_without_rows": []
+    }
+   ]
+  }
+ }
+}

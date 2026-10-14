@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/3", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to identify non-prime numbers.\nassert is_not_prime(2) == False\n\"\"\"\n"}

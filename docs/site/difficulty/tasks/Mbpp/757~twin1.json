@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/757~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a function that, given a list of strings, counts the pairs of strings in the list that are reverses of one another.\nassert count_reverse_pairs([\"julia\", \"best\", \"tseb\", \"for\", \"ailuj\"])== 2\n\"\"\""}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/286~twin1", "benchmark": "wave 2", "text": "\"\"\"\nSay you take an array and repeat it k times, gluing the copies end to end into one longer array. Your job is to write a function that finds the largest sum of a contiguous array within that repeated version.\nassert max_sub_array_sum_repeated([10, 20, -30, -1], 4, 3) == 30\n\"\"\""}

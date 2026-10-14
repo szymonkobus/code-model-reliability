@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/268", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find the n'th star number.\nassert find_star_num(3) == 37\n\"\"\"\n"}

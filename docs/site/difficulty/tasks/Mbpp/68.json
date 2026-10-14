@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/68", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to check whether the given array is monotonic or not.\nassert is_Monotonic([6, 5, 4, 4]) == True\n\"\"\"\n"}

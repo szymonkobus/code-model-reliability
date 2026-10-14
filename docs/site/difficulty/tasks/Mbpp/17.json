@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/17", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function that returns the perimeter of a square given its side length as input.\nassert square_perimeter(10)==40\n\"\"\"\n"}

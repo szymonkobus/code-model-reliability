@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/437", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to remove odd characters in a string.\nassert remove_odd(\"python\")==(\"yhn\")\n\"\"\"\n"}

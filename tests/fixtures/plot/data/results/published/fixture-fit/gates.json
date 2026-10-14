@@ -1,0 +1,154 @@
+{
+ "rule": {
+  "verdict": "five or more divergences never decides alone: fail on divergences above 0.5% of the kept draws, on split R-hat above 1.01 or bulk effective sample size below 400 of the D50 or D99 crossing draws (a bound level exempt; a thinned export's sample size reported, not gated); the engine's count flag beside as a note",
+  "concentration": "a reading beside the gates, never a hold",
+  "regimes": [
+   {
+    "regime": "extreme",
+    "min": 0.8,
+    "max": null
+   },
+   {
+    "regime": "concentrated",
+    "min": 0.5,
+    "max": 0.8
+   },
+   {
+    "regime": "intermediate",
+    "min": 0.3,
+    "max": 0.5
+   },
+   {
+    "regime": "diffuse",
+    "min": null,
+    "max": 0.3
+   }
+  ]
+ },
+ "n_arms": 4,
+ "n_pass": 3,
+ "arms": {
+  "Qwen--Qwen3-8B_temp_0.8": {
+   "divergences": 0,
+   "divergence_share": 0.0,
+   "divergence_gate": "pass",
+   "engine_divergence_flag": "pass",
+   "rhat_gate": "FAIL",
+   "ess_gate": "pass",
+   "gates_failed": [
+    "rhat"
+   ],
+   "gate": "FAIL",
+   "crossing_rhat_d50": 1.0139,
+   "crossing_ess_d50": 482.6,
+   "crossing_rhat_d99": 1.0017,
+   "crossing_ess_d99": 2898.8,
+   "crossing_mixes_d50": false,
+   "crossing_mixes_d99": true,
+   "crossing_chain_spread_d50": 0.032,
+   "crossing_chain_spread_d99": 0.0073,
+   "draws_basis": "full",
+   "parameter_rhat_max": 1.0051,
+   "parameter_ess_min": 1281.8,
+   "engine_rhat_gate": "FAIL",
+   "engine_ess_gate": "pass",
+   "chains_disagree_on": [],
+   "concentration": {
+    "share_top5pct_easy_third": 0.996,
+    "any_fail_share_easy_third": 0.0554,
+    "n_easy_third_tasks": 433,
+    "regime": "extreme"
+   }
+  },
+  "Qwen--Qwen3-8B_think_temp_0.6": {
+   "divergences": 0,
+   "divergence_share": 0.0,
+   "divergence_gate": "pass",
+   "engine_divergence_flag": "pass",
+   "rhat_gate": "pass",
+   "ess_gate": "pass",
+   "gates_failed": [],
+   "gate": "pass",
+   "crossing_rhat_d50": 1.0041,
+   "crossing_ess_d50": 1218.6,
+   "crossing_rhat_d99": 1.001,
+   "crossing_ess_d99": 3430.5,
+   "crossing_mixes_d50": true,
+   "crossing_mixes_d99": true,
+   "crossing_chain_spread_d50": 0.0041,
+   "crossing_chain_spread_d99": 0.0025,
+   "draws_basis": "full",
+   "parameter_rhat_max": 1.0009,
+   "parameter_ess_min": 1673.0,
+   "engine_rhat_gate": "pass",
+   "engine_ess_gate": "pass",
+   "chains_disagree_on": [],
+   "concentration": {
+    "share_top5pct_easy_third": 1.0,
+    "any_fail_share_easy_third": 0.03,
+    "n_easy_third_tasks": 433,
+    "regime": "extreme"
+   }
+  },
+  "claude-haiku-4-5-thinking_batch": {
+   "divergences": 0,
+   "divergence_share": 0.0,
+   "divergence_gate": "pass",
+   "engine_divergence_flag": "pass",
+   "rhat_gate": "pass",
+   "ess_gate": "pass",
+   "gates_failed": [],
+   "gate": "pass",
+   "crossing_rhat_d50": 1.0061,
+   "crossing_ess_d50": 715.5,
+   "crossing_rhat_d99": 1.002,
+   "crossing_ess_d99": 2272.1,
+   "crossing_mixes_d50": true,
+   "crossing_mixes_d99": true,
+   "crossing_chain_spread_d50": 0.0113,
+   "crossing_chain_spread_d99": 0.0081,
+   "draws_basis": "full",
+   "parameter_rhat_max": 1.0015,
+   "parameter_ess_min": 1424.1,
+   "engine_rhat_gate": "pass",
+   "engine_ess_gate": "pass",
+   "chains_disagree_on": [],
+   "concentration": {
+    "share_top5pct_easy_third": 1.0,
+    "any_fail_share_easy_third": 0.0208,
+    "n_easy_third_tasks": 433,
+    "regime": "extreme"
+   }
+  },
+  "claude-haiku-4-5_batch": {
+   "divergences": 0,
+   "divergence_share": 0.0,
+   "divergence_gate": "pass",
+   "engine_divergence_flag": "pass",
+   "rhat_gate": "pass",
+   "ess_gate": "pass",
+   "gates_failed": [],
+   "gate": "pass",
+   "crossing_rhat_d50": 1.0067,
+   "crossing_ess_d50": 414.4,
+   "crossing_rhat_d99": 1.002,
+   "crossing_ess_d99": 1152.8,
+   "crossing_mixes_d50": true,
+   "crossing_mixes_d99": true,
+   "crossing_chain_spread_d50": 0.0071,
+   "crossing_chain_spread_d99": 0.0124,
+   "draws_basis": "full",
+   "parameter_rhat_max": 1.0042,
+   "parameter_ess_min": 1417.5,
+   "engine_rhat_gate": "pass",
+   "engine_ess_gate": "pass",
+   "chains_disagree_on": [],
+   "concentration": {
+    "share_top5pct_easy_third": 1.0,
+    "any_fail_share_easy_third": 0.0162,
+    "n_easy_third_tasks": 433,
+    "regime": "extreme"
+   }
+  }
+ }
+}

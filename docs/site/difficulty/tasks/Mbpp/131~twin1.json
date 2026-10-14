@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/131~twin1", "benchmark": "wave 2", "text": "\"\"\"\nImplement a Python function that returns the given string with its vowel characters reversed in order, while all non-vowel characters remain in their original positions; the letter y is not considered a vowel.\nassert reverse_vowels(\"Python\") == \"Python\"\n\"\"\""}

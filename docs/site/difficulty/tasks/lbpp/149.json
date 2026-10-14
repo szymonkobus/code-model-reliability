@@ -1,1 +1,0 @@
-{"task_id": "lbpp/149", "benchmark": "wave 2", "text": "def test_sqrt_ratio(num: float) -> bool:\n    \"\"\"Write a python function that returns True if the square root of a number is strictly greater than the number divided by ten. For negative numbers, return False.\n    \"\"\"\n"}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/803", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to check whether the given number is a perfect square or not. \nassert not is_perfect_square(10)\n\"\"\"\n"}

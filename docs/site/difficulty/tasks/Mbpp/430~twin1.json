@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/430~twin1", "benchmark": "wave 2", "text": "\"\"\"\nFind the directrix of a parabola.\nassert parabola_directrix(5,3,2)==-198\n\"\"\""}

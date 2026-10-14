@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/113", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to check if a string represents an integer or not.\nassert check_integer(\"python\")==False\n\"\"\"\n"}

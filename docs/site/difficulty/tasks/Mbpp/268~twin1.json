@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/268~twin1", "benchmark": "wave 2", "text": "\"\"\"\nHey, here's a little challenge for you: write a function that gives back the n'th star number.\nassert find_star_num(3) == 37\n\"\"\""}

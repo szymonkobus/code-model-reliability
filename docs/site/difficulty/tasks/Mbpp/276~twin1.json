@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/276~twin1", "benchmark": "wave 2", "text": "\"\"\"\nDefine a function that, given the radius and the height of a cylinder, returns the volume of that cylinder.\nassert math.isclose(volume_cylinder(10,5), 1570.7500000000002, rel_tol=0.001)\n\"\"\""}

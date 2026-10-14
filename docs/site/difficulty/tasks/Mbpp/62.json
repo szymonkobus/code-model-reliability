@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/62", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find smallest number in a list.\nassert smallest_num([10, 20, 1, 45, 99]) == 1\n\"\"\"\n"}

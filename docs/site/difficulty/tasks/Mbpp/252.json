@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/252", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to convert complex numbers to polar coordinates.\nassert convert(1) == (1.0, 0.0)\n\"\"\"\n"}

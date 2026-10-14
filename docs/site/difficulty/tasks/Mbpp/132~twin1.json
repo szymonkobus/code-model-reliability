@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/132~twin1", "benchmark": "wave 2", "text": "\"\"\"\nA typesetter at a small print shop stores each piece of text as a tuple of its individual characters, but the printing press only accepts whole strings. Write a function to convert a tuple to a string.\nassert tup_string(('e', 'x', 'e', 'r', 'c', 'i', 's', 'e', 's'))==(\"exercises\")\n\"\"\""}

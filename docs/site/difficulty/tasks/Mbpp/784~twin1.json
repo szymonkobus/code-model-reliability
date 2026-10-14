@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/784~twin1", "benchmark": "wave 2", "text": "\"\"\"\nImplement a function to compute the product of the first even number and the first odd number of a given list.\nassert mul_even_odd([1,3,5,7,4,1,6,8])==4\n\"\"\""}

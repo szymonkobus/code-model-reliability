@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/555", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the difference between the sum of cubes of the first n natural numbers and the sum of the first n natural numbers.\nassert difference(3) == 30\n\"\"\"\n"}

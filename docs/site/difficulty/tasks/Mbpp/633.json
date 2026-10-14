@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/633", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the sum of xor of all pairs of numbers in the given list.\nassert pair_xor_Sum([5,9,7,6],4) == 47\n\"\"\"\n"}

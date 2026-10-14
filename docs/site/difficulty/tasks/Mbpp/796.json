@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/796", "benchmark": "mbpp", "text": "\"\"\"\nWrite function to find the sum of all items in the given dictionary.\nassert return_sum({'a': 100, 'b':200, 'c':300}) == 600\n\"\"\"\n"}

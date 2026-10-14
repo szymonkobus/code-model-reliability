@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/92~twin1", "benchmark": "wave 2", "text": "\"\"\"\nHey, could you write a function that checks whether the given number is undulating or not?\nassert is_undulating(1212121) == True\n\"\"\""}

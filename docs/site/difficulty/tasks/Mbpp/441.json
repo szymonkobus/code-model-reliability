@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/441", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find the surface area of a cube of a given size.\nassert surfacearea_cube(5)==150\n\"\"\"\n"}

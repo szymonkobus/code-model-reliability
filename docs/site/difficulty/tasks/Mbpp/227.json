@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/227", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find minimum of three numbers.\nassert min_of_three(10,20,0)==0\n\"\"\"\n"}

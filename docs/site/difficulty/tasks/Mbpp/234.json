@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/234", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find the volume of a cube given its side length.\nassert volume_cube(3)==27\n\"\"\"\n"}

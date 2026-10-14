@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/626", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the area of the largest triangle that can be inscribed in a semicircle with a given radius.\nassert triangle_area(-1) == None\n\"\"\"\n"}

@@ -1,0 +1,64 @@
+stem	arm	model_id	model_name	family
+Qwen--Qwen2.5-0.5B-Instruct	Qwen--Qwen2.5-0.5B-Instruct_temp_0.8	Qwen/Qwen2.5-0.5B-Instruct	Qwen2.5 0.5B	Qwen2.5-Instruct
+Qwen--Qwen2.5-1.5B-Instruct	Qwen--Qwen2.5-1.5B-Instruct_temp_0.8	Qwen/Qwen2.5-1.5B-Instruct	Qwen2.5 1.5B	Qwen2.5-Instruct
+Qwen--Qwen2.5-14B-Instruct	Qwen--Qwen2.5-14B-Instruct_temp_0.8	Qwen/Qwen2.5-14B-Instruct	Qwen2.5 14B	Qwen2.5-Instruct
+Qwen--Qwen2.5-32B-Instruct	Qwen--Qwen2.5-32B-Instruct_temp_0.8	Qwen/Qwen2.5-32B-Instruct	Qwen2.5 32B	Qwen2.5-Instruct
+Qwen--Qwen2.5-3B-Instruct	Qwen--Qwen2.5-3B-Instruct_temp_0.8	Qwen/Qwen2.5-3B-Instruct	Qwen2.5 3B	Qwen2.5-Instruct
+Qwen--Qwen2.5-7B-Instruct	Qwen--Qwen2.5-7B-Instruct_temp_0.8	Qwen/Qwen2.5-7B-Instruct	Qwen2.5 7B	Qwen2.5-Instruct
+Qwen--Qwen2.5-Coder-0.5B-Instruct	Qwen--Qwen2.5-Coder-0.5B-Instruct_temp_0.8	Qwen/Qwen2.5-Coder-0.5B-Instruct	Qwen2.5-Coder 0.5B	Qwen2.5-Coder
+Qwen--Qwen2.5-Coder-1.5B-Instruct	Qwen--Qwen2.5-Coder-1.5B-Instruct_temp_0.8	Qwen/Qwen2.5-Coder-1.5B-Instruct	Qwen2.5-Coder 1.5B	Qwen2.5-Coder
+Qwen--Qwen2.5-Coder-14B-Instruct	Qwen--Qwen2.5-Coder-14B-Instruct_temp_0.8	Qwen/Qwen2.5-Coder-14B-Instruct	Qwen2.5-Coder 14B	Qwen2.5-Coder
+Qwen--Qwen2.5-Coder-32B-Instruct	Qwen--Qwen2.5-Coder-32B-Instruct_temp_0.8	Qwen/Qwen2.5-Coder-32B-Instruct	Qwen2.5-Coder 32B	Qwen2.5-Coder
+Qwen--Qwen2.5-Coder-3B-Instruct	Qwen--Qwen2.5-Coder-3B-Instruct_temp_0.8	Qwen/Qwen2.5-Coder-3B-Instruct	Qwen2.5-Coder 3B	Qwen2.5-Coder
+Qwen--Qwen2.5-Coder-7B-Instruct	Qwen--Qwen2.5-Coder-7B-Instruct_temp_0.8	Qwen/Qwen2.5-Coder-7B-Instruct	Qwen2.5-Coder 7B	Qwen2.5-Coder
+Qwen--Qwen3-0.6B	Qwen--Qwen3-0.6B_temp_0.8	Qwen/Qwen3-0.6B	Qwen3 0.6B	Qwen3
+Qwen--Qwen3-0.6B	Qwen--Qwen3-0.6B_think_temp_0.6	Qwen/Qwen3-0.6B	Qwen3 0.6B (thinking)	Qwen3
+Qwen--Qwen3-1.7B	Qwen--Qwen3-1.7B_temp_0.8	Qwen/Qwen3-1.7B	Qwen3 1.7B	Qwen3
+Qwen--Qwen3-1.7B	Qwen--Qwen3-1.7B_think_temp_0.6	Qwen/Qwen3-1.7B	Qwen3 1.7B (thinking)	Qwen3
+Qwen--Qwen3-14B	Qwen--Qwen3-14B_temp_0.8	Qwen/Qwen3-14B	Qwen3 14B	Qwen3
+Qwen--Qwen3-14B	Qwen--Qwen3-14B_think_temp_0.6	Qwen/Qwen3-14B	Qwen3 14B (thinking)	Qwen3
+Qwen--Qwen3-30B-A3B	Qwen--Qwen3-30B-A3B_temp_0.8	Qwen/Qwen3-30B-A3B	Qwen3 30B-A3B	Qwen3
+Qwen--Qwen3-30B-A3B	Qwen--Qwen3-30B-A3B_think_temp_0.6	Qwen/Qwen3-30B-A3B	Qwen3 30B-A3B (thinking)	Qwen3
+Qwen--Qwen3-32B	Qwen--Qwen3-32B_temp_0.8	Qwen/Qwen3-32B	Qwen3 32B	Qwen3
+Qwen--Qwen3-32B	Qwen--Qwen3-32B_think_temp_0.6	Qwen/Qwen3-32B	Qwen3 32B (thinking)	Qwen3
+Qwen--Qwen3-4B-Instruct-2507	Qwen--Qwen3-4B-Instruct-2507_temp_0.8	Qwen/Qwen3-4B-Instruct-2507	Qwen3 4B (2507)	Qwen3
+Qwen--Qwen3-4B	Qwen--Qwen3-4B_temp_0.8	Qwen/Qwen3-4B	Qwen3 4B	Qwen3
+Qwen--Qwen3-4B	Qwen--Qwen3-4B_think_temp_0.6	Qwen/Qwen3-4B	Qwen3 4B (thinking)	Qwen3
+Qwen--Qwen3-8B	Qwen--Qwen3-8B_temp_0.8	Qwen/Qwen3-8B	Qwen3 8B	Qwen3
+Qwen--Qwen3-8B	Qwen--Qwen3-8B_think_temp_0.6	Qwen/Qwen3-8B	Qwen3 8B (thinking)	Qwen3
+Qwen--Qwen3-Coder-30B-A3B-Instruct	Qwen--Qwen3-Coder-30B-A3B-Instruct_temp_0.8	Qwen/Qwen3-Coder-30B-A3B-Instruct	Qwen3-Coder 30B-A3B	Qwen3-Coder
+claude-haiku-4-5-thinking	claude-haiku-4-5-thinking_batch	claude-haiku-4-5-thinking	Haiku 4.5 (thinking)	Claude
+claude-haiku-4-5	claude-haiku-4-5_batch	claude-haiku-4-5	Haiku 4.5	Claude
+claude-haiku-5-5-thinking	claude-haiku-5-5-thinking_batch	claude-haiku-5-5	Haiku 5.5 (thinking)	Claude
+claude-haiku-5-5	claude-haiku-5-5_batch	claude-haiku-5-5	Haiku 5.5	Claude
+claude-opus-5-thinking	claude-opus-5-thinking_batch	claude-opus-5	Opus 5 (thinking)	Claude
+claude-opus-5	claude-opus-5_batch	claude-opus-5	Opus 5	Claude
+claude-sonnet-5-5-thinking	claude-sonnet-5-5-thinking_batch	claude-sonnet-5-5	Sonnet 5.5 (thinking)	Claude
+claude-sonnet-5-5	claude-sonnet-5-5_batch	claude-sonnet-5-5	Sonnet 5.5	Claude
+claude-sonnet-5-thinking	claude-sonnet-5-thinking_batch	claude-sonnet-5	Sonnet 5 (thinking)	Claude
+claude-sonnet-5	claude-sonnet-5_batch	claude-sonnet-5	Sonnet 5	Claude
+deepseek-ai--DeepSeek-Coder-V2-Instruct	deepseek-ai--DeepSeek-Coder-V2-Instruct_temp_0.8	deepseek-ai/DeepSeek-Coder-V2-Instruct	DeepSeek-Coder-V2 236B-A21B	DeepSeek-Coder-V2
+deepseek-ai--DeepSeek-Coder-V2-Lite-Instruct	deepseek-ai--DeepSeek-Coder-V2-Lite-Instruct_temp_0.8	deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct	DeepSeek-Coder-V2-Lite	DeepSeek-Coder-V2
+deepseek-ai--DeepSeek-R1-0528	deepseek-ai--DeepSeek-R1-0528_think_temp_0.6	deepseek-ai/DeepSeek-R1-0528	DeepSeek-R1-0528 (thinking)	DeepSeek-V3
+deepseek-ai--DeepSeek-R1-Distill-Llama-8B	deepseek-ai--DeepSeek-R1-Distill-Llama-8B_think_temp_0.6	deepseek-ai/DeepSeek-R1-Distill-Llama-8B	R1-Distill Llama 8B (thinking)	DeepSeek-R1-Distill
+deepseek-ai--DeepSeek-R1-Distill-Qwen-1.5B	deepseek-ai--DeepSeek-R1-Distill-Qwen-1.5B_think_temp_0.6	deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B	R1-Distill Qwen 1.5B (thinking)	DeepSeek-R1-Distill
+deepseek-ai--DeepSeek-R1-Distill-Qwen-14B	deepseek-ai--DeepSeek-R1-Distill-Qwen-14B_think_temp_0.6	deepseek-ai/DeepSeek-R1-Distill-Qwen-14B	R1-Distill Qwen 14B (thinking)	DeepSeek-R1-Distill
+deepseek-ai--DeepSeek-R1-Distill-Qwen-32B	deepseek-ai--DeepSeek-R1-Distill-Qwen-32B_think_temp_0.6	deepseek-ai/DeepSeek-R1-Distill-Qwen-32B	R1-Distill Qwen 32B (thinking)	DeepSeek-R1-Distill
+deepseek-ai--DeepSeek-R1-Distill-Qwen-7B	deepseek-ai--DeepSeek-R1-Distill-Qwen-7B_think_temp_0.6	deepseek-ai/DeepSeek-R1-Distill-Qwen-7B	R1-Distill Qwen 7B (thinking)	DeepSeek-R1-Distill
+deepseek-ai--DeepSeek-V3-0324	deepseek-ai--DeepSeek-V3-0324_temp_0.8	deepseek-ai/DeepSeek-V3-0324	DeepSeek-V3-0324	DeepSeek-V3
+deepseek-ai--DeepSeek-V3.2	deepseek-ai--DeepSeek-V3.2_temp_0.6	deepseek-ai/DeepSeek-V3.2	DeepSeek-V3.2	DeepSeek-V3
+deepseek-ai--DeepSeek-V3.2	deepseek-ai--DeepSeek-V3.2_think_temp_0.6	deepseek-ai/DeepSeek-V3.2	DeepSeek-V3.2 (thinking)	DeepSeek-V3
+deepseek-ai--deepseek-coder-1.3b-instruct	deepseek-ai--deepseek-coder-1.3b-instruct_temp_0.8	deepseek-ai/deepseek-coder-1.3b-instruct	DeepSeek-Coder 1.3B	DeepSeek-Coder
+deepseek-ai--deepseek-coder-33b-instruct	deepseek-ai--deepseek-coder-33b-instruct_temp_0.8	deepseek-ai/deepseek-coder-33b-instruct	DeepSeek-Coder 33B	DeepSeek-Coder
+deepseek-ai--deepseek-coder-6.7b-instruct	deepseek-ai--deepseek-coder-6.7b-instruct_temp_0.8	deepseek-ai/deepseek-coder-6.7b-instruct	DeepSeek-Coder 6.7B	DeepSeek-Coder
+gemini-3.5-flash-lite	gemini-3.5-flash-lite_batch	google/gemini-3.5-flash-lite	Gemini 3.5 Flash-Lite	Gemini
+gemini-3.6-flash	gemini-3.6-flash_batch	google/gemini-3.6-flash	Gemini 3.6 Flash (thinking)	Gemini
+google--gemma-4-12B-it	google--gemma-4-12B-it_temp_0.8@768-marker	google/gemma-4-12B-it	Gemma 4 12B	Gemma-4
+google--gemma-4-31B-it	google--gemma-4-31B-it_temp_0.8@768-marker	google/gemma-4-31B-it	Gemma 4 31B	Gemma-4
+gpt-5-mini	gpt-5-mini_batch	openai/gpt-5-mini	GPT-5 mini (thinking)	GPT-5
+gpt-5-nano	gpt-5-nano_batch	openai/gpt-5-nano	GPT-5 nano (thinking)	GPT-5
+moonshotai--Kimi-Dev-72B	moonshotai--Kimi-Dev-72B_temp_0.8	moonshotai/Kimi-Dev-72B	Kimi-Dev 72B	Kimi
+moonshotai--Kimi-K2-Instruct	moonshotai--Kimi-K2-Instruct_temp_0.8	moonshotai/Kimi-K2-Instruct	Kimi-K2	Kimi
+moonshotai--Kimi-Linear-48B-A3B-Instruct	moonshotai--Kimi-Linear-48B-A3B-Instruct_temp_0.8	moonshotai/Kimi-Linear-48B-A3B-Instruct	Kimi-Linear 48B-A3B	Kimi
+moonshotai--Moonlight-16B-A3B-Instruct	moonshotai--Moonlight-16B-A3B-Instruct_temp_0.8	moonshotai/Moonlight-16B-A3B-Instruct	Moonlight-16B	Kimi
+zai-org--GLM-4.7-Flash	zai-org--GLM-4.7-Flash_temp_0.8	zai-org/GLM-4.7-Flash	GLM-4.7-Flash	GLM

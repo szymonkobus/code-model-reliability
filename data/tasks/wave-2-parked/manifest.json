@@ -1,0 +1,55 @@
+{
+ "set": "wave 2 parked",
+ "set_key": "wave_2_parked",
+ "members": 893,
+ "kept_by_audit": 879,
+ "full_text_tasks": 654,
+ "pointer_tasks": 239,
+ "pointers_by_reason": {
+  "filtered-string": 1,
+  "upstream-terms": 238
+ },
+ "pointers_reissued_with_inputs_removed": 136,
+ "pointer_rebuild": "convert the upstream row with the converter the pointer names (cmr tasks convert), then remove the inputs listed under rebuild, matched by value; the content hash then equals the certified one",
+ "io_modes": {
+  "function": 425,
+  "stdio": 468
+ },
+ "records_with_plus_inputs_removed": 31,
+ "records_with_input_shapes": 50,
+ "sha256_sorted_members": "751b9b62afb8eed28d63377f91dada73e85cd953299a58983938620bc68e39e5",
+ "sha256_sorted_kept": "9b897ca256b2a2f912357a0748284b8f45d59d5aa8c2f4aeb7accc47ea3ca219",
+ "hash_recipe": "sha256(json.dumps({task_id, prompt, entry_point, canonical_solution, base_input, plus_input, atol, expected_output}, sort_keys=True))",
+ "record_fields": [
+  "task_id",
+  "prompt",
+  "entry_point",
+  "canonical_solution",
+  "base_input",
+  "plus_input",
+  "atol",
+  "expected_output",
+  "content_sha256",
+  "kept_by_audit",
+  "io_mode",
+  "provenance"
+ ],
+ "record_fields_where_they_apply": {
+  "plus_inputs_removed": "an extended test input that carries a boolean at an argument position where no example input carries one is removed before judging; a reworded copy inherits its parent's list; matched by value",
+  "input_shapes": "the declared shape per positional argument; the inputs are converted to these shapes (tuples, sets) before the call"
+ },
+ "parts": [
+  {
+   "file": "tasks-part-01.jsonl.gz",
+   "records": 600,
+   "bytes": 40510273,
+   "sha256": "65124cac17719ff8c7d541cf27606ee67407de7356b62fd5c57f0c0ab1f8cda9"
+  },
+  {
+   "file": "tasks-part-02.jsonl.gz",
+   "records": 54,
+   "bytes": 3572233,
+   "sha256": "c482ecc17019c35b6c8eabd7a253b84067ebc4cf6d5829ea0e57041a911434c4"
+  }
+ ]
+}

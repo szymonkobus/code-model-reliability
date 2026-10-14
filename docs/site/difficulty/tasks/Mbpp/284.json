@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/284", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function that takes in a list and element and checks whether all items in the list are equal to the given element.\nassert check_element([\"green\", \"orange\", \"black\", \"white\"],'blue')==False\n\"\"\"\n"}

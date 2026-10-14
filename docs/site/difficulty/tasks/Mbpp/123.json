@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/123", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to sum all amicable numbers from 1 to a specified number.\nassert amicable_numbers_sum(999)==504\n\"\"\"\n"}

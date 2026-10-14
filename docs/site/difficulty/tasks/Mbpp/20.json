@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/20", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to check if the given number is woodball or not.\nassert is_woodall(383) == True\n\"\"\"\n"}

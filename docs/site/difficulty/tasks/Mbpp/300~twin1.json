@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/300~twin1", "benchmark": "wave 2", "text": "\"\"\"\nHere's the task: write a function that, given n, counts up all the binary sequences of length 2n where the sum of the first n bits comes out the same as the sum of the last n bits.\nassert math.isclose(count_binary_seq(1), 2.0, rel_tol=0.001)\n\"\"\""}

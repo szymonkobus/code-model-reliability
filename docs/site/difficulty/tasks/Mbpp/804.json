@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/804", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to check whether the product of numbers in a list is even or not.\nassert is_product_even([1,2,3])\n\"\"\"\n"}

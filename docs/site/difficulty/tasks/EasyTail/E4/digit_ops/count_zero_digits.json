@@ -1,1 +1,0 @@
-{"task_id": "EasyTail/E4/digit_ops/count_zero_digits", "benchmark": "wave 2", "text": "def count_zero_digits(n):\n    \"\"\"Given a positive integer n (n >= 1), return how many decimal digits of n are the digit 0. Return the result as an int.\n    >>> count_zero_digits(1)\n    0\n    >>> count_zero_digits(10)\n    1\n    \"\"\"\n"}

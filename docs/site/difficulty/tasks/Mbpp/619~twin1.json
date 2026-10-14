@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/619~twin1", "benchmark": "wave 2", "text": "\"\"\"\nHey, here's what I need: write a function that takes a string and moves all the numbers in it to the end of that string.\nassert move_num('I1love143you55three3000thousand') == 'Iloveyouthreethousand1143553000'\n\"\"\""}

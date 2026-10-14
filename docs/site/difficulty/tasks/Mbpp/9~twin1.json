@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/9~twin1", "benchmark": "wave 2", "text": "\"\"\"\nSo here's the task: I need a python function that figures out how many times you have to rotate a string before it looks like itself again — specifically, the minimum number of rotations (it has to be greater than 0) required to get the same string back.\nassert find_Rotations(\"aaaa\") == 1\n\"\"\""}

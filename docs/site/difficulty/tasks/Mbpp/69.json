@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/69", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to check whether a list contains the given sublist or not.\nassert is_sublist([2,4,3,5,7],[3,7])==False\n\"\"\"\n"}

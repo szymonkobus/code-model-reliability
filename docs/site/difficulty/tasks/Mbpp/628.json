@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/628", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to replace all spaces in the given string with '%20'.\nassert replace_spaces(\"My Name is Dawood\") == 'My%20Name%20is%20Dawood'\n\"\"\"\n"}

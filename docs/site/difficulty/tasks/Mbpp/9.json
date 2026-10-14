@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/9", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the minimum number of rotations (greater than 0) required to get the same string.\nassert find_Rotations(\"aaaa\") == 1\n\"\"\"\n"}

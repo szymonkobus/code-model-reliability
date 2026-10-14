@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/58", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to check whether the given two integers have opposite sign or not.\nassert opposite_Signs(1,-2) == True\n\"\"\"\n"}

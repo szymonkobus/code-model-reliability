@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/793", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the last position of an element in a sorted array.\nassert last([1,2,3],1) == 0\n\"\"\"\n"}

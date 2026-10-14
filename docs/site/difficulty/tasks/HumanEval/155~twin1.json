@@ -1,1 +1,0 @@
-{"task_id": "HumanEval/155~twin1", "benchmark": "wave 2", "text": "def even_odd_count(num):\n    \"\"\"So here's the deal: you get handed an integer, and your job is to hand back a tuple counting its digits — how many are even and how many are odd, in that order.\n\n     Example:\n        even_odd_count(-12) ==> (1, 1)\n        even_odd_count(123) ==> (1, 2)\n    \"\"\"\n"}

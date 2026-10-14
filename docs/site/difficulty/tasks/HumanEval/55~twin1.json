@@ -1,1 +1,0 @@
-{"task_id": "HumanEval/55~twin1", "benchmark": "wave 2", "text": "\ndef fib(n: int):\n    \"\"\"Return the n-th term of the Fibonacci sequence.\n    >>> fib(10)\n    55\n    >>> fib(1)\n    1\n    >>> fib(8)\n    21\n    \"\"\"\n"}

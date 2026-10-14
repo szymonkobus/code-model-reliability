@@ -1,1 +1,0 @@
-{"task_id": "HumanEval/83", "benchmark": "humaneval", "text": "\ndef starts_one_ends(n):\n    \"\"\"\n    Given a positive integer n, return the count of the numbers of n-digit\n    positive integers that start or end with 1.\n    \"\"\"\n"}

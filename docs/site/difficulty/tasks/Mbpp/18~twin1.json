@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/18~twin1", "benchmark": "wave 2", "text": "\"\"\"\nA typesetter is cleaning up a draft: she has a line of text and a separate note listing the letters her editor wants struck out. Write a function to remove characters from the first string which are present in the second string.\nassert remove_dirty_chars(\"probasscurve\", \"pros\") == 'bacuve'\n\"\"\""}

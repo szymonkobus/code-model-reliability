@@ -1,0 +1,24 @@
+{
+ "sources": [
+  {
+   "id": "fx",
+   "name": "fixture tasks",
+   "families": [
+    "fx"
+   ],
+   "redistribution": "ours",
+   "what_it_is": "four tiny tasks written for the tests",
+   "licence_as_recorded": "this repository's data licence"
+  },
+  {
+   "id": "fxp",
+   "name": "fixture upstream",
+   "families": [
+    "fxp"
+   ],
+   "redistribution": "pointer",
+   "what_it_is": "a stand-in for an upstream whose terms permit pointers only",
+   "licence_as_recorded": "pointers only"
+  }
+ ]
+}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/90", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the length of the longest word.\nassert len_log([\"python\",\"PHP\",\"bigdata\"]) == 7\n\"\"\"\n"}

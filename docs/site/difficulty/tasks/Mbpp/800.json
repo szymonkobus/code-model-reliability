@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/800", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to remove all whitespaces from a string.\nassert remove_all_spaces('python  program')==('pythonprogram')\n\"\"\"\n"}

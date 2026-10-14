@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/724", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function that takes base and power as arguments and calculate the sum of all digits of the base to the specified power.\nassert power_base_sum(2,100)==115\n\"\"\"\n"}

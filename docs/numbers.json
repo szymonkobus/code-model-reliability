@@ -1,62 +1,68 @@
 {
- "n_arms_published": 170,
- "n_models": 162,
- "n_registry_rows": 305,
- "attempts_per_task_wave1": 128,
- "wave1_kept": 431,
- "fit_board_top_arms": 59,
- "fit_board_top_tasks": 1297,
- "fit_board_top_cells": 70157,
- "fit_board_top_attempts_m": 7.4,
- "fit_board_top_crossing_rows": 59,
- "fit_old_arms": 59,
- "fit_old_tasks": 431,
- "fit_old_cells": 25143,
- "fit_old_attempts_m": 3.3,
- "fit_old_crossing_rows": 59,
- "fit_top_arms": 55,
- "fit_top_tasks": 866,
- "fit_top_cells": 45014,
- "fit_top_attempts_m": 4.2,
- "fit_top_crossing_rows": 55,
- "fit_golden_arms": 12,
- "fit_golden_tasks": 1292,
- "fit_golden_cells": 15501,
- "fit_golden_attempts_m": 1.7,
- "fit_golden_crossing_rows": 12,
- "wave2_in_fits": 866,
- "wave2_members": 869,
- "wave2_kept": 861,
- "wave2_full_text": 774,
- "wave2_pointers": 95,
- "wave2_pointers_scrub": 0,
- "wave2_pointers_licence": 95,
- "wave2_restricted_pct": 11,
- "wave2_parts": 1,
- "wave2_parts_mb": 28,
- "wave2_missing": 0,
- "parked_members": 893,
- "parked_kept": 885,
- "parked_full_text": 654,
- "parked_pointers": 239,
- "parked_pointers_scrub": 1,
- "parked_pointers_licence": 238,
- "parked_restricted_pct": 27,
- "parked_parts": 2,
- "parked_parts_mb": 43,
- "parked_missing": 0,
- "new_total": 1762,
- "wave2_fitted": 869,
- "wave2_restricted": 95,
- "wave2_restricted_scrub": 0,
- "wave2_restricted_licence": 95,
- "wave2_certificates": 2377,
- "verdict_attempts_m": 4.0,
- "verdict_arms_humaneval": 59,
- "verdict_arms_mbpp": 58,
- "refit_hours_median": 5.0,
- "refit_hours_max": 16.1,
- "refit_note": "sampling time recorded in the fits' posterior summaries (runtime_seconds_mcmc), four chains on four CPU cores",
- "tree_files": 3030,
- "tree_mb": 128
+ "n_wave1": 430,
+ "n_wave1_kept": 430,
+ "n_wave2": 869,
+ "n_wave2_kept": 858,
+ "n_wave2_parked": 893,
+ "n_wave2_parked_kept": 879,
+ "n_wave2_text": 774,
+ "n_wave2_pointers": 95,
+ "n_wave2_parked_text": 654,
+ "n_wave2_parked_pointers": 239,
+ "fit": "e0f5112bec34",
+ "n_arms": 63,
+ "n_tasks_fit": 1297,
+ "n_cells": 75305,
+ "n_attempts_million": "8.1",
+ "n_kept_12": 1288,
+ "n_tasks_fit_not_kept": 9,
+ "tasks_fit_not_kept": [
+  {
+   "task_id": "HumanEval/22~twin1",
+   "set": "wave_2",
+   "label": "underspecification"
+  },
+  {
+   "task_id": "HumanEval/39",
+   "set": "none",
+   "label": "underspecification"
+  },
+  {
+   "task_id": "evoeval/subtle_22",
+   "set": "wave_2",
+   "label": "underspecification"
+  },
+  {
+   "task_id": "evoeval/subtle_43",
+   "set": "wave_2",
+   "label": "underspecification"
+  },
+  {
+   "task_id": "leetcode/check-if-the-rectangle-corner-is-reachable",
+   "set": "wave_2",
+   "label": "underspecification"
+  },
+  {
+   "task_id": "leetcode/count-subarrays-of-length-three-with-a-condition",
+   "set": "wave_2",
+   "label": "underspecification"
+  },
+  {
+   "task_id": "leetcode/distribute-elements-into-two-arrays-i",
+   "set": "wave_2",
+   "label": "underspecification"
+  },
+  {
+   "task_id": "leetcode/number-of-changing-keys",
+   "set": "wave_2",
+   "label": "underspecification"
+  },
+  {
+   "task_id": "openr1/1646_E",
+   "set": "wave_2",
+   "label": "underspecification"
+  }
+ ],
+ "version": "2.0.0",
+ "date": "2026-10-14"
 }

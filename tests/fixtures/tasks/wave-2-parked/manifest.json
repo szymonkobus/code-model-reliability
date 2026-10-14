@@ -1,0 +1,20 @@
+{
+ "set": "wave 2 parked",
+ "set_key": "wave_2_parked",
+ "members": 1,
+ "kept_by_audit": 0,
+ "full_text_tasks": 1,
+ "pointer_tasks": 0,
+ "pointers_by_reason": {},
+ "sha256_sorted_members": "8767d9198fb1c9e1b223157b7dc26ccf05a5a4b22cd231706410025ac8291c73",
+ "sha256_sorted_kept": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+ "hash_recipe": "sha256(json.dumps({task_id, prompt, entry_point, canonical_solution, base_input, plus_input, atol, expected_output}, sort_keys=True))",
+ "parts": [
+  {
+   "file": "tasks-part-01.jsonl",
+   "records": 1,
+   "bytes": 678,
+   "sha256": "267cd25eba2fd4cee6260fb973f92ef1967b90bd223179ba721f705e0a755c6e"
+  }
+ ]
+}

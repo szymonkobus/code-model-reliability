@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/770", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the sum of fourth power of first n odd natural numbers.\nassert odd_num_sum(2) == 82\n\"\"\"\n"}

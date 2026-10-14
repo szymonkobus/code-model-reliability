@@ -1,9 +1,9 @@
-
+/* kit.css — the pages' shared styles: the filter row, the switches, the tooltip, the crosshair and the export buttons. Copied beside each page by the site build. */
 .kit-filter-row {
   display: flex; gap: 1.1rem; align-items: center; flex-wrap: wrap;
   padding: .55rem 0; margin: .4rem 0 1rem;
   border-bottom: 1px solid var(--border, #e0d9c8);
-  
+
   position: sticky; top: 0; z-index: 9;
   background: var(--bg, #faf6ec);
 }
@@ -32,6 +32,14 @@
   outline: 2px solid #0b57d0; outline-offset: 1px;
 }
 
+.kit-select { display: inline-flex; align-items: center; gap: .5rem; }
+.kit-select select {
+  font: 600 .82rem/1.2 inherit; font-family: inherit; color: var(--ink, #1a1a1a);
+  background: var(--panel, #f2ecdf); border: 1px solid var(--border2, #cfc5ac); border-radius: 999px;
+  padding: .32rem 1.6rem .32rem .85rem; cursor: pointer; max-width: 22rem;
+}
+.kit-select select:focus-visible { outline: 2px solid #0b57d0; outline-offset: 1px; }
+.kit-select option:disabled { color: var(--ink-3, #8b8477); }
 
 .kit-tip {
   position: fixed; z-index: 40; display: none; max-width: 18rem;
@@ -48,7 +56,6 @@
 .kit-tip-label { color: var(--ink-2, #52514e); }
 .kit-crosshair { position: absolute; top: 0; bottom: 0; width: 1px;
   background: var(--border2, #cfc5ac); display: none; pointer-events: none; }
-
 
 .kit-columns { display: flex; flex-direction: column; min-height: 0; }
 .kit-col-filter { width: 100%; max-width: 20rem; background: #fff;
@@ -88,9 +95,28 @@
     padding: .35rem .8rem; cursor: pointer; }
 }
 
-
 .kit-export { display: flex; justify-content: flex-end; align-items: center; gap: .4rem; margin: .35rem 0 1rem; font-size: .85rem; }
 .kit-export-btn, a.kit-export-btn { font: inherit; font-size: .85rem; line-height: 1.2; padding: .28rem .65rem; border: 1px solid var(--border, #d9d2bf); border-radius: 6px; background: var(--panel, #f3eee0); color: var(--ink-2, #52514e); text-decoration: none; cursor: pointer; }
 .kit-export-btn:hover { background: var(--bg, #faf6ec); }
 .kit-export-svg { padding: .28rem .5rem; }
 @media print { .kit-export { display: none; } }
+
+.kit-table-scroll { overflow-x: auto; max-width: 100%; min-width: 0; -webkit-overflow-scrolling: touch; }
+.kit-table-scroll > table { width: auto; min-width: 100%; table-layout: auto; }
+.kit-table-scroll th { white-space: nowrap; }
+
+.kit-chart-scroll { overflow-x: auto; max-width: 100%; min-width: 0; -webkit-overflow-scrolling: touch; }
+.kit-chart-scroll > svg { display: block; height: auto; }
+
+.kit-panels { display: grid; gap: .9rem 1rem; align-items: start; margin: .6rem 0 .4rem; }
+.kit-panel { min-width: 0; }
+.kit-panel-title { font-size: .9rem; font-weight: 600; margin: 0 0 .25rem; color: var(--ink, #222); }
+.kit-panel-body { width: 100%; aspect-ratio: 1 / 1; }
+.kit-panel-body > svg, .kit-panel-body > canvas { width: 100%; height: 100%; display: block; }
+
+[hidden] { display: none !important; }
+.kit-run-key { display: flex; flex-wrap: wrap; gap: .3rem 1.1rem; margin: .4rem 0 .6rem; font-size: .9rem; color: var(--ink-2, #3f3d38); }
+.kit-run-key > span { display: inline-grid; grid-template-columns: 14px 1fr; column-gap: .4rem; align-items: start; max-width: 46ch; }
+.kit-run-key svg { width: 14px; height: 14px; margin-top: .15em; }
+.kit-readout { display: block; font-weight: 600; margin: .4rem 0; font-variant-numeric: tabular-nums; }
+.kit-readout-box { display: inline-block; font-weight: 600; border: 1px solid var(--border, #d9d2c3); border-radius: 6px; padding: .25rem .6rem; background: var(--inset, #eae3d2); margin: .4rem 0; font-variant-numeric: tabular-nums; }

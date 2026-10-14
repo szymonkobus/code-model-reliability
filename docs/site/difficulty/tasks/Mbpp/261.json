@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/261", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function that takes in two tuples and performs mathematical division operation element-wise across the given tuples.\nassert division_elements((10, 4, 6, 9),(5, 2, 3, 3)) == (2, 2, 2, 3)\n\"\"\"\n"}

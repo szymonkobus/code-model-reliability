@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/79", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to check whether the length of the word is odd or not.\nassert word_len(\"Hadoop\") == False\n\"\"\"\n"}

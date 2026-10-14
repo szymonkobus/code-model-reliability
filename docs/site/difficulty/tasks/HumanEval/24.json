@@ -1,1 +1,0 @@
-{"task_id": "HumanEval/24", "benchmark": "humaneval", "text": "\n\ndef largest_divisor(n: int) -> int:\n    \"\"\" For a given number n, find the largest number that divides n evenly, smaller than n\n    >>> largest_divisor(15)\n    5\n    \"\"\"\n"}

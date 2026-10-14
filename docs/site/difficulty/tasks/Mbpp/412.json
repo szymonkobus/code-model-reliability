@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/412", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to remove odd numbers from a given list.\nassert remove_odd([1,2,3]) == [2]\n\"\"\"\n"}

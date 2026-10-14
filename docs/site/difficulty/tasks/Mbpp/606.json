@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/606", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to convert degrees to radians.\nassert radian_degree(90)==1.5707963267948966\n\"\"\"\n"}

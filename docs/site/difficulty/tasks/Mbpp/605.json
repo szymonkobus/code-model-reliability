@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/605", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to check if the given integer is a prime number.\nassert prime_num(13)==True\n\"\"\"\n"}

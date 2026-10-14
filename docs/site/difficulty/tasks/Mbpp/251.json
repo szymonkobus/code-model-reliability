@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/251", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function that takes in a list and an element and inserts the element before each element in the list, and returns the resulting list.\nassert insert_element(['Red', 'Green', 'Black'] ,'c')==['c', 'Red', 'c', 'Green', 'c', 'Black']\n\"\"\"\n"}

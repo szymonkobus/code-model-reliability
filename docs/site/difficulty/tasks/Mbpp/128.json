@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/128", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find words that are longer than n characters from a given list of words.\nassert long_words(3,\"python is a programming language\")==['python','programming','language']\n\"\"\"\n"}

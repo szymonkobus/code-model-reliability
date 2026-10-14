@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/726~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a function that gets handed a tuple of numbers (t_1,...,t_{N+1}) and gives back a tuple of length N, where the i-th element of the result equals t_i * t_{i+1}.\nassert multiply_elements((1, 5, 7, 8, 10)) == (5, 35, 56, 80)\n\"\"\""}

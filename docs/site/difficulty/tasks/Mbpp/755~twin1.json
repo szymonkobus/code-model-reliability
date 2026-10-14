@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/755~twin1", "benchmark": "wave 2", "text": "\"\"\"\nDefine a function that determines the second smallest number occurring in a given list.\nassert second_smallest([1, 2, -8, -2, 0, -2])==-2\n\"\"\""}

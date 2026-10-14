@@ -1,0 +1,45 @@
+{
+ "fit": "e0f5112bec34",
+ "set": "wave 1+2",
+ "population": {
+  "arms_fitted": 63,
+  "arms_voting": 51,
+  "tasks": 1297,
+  "cells": 75305
+ },
+ "axis": "the mean over the panel arms of each arm's failure rate on the task, shrunk by one pseudo-observation of half a failure and half a pass over the task's attempts, on the logit scale; the panel every arm with attempts on at least 90% of the set's tasks",
+ "engine": {
+  "sha256_12": {
+   "414898ce61cd": 63
+  },
+  "pins": {
+   "numpy": "2.4.6",
+   "scipy": "1.17.1",
+   "numpyro": "0.21.0",
+   "jax": "0.10.2"
+  }
+ },
+ "sampler": {
+  "layouts": {
+   "4 x (4000 + 16000)": 24,
+   "4 x (2000 + 8000)": 38,
+   "4 x (8000 + 32000)": 1
+  },
+  "target_accept": 0.995,
+  "max_tree_depth": 10,
+  "seed": 20260825,
+  "errors_in_variables": "on",
+  "crossing_rule": "middle"
+ },
+ "estimator": "D50 and D99 are the crossings of the average-rate curve at 50% and 1% failure, the median over every draw with the censored draws beyond the ends of the scale; the median-task D99 beside",
+ "cut": "2026-09-10",
+ "files": [
+  "cells.csv",
+  "axis.csv",
+  "panel.json",
+  "gates.json",
+  "crossings.csv",
+  "crossings.json",
+  "arms/"
+ ]
+}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/12", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to sort a given matrix in ascending order according to the sum of its rows.\nassert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]\n\"\"\"\n"}

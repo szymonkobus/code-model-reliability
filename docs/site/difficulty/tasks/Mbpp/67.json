@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/67", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find the number of ways to partition a set of Bell numbers.\nassert bell_number(2)==2\n\"\"\"\n"}

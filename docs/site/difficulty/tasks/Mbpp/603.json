@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/603", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to get all lucid numbers smaller than or equal to a given integer.\nassert get_ludic(10) == [1, 2, 3, 5, 7]\n\"\"\"\n"}

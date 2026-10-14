@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/119", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the element that appears only once in a sorted array.\nassert search([1,1,2,2,3]) == 3\n\"\"\"\n"}

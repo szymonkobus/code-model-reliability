@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/82", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find the volume of a sphere.\nassert math.isclose(volume_sphere(10), 4188.790204786391, rel_tol=0.001)\n\"\"\"\n"}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/735", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to toggle bits of the number except the first and the last bit. \nassert toggle_middle_bits(9) == 15\n\"\"\"\n"}

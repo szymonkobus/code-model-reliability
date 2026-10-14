@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/65", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to flatten a list and sum all of its elements.\nassert recursive_list_sum(([1, 2, [3,4],[5,6]]))==21\n\"\"\"\n"}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/588~twin1", "benchmark": "wave 2", "text": "\"\"\"\nHey, could you write a python function that takes a list and tells you how far apart its biggest and smallest values are? In other words, find the difference between the largest and smallest value in a given list.\nassert big_diff([1,2,3,4]) == 3\n\"\"\""}

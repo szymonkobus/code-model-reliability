@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/565", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to split a string into characters.\nassert split('python') == ['p','y','t','h','o','n']\n\"\"\"\n"}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/576", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to check whether a list is sublist of another or not.\nassert is_Sub_Array([1,4,3,5],[1,2]) == False\n\"\"\"\n"}

@@ -1,0 +1,4 @@
+arm,task_id,failures,attempts,time_limit_fails,judging
+fixture-standin,fixture/has_close_pair,4,12,2,32e8f1ce6e78
+fixture-standin,fixture/half_box_volume,6,12,1,32e8f1ce6e78
+fixture-standin,fixture/sorted_lines,4,12,3,32e8f1ce6e78

@@ -1,0 +1,19 @@
+{
+ "rule": "an arm votes when it has attempts on at least the threshold share of the set's tasks; every arm with cells is fitted and placed; an arm listed under positioned_only is placed and does not vote",
+ "threshold": 0.9,
+ "n_tasks": 40,
+ "voters": [
+  "Qwen--Qwen3-8B_temp_0.8",
+  "Qwen--Qwen3-8B_think_temp_0.6",
+  "claude-haiku-4-5-thinking_batch",
+  "claude-haiku-4-5_batch"
+ ],
+ "positioned_only": [],
+ "excluded_from_voting": [],
+ "coverage": {
+  "Qwen--Qwen3-8B_temp_0.8": 1.0,
+  "Qwen--Qwen3-8B_think_temp_0.6": 1.0,
+  "claude-haiku-4-5-thinking_batch": 1.0,
+  "claude-haiku-4-5_batch": 1.0
+ }
+}

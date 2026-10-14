@@ -1,0 +1,181 @@
+{
+ "package": "the task sets of code-model-reliability (data/tasks)",
+ "counts": {
+  "wave_1": {
+   "members": 430,
+   "kept": 430
+  },
+  "wave_2": {
+   "members": 869,
+   "kept": 858
+  },
+  "wave_2_parked": {
+   "members": 893,
+   "kept": 879
+  },
+  "wave_1_plus_2_kept": 1288,
+  "certificates": 2377,
+  "attribution_rows": 2192,
+  "labels": 2652,
+  "label_history": 1149,
+  "label_history_pool_rows_read": 1186,
+  "label_history_pool_rows_on_members": 1077,
+  "wave_2_text": 774,
+  "wave_2_parked_text": 654,
+  "wave_2_pointers": 95,
+  "wave_2_parked_pointers": 239
+ },
+ "files": {
+  "README.md": {
+   "bytes": 6752,
+   "sha256": "86d9699fd1891171b3735981e356ed66758c5b659bd8db4f11669d06af249c19"
+  },
+  "attribution.jsonl": {
+   "bytes": 1948697,
+   "sha256": "9ffd74af0f6e26a1155adfb1047faa1606ff60e36778bd72a86bea5af619023c"
+  },
+  "certificates.jsonl": {
+   "bytes": 3057858,
+   "sha256": "837905dbecc9f258879930993bdd3d2c8c2e0bd63e4db6ad79692212d35f1610"
+  },
+  "labels/label_history.jsonl": {
+   "bytes": 731303,
+   "sha256": "4013bd62efd8c5250ba2f1f7cfef5a56f47586c08f86a7c5efa6aa00b66b1e8a"
+  },
+  "labels/labels.jsonl": {
+   "bytes": 1132081,
+   "sha256": "e662b6bead47f63dee005020af23ca22b5891d41a054ee831204020fe61043df"
+  },
+  "sets.json": {
+   "bytes": 130977,
+   "sha256": "7e5cbf58d221919b51d998ce45ea3dd2f3500b00ac150fcce7cac8d7af591f38"
+  },
+  "sources.json": {
+   "bytes": 4830,
+   "sha256": "07ac1807e9d7508ee05dd8a75de213f3ed7aa019bcae2cadddf85d3796b2b681"
+  },
+  "wave-1/kept_tasks.json": {
+   "bytes": 6876,
+   "sha256": "a59e21a4c15bd3255153398e6a269050cc61136d245ad09fbba18f30cb7b24ee"
+  },
+  "wave-1/plus_inputs_removed.json": {
+   "bytes": 350988,
+   "sha256": "8d2ef7033fb6617bc620ab688a74521b453a2464e78af77b36749c7db3be5fb8"
+  },
+  "wave-2/manifest.json": {
+   "bytes": 1710,
+   "sha256": "6ed358633ac993fd9a2d7dc9eedf8f1812621c7b63845c5c989af00c19cc9542"
+  },
+  "wave-2/restricted.jsonl": {
+   "bytes": 148662,
+   "sha256": "f732e8fe0742dfd52f9254b679258eea79b44528f708ea7e389d6cbfb43c5013"
+  },
+  "wave-2/tasks-part-01.jsonl.gz": {
+   "bytes": 28264572,
+   "sha256": "4c62a0c181c6ddf325a947fd98b9f4dd43dd3772a06553a31da5b30e6c97f167"
+  },
+  "wave-2-parked/manifest.json": {
+   "bytes": 1916,
+   "sha256": "c859c17ef4edbf8090661d0f6950de492f39a87fadb480222ab6504407bcb736"
+  },
+  "wave-2-parked/restricted.jsonl": {
+   "bytes": 1053463,
+   "sha256": "0065262b448b4adc5ec2c43b0a91825c6ba351a9cec59f840da9d2af0a9aed93"
+  },
+  "wave-2-parked/tasks-part-01.jsonl.gz": {
+   "bytes": 40510273,
+   "sha256": "65124cac17719ff8c7d541cf27606ee67407de7356b62fd5c57f0c0ab1f8cda9"
+  },
+  "wave-2-parked/tasks-part-02.jsonl.gz": {
+   "bytes": 3572233,
+   "sha256": "c482ecc17019c35b6c8eabd7a253b84067ebc4cf6d5829ea0e57041a911434c4"
+  }
+ },
+ "exported_from": {
+  "membership": {
+   "sha256": "1799e93e522a2e40bd86c148cebf554d38c44e9d00e072a78a68ac2c4fb2c10c",
+   "bytes": 132152
+  },
+  "attribution_wave_1": {
+   "sha256": "b47e0613b7f72a224b0c9316919538a62efedb578a265a24bdf6abfa6fdf169d",
+   "bytes": 364461
+  },
+  "attribution_wave_2": {
+   "sha256": "963f6fa09bfbd6c624498b789038eabf092342b25e8be4dc25ab37b1b1f7e9bf",
+   "bytes": 748051
+  },
+  "attribution_wave_2_parked": {
+   "sha256": "6fb4f5e01b014a5a09b525e2935c801501291559277563386ae6b7c5be5b53d8",
+   "bytes": 836185
+  },
+  "licence_table": {
+   "sha256": "0dcc551757aabbbc0a06d288a51a9188b01f085cf7d0dbdee7d9aa4cf63b6f1b",
+   "bytes": 5128
+  },
+  "certificates": {
+   "sha256": "37f374337a41b9ca9a481f9f6dfcf72aa5f73ae4e89963cb8763690c332f2d31",
+   "bytes": 754695316,
+   "rows": 2377
+  },
+  "plus_input_removals": {
+   "sha256": "4a3b02280bfad9a1cd9c183810588f71abc2804a3b5b0914aa426311299b4c90",
+   "bytes": 434343
+  },
+  "declared_input_shapes": {
+   "sha256": "14b1f3364ca3ee935674e84f1ef9e70be76770b53f579c30b5cfd517d44bafb3",
+   "bytes": 215946
+  },
+  "labels_humaneval": {
+   "sha256": "ce4ea49beb68dacc8456d0cdd9cf09a98c741b02a964c004ed10828ea4354d8c",
+   "bytes": 47974
+  },
+  "labels_mbpp": {
+   "sha256": "155873844d0ee0ff18df5e3ecaaf5edfcb1e15e0fa5b8a52ffdda5b81fb5e244",
+   "bytes": 106972
+  },
+  "labels_pool": {
+   "sha256": "05ae83b80b471ab73842ddf01036e5dea43e848bcc986420f86f1e5a1552f5a7",
+   "bytes": 1003367
+  },
+  "label_history_wave_1": {
+   "sha256": "6ad6622ab241eb3c82a58c6a1a892aad1fd2ebdcf4b31c41b68335dd7b430c02",
+   "bytes": 69057
+  },
+  "label_history_pool_1": {
+   "sha256": "4257bfb7ec9647ccfa6a2ba6f8061f02cb7fbfc5e6cf3336168b02c43c412e2c",
+   "bytes": 715746,
+   "file": "label_history_20260830T0113Z_to_20260904T0139Z.jsonl"
+  },
+  "label_history_pool_2": {
+   "sha256": "e5da816a36698de6082d03566c50c6c431455eb19f0705ec39dbaaf3e4ea3f8d",
+   "bytes": 678339,
+   "file": "label_history_20260904T0152Z_to_20260922T1031Z.jsonl"
+  },
+  "label_history_pool_3": {
+   "sha256": "bc1419cccd199e6e9b4b328f9562a1b03393ed9992adff783bd278f1e9246831",
+   "bytes": 3839,
+   "file": "label_history.jsonl"
+  }
+ },
+ "how_the_files_of_record_were_treated": [
+  "the rows of the membership file, the attribution files and the licence table travel whole; the keys that carry clock stamps or internal names (_stamp, _owner, inputs) are dropped and the files are pinned here by sha256",
+  "the certificates carry a curated field list (identity, set, status, keep flag, audit label, band aim, conversion method and reference origin, a curated provenance block) and no run outcomes",
+  "a clock stamp is written as a day",
+  "a value that fails the publication check's data vocabulary (a name, a stamp, an internal word) is withheld, never rewritten; the counts per field are under withheld",
+  "a task whose upstream terms permit pointers only, or whose text fails the publication check, ships as a pointer with the reason",
+  "io_mode, plus_inputs_removed and input_shapes are task facts the judge applies, written onto the records from their files of record"
+ ],
+ "withheld": {
+  "certificate.audit_label.justification": 62,
+  "label_history.pool.justification": 62,
+  "label_history.wave_1.justification": 10,
+  "label_history.wave_1.review_round": 2,
+  "labels.pool.justification": 62,
+  "labels.wave_1.justification": 16
+ },
+ "task_text_read": {
+  "matched": 1762,
+  "other versions seen": 275,
+  "files": 67
+ }
+}

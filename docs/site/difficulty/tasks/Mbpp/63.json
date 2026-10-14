@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/63", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find the maximum difference between available pairs in the given tuple list.\nassert max_difference([(3, 5), (1, 7), (10, 3), (1, 2)]) == 7\n\"\"\"\n"}

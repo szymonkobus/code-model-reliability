@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/86~twin1", "benchmark": "wave 2", "text": "\"\"\"\nA hobbyist tiling a game board with hexagons wants to know how many tiles sit in each successive ring-layered arrangement around a central tile. Write a function to find nth centered hexagonal number.\nassert centered_hexagonal_number(10) == 271\n\"\"\""}

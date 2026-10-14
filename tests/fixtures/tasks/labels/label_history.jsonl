@@ -1,0 +1,1 @@
+{"day_applied": "2024-03-02", "day_recorded": "2024-03-01", "justification": "The examples show lower-case words only, while the extended tests include upper-case vowels the statement does name.", "label_after": "tricky", "label_before": "regular", "review_round": "round-1", "set": "wave_2", "task_id": "fx/count_vowels"}

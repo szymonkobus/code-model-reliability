@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/72", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to check whether the given number can be represented as the difference of two squares or not.\nassert dif_Square(5) == True\n\"\"\"\n"}

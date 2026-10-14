@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/759", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to check whether a given string is a decimal number with a precision of 2.\nassert is_decimal('123.11')==True\n\"\"\"\n"}

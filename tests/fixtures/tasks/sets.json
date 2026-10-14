@@ -1,0 +1,71 @@
+{
+ "_rule": "the members of record of the fixture sets; a sha256 over each sorted list is the set's identity",
+ "label_rule": {
+  "keep_labels": [
+   "regular",
+   "tricky"
+  ],
+  "excluded_labels": [
+   "contradiction",
+   "underspecification"
+  ],
+  "rule": "a task is kept iff its current label is a keep label"
+ },
+ "sets": {
+  "wave_1": {
+   "members": [
+    "fx/w1_a",
+    "fx/w1_b"
+   ],
+   "kept": [
+    "fx/w1_a",
+    "fx/w1_b"
+   ],
+   "count": 2,
+   "kept_count": 2,
+   "sha256_sorted_members": "547d31d4c9bb742c2fe9aa4d6d0c76fe7109e13be38c9766a04c6556f3cb50a5",
+   "sha256_sorted_kept": "547d31d4c9bb742c2fe9aa4d6d0c76fe7109e13be38c9766a04c6556f3cb50a5"
+  },
+  "wave_2": {
+   "members": [
+    "fx/add_two",
+    "fx/count_vowels",
+    "fxp/is_even"
+   ],
+   "kept": [
+    "fx/add_two",
+    "fx/count_vowels",
+    "fxp/is_even"
+   ],
+   "count": 3,
+   "kept_count": 3,
+   "sha256_sorted_members": "8e565238205c5102accbcf2f775ffb28d36a99fe2359b54e7f91c96db448cab3",
+   "sha256_sorted_kept": "8e565238205c5102accbcf2f775ffb28d36a99fe2359b54e7f91c96db448cab3"
+  },
+  "wave_2_parked": {
+   "members": [
+    "fx/clip"
+   ],
+   "kept": [],
+   "count": 1,
+   "kept_count": 0,
+   "sha256_sorted_members": "8767d9198fb1c9e1b223157b7dc26ccf05a5a4b22cd231706410025ac8291c73",
+   "sha256_sorted_kept": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+ },
+ "wave_1_plus_2": {
+  "kept_count": 5,
+  "sha256_sorted_kept": "c33e1bab5eb98d31b98e3f4121aa8357695e1b446bde7779a6ea1378d6e15afc"
+ },
+ "folded_twins": {
+  "focused": [],
+  "parked": []
+ },
+ "wave_2_members_not_kept": [],
+ "wave_2_parked_members_not_kept": [
+  {
+   "task_id": "fx/clip",
+   "reason": "underspecification"
+  }
+ ]
+}

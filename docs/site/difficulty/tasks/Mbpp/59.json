@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/59", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find the nth octagonal number.\nassert is_octagonal(5) == 65\n\"\"\"\n"}

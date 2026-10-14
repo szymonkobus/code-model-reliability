@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/281", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to check if the elements of a given list are unique or not.\nassert all_unique([1,2,3]) == True\n\"\"\"\n"}

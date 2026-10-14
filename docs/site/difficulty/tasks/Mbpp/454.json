@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/454", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function that matches a word containing 'z'.\nassert text_match_wordz(\"pythonz.\")==True\n\"\"\"\n"}

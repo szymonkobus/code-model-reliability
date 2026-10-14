@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/264", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to calculate a dog's age in dog's years.\nassert dog_age(12)==61\n\"\"\"\n"}

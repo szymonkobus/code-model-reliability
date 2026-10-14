@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/116", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to convert a given tuple of positive integers into a single integer.\nassert tuple_to_int((1,2,3))==123\n\"\"\"\n"}

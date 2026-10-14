@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/95", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the length of the smallest list in a list of lists.\nassert Find_Min_Length([[1],[1,2]]) == 1\n\"\"\"\n"}

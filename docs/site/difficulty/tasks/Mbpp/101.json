@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/101", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find the kth element in the given array using 1-based indexing.\nassert kth_element([12,3,5,7,19], 2) == 3\n\"\"\"\n"}

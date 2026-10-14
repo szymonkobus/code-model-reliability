@@ -1,1 +1,0 @@
-{"task_id": "EasyTail/E4/index_ops/even_minus_odd_index_sum", "benchmark": "wave 2", "text": "def even_minus_odd_index_sum(nums):\n    \"\"\"Return the sum of the values at even indices minus the sum of the values at odd indices (0 for an empty list).\n    >>> even_minus_odd_index_sum([])\n    0\n    >>> even_minus_odd_index_sum([0, 1, 2])\n    1\n    \"\"\"\n"}

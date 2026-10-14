@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/624", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to convert a given string to uppercase.\nassert is_upper(\"person\") ==\"PERSON\"\n\"\"\"\n"}

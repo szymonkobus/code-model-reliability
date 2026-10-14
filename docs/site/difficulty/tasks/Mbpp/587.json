@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/587", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to convert a list to a tuple.\nassert list_tuple([5, 10, 7, 4, 15, 3])==(5, 10, 7, 4, 15, 3)\n\"\"\"\n"}

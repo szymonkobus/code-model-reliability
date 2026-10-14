@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/439", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to join a list of multiple integers into a single integer.\nassert multiple_to_single([11, 33, 50])==113350\n\"\"\"\n"}

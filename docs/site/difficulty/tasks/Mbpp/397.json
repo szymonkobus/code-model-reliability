@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/397", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find the median of three numbers.\nassert median_numbers(25,55,65)==55.0\n\"\"\"\n"}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/448", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to calculate the sum of perrin numbers.\nassert cal_sum(9) == 49\n\"\"\"\n"}

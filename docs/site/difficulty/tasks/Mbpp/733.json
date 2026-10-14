@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/733", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find the index of the first occurrence of a given number in a sorted array.\nassert find_first_occurrence([2, 5, 5, 5, 6, 6, 8, 9, 9, 9], 5) == 1\n\"\"\"\n"}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/118", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to convert a string to a list of strings split on the space character.\nassert string_to_list(\"python programming\")==['python','programming']\n\"\"\"\n"}

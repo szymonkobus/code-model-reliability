@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/790", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to check whether every even index contains even numbers of a given list.\nassert even_position([3,2,1]) == False\n\"\"\"\n"}

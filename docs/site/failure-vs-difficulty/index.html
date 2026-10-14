@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Failure rate against difficulty</title>
+<link rel="stylesheet" href="kit.css">
+<link rel="stylesheet" href="curves.css">
+</head><body>
+<h1>Failure rate against difficulty</h1>
+<p id="headline">the chart loads with the data</p>
+<div id="setline" class="sub"></div>
+<div id="chartrow">
+<div id="chartcol">
+<div id="chartbox" aria-label="failure rate against task difficulty, one curve per model">
+  <svg id="chart" viewBox="0 0 960 560" data-plot></svg>
+</div>
+<div id="exportrow"></div>
+<div id="narrate" class="sub" role="status"></div>
+<p id="linekey" class="sub">Line key: solid, a model in its plain form; dashed, its thinking form (a thinking model keeps its base model’s colour); dotted, a fine-tune of the base model named in its row; long dashes with dots, a reinforcement-learning run, darker later in training; the thin grey diagonal, a failure rate equal to the task’s difficulty, the average over the models.</p>
+</div>
+<section id="chartcontrols" class="group" aria-label="chart controls"><div class="grouplabel">Chart controls</div>
+<div id="controls"></div>
+</section>
+</div>
+<section id="models" class="group" aria-label="model selection"><div class="grouplabel">Models shown</div><div id="armsbar"></div>
+<div class="chips" id="chips"></div>
+<div id="datanote" class="sub" role="status" hidden></div>
+<div id="chips-runs"></div>
+</section>
+<details class="about" id="tablesfold"><summary>Crossings by model</summary>
+<div id="crossings"></div>
+</details>
+<details class="about" id="defs"><summary>Definitions</summary>
+<ul class="defs">
+<li><b>Task difficulty</b> — a task's position on one scale defined from the population of models: the average model's failure rate on the task, on the logit scale; positions print as a share of the scale from 0 to 100%.</li>
+<li><b>Failure rate</b> — a model's share of failed attempts on a task; the task dots show it as observed, (failures + ½) / (attempts + 1), kept inside the frame.</li>
+<li><b>Failure curve</b> — a model's fitted failure rate against task difficulty, a Bayesian fit to its results on every task (the attempts that fail out of the attempts made); one curve per model, a thinking variant its own model.</li>
+<li><b>Average rate / Median task</b> — two summaries of a fitted curve: the average failure rate over the tasks at each difficulty, or the median task's failure rate; the bands and the crossings follow the definition chosen.</li>
+<li><b>Median failure rate / Median difficulty</b> — what the drawn curve is the median of: at each difficulty, the median over the fit's draws of the failure rate; or at each failure rate, the median over the draws of the difficulty at which the draw crosses it. The second passes through the printed crossings.</li>
+<li><b>Uncertainty band</b> — the central 80% or 90% of the fitted curve's draws at each difficulty; under Median difficulty, of the crossing's draws at each failure rate, drawn sideways.</li>
+<li><b>D50, capability</b> — the difficulty at which the model's fitted failure rate crosses one half.</li>
+<li><b>D99, reliability</b> — the difficulty at which it crosses one in a hundred.</li>
+<li><b>Pin</b> — the curves slid sideways so that each crosses the pinned failure rate at the frame's centre; the horizontal axis then reads difficulty relative to each model's own crossing, and the shapes compare directly.</li>
+<li><b>Partial model</b> — a model with attempts on fewer than 90% of the tasks; hidden by default and drawn faded by the Partial models switch.</li>
+<li><b>Training run</b> — a model trained in this project, read at several steps; its positions sit in their own row and open deselected; checkpoint 0 is the model the run started from.</li>
+</ul></details>
+<script src="kit.js"></script>
+<script src="kit-viz.js"></script>
+<script src="kit-export.js"></script>
+<script src="app.js"></script>
+</body></html>

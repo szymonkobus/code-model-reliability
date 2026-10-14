@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/742", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to caluclate the area of a tetrahedron.\nassert area_tetrahedron(3)==15.588457268119894\n\"\"\"\n"}

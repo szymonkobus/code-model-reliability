@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/415", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find a pair with highest product from a given array of integers.\nassert max_Product([1,2,3,4,7,0,8,4]) == (7,8)\n\"\"\"\n"}

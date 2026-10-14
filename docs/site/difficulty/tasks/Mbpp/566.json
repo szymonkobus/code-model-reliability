@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/566", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to get the sum of the digits of a non-negative integer.\nassert sum_digits(345)==12\n\"\"\"\n"}

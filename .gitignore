@@ -5,14 +5,15 @@ __pycache__/
 *.pyc
 .cache/
 .pytest_cache/
-.ipynb_checkpoints/
-# fit outputs and logs produced by running the engine locally
-analysis/fitting/waves/*/results/
-analysis/fitting/waves/*/logs/
+*.egg-info/
+uv.lock
+# fit outputs and logs produced by running the engine locally (the published fit lives under data/results/)
+fits/
 *.log
-# figures regenerate from results/
+# figures regenerate from the published tables (the figure scripts write here)
 figures/*.png
-# local secrets never belong here; keys come from the environment
+figures/*.svg
+# keys come from the environment, never from a file here
 *.env
 *.key
 *.pem

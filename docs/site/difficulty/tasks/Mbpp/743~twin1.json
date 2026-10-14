@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/743~twin1", "benchmark": "wave 2", "text": "\"\"\"\nHey, could you write a function that takes a list and rotates it to the right by a specified number of items?\nassert rotate_right([1, 2, 3, 4, 5, 6, 7, 8, 9, 10],3)==[8, 9, 10, 1, 2, 3, 4, 5, 6, 7]\n\"\"\"\n"}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/168~twin1", "benchmark": "wave 2", "text": "\"\"\"\nA librarian is tallying how many times a particular catalog code shows up in the day's checkout log. Given a list and a number, write a function that counts the number of occurrences of that number in the given list.\nassert frequency([1,2,3], 4) == 0\n\"\"\""}

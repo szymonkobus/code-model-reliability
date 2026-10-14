@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/266", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find the lateral surface area of a cube given its side length.\nassert lateralsurface_cube(5)==100\n\"\"\"\n"}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/165", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to count the number of characters in a string that occur at the same position in the string as in the English alphabet (case insensitive).\nassert count_char_position(\"xbcefg\") == 2\n\"\"\"\n"}

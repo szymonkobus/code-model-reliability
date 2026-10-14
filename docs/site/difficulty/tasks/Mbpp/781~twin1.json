@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/781~twin1", "benchmark": "wave 2", "text": "\"\"\"\nImplement a Python function that determines whether the count of divisors of a given number is even.\nassert count_divisors(10)\n\"\"\""}

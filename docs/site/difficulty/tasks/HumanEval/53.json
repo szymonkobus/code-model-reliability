@@ -1,1 +1,0 @@
-{"task_id": "HumanEval/53", "benchmark": "humaneval", "text": "\n\ndef add(x: int, y: int):\n    \"\"\"Add two numbers x and y\n    >>> add(2, 3)\n    5\n    >>> add(5, 7)\n    12\n    \"\"\"\n"}

@@ -1,1 +1,0 @@
-{"task_id": "EasyTail/E4/string_tf/hyphen_join_chars", "benchmark": "wave 2", "text": "def hyphen_join_chars(s):\n    \"\"\"Return the characters of s joined by single hyphens ('-'); the empty string stays empty and a one-character s is returned unchanged.\n    >>> hyphen_join_chars('')\n    ''\n    >>> hyphen_join_chars('a')\n    'a'\n    \"\"\"\n"}

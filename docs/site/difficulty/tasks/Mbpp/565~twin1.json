@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/565~twin1", "benchmark": "wave 2", "text": "\"\"\"\nHey, could you write a python function that takes a string and splits it up into its individual characters?\nassert split('python') == ['p','y','t','h','o','n']\n\"\"\""}

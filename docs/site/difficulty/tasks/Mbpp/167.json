@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/167", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the smallest power of 2 greater than or equal to n.\nassert next_power_of_2(0) == 1\n\"\"\"\n"}

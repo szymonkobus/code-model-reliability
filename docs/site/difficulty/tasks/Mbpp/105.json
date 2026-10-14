@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/105", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to count true booleans in the given list.\nassert count([True,False,True]) == 2\n\"\"\"\n"}

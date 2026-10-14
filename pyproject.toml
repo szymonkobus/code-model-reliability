@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "code-model-reliability"
+version = "2.0.0"
+description = "Capability and reliability of code models, measured as the task difficulty at which a model's failure rate crosses one half and one in a hundred."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+dependencies = [
+  "numpy>=1.26",
+  "scipy>=1.11",
+]
+
+[project.optional-dependencies]
+# The fitting engine's pins: a different numpyro or jax changes the published numbers (its header says the same).
+fit = ["numpy==2.4.6", "scipy==1.17.1", "numpyro==0.21.0", "jax==0.10.2"]
+plot = ["matplotlib>=3.8"]
+# The judge harness at the commit every published verdict was produced under.
+judge = ["evalplus @ git+https://github.com/evalplus/evalplus.git@26d6d00bb1fd0fa37f39c99d5290da67891d1c5e"]
+# Generation on a GPU machine (the open-weight models) is not an extra: its environment (vllm, transformers and the
+# harness installed without its optional provider libraries, whose pins conflict with vllm's) is built by
+# cluster/environment.sh from cluster/requirements-generate.txt. The API back ends need only their client libraries.
+api = ["anthropic>=0.40", "openai>=1.11", "google-genai>=1.0"]
+test = ["pytest>=8"]
+
+[project.scripts]
+cmr = "code_model_reliability.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

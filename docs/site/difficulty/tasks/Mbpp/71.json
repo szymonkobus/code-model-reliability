@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/71", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to sort a list of elements.\nassert comb_sort([5, 15, 37, 25, 79]) == [5, 15, 25, 37, 79]\n\"\"\"\n"}

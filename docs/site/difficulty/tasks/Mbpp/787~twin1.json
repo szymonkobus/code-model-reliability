@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/787~twin1", "benchmark": "wave 2", "text": "\"\"\"\nAt the pattern-checking desk of a small text archive, a clerk needs a tool for one specific job: write a function that matches a string that has an a followed by three 'b'.\nassert not text_match_three(\"ac\")\n\"\"\""}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/11", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to remove first and last occurrence of a given character from the string.\nassert remove_Occ(\"hello\",\"l\") == \"heo\"\n\"\"\"\n"}

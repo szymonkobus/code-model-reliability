@@ -1,0 +1,42 @@
+{
+ "completion_form": false,
+ "every_test": true,
+ "harness": {
+  "commit": "26d6d00bb1fd0fa37f39c99d5290da67891d1c5e",
+  "name": "evalplus",
+  "version": "0.4.0.dev44"
+ },
+ "input_rules": {
+  "plus_inputs_removed": {
+   "inputs": 0,
+   "tasks": 0
+  },
+  "typed_input_tasks": 0
+ },
+ "n_attempts": 36,
+ "n_tasks": 3,
+ "reference": "isolated",
+ "set_hash": "8deec2363cffdcd28c3f95c9f7453d92016a49dd955ea2b15703f3cd9397e59b",
+ "settings": {
+  "comparison": "normalised-values, float tolerance 1e-9, canonical stdout",
+  "leading_imports": "leading-imports-v4.1-self-shadowing-refined",
+  "leading_imports_applied": "at-load",
+  "memory_gib": 2.0,
+  "name": "fixture-test",
+  "plus_filter": true,
+  "reference": "isolated",
+  "set_cap_s": 4.0,
+  "time_limit_factor": 4.0,
+  "time_limit_floor_s": 1.0,
+  "typed_inputs": true,
+  "typing_prelude": "typing-prelude-v5",
+  "workers": 2
+ },
+ "settings_id": "32e8f1ce6e78",
+ "stopped_by_time_limit": {
+  "fixture/half_box_volume": 1,
+  "fixture/has_close_pair": 2,
+  "fixture/sorted_lines": 3
+ },
+ "task_source": "fixture_tasks.jsonl"
+}

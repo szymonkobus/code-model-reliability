@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/312", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find the volume of a cone.\nassert math.isclose(volume_cone(5,12), 314.15926535897927, rel_tol=0.001)\n\"\"\"\n"}

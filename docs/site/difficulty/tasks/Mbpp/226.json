@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/226", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to remove the characters which have odd index values of a given string.\nassert odd_values_string('abcdef') == 'ace'\n\"\"\"\n"}

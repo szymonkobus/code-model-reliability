@@ -1,1 +1,0 @@
-{"task_id": "EasyTail/E4/digit_ops/smallest_digit", "benchmark": "wave 2", "text": "def smallest_digit(n):\n    \"\"\"Given a positive integer n (n >= 1), return the smallest decimal digit of n. Return the result as an int.\n    >>> smallest_digit(1)\n    1\n    >>> smallest_digit(10)\n    0\n    \"\"\"\n"}

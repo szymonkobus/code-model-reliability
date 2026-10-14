@@ -1,1 +1,0 @@
-{"task_id": "EasyTail/E4/digit_ops/largest_digit", "benchmark": "wave 2", "text": "def largest_digit(n):\n    \"\"\"Given a positive integer n (n >= 1), return the largest decimal digit of n. Return the result as an int.\n    >>> largest_digit(1)\n    1\n    >>> largest_digit(999)\n    9\n    \"\"\"\n"}

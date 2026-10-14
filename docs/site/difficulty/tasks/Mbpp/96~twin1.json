@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/96~twin1", "benchmark": "wave 2", "text": "\"\"\"\nA mathematics tutor is preparing a lesson on factors and wants a quick way to tally them. For any given integer, they need to know how many divisors it has in total. Write a python function to find the number of divisors of a given integer.\nassert divisor(15) == 4\n\"\"\""}

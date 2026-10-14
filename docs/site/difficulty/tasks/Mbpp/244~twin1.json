@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/244~twin1", "benchmark": "wave 2", "text": "\"\"\"\nGiven a number, find the next perfect square greater than it, using a python function.\nassert next_Perfect_Square(35) == 36\n\"\"\""}

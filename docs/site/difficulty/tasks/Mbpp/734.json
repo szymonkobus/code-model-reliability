@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/734", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find sum of products of all possible sublists of a given list. \nassert sum_Of_Subarray_Prod([1,2,3]) == 20\n\"\"\"\n"}

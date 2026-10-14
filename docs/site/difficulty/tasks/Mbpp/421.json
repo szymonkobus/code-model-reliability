@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/421", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to concatenate each element of tuple by the delimiter.\nassert concatenate_tuple((\"ID\", \"is\", 4, \"UTS\") ) == 'ID-is-4-UTS'\n\"\"\"\n"}

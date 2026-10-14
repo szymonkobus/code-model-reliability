@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/235", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to set all even bits of a given number.\nassert even_bit_set_number(10) == 10\n\"\"\"\n"}

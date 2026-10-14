@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/772", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to remove all the words with k length in the given string.\nassert remove_length('The person is most value tet', 3) == 'person is most value'\n\"\"\"\n"}

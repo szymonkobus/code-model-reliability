@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/269", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find the ascii value of a character.\nassert ascii_value('A')==65\n\"\"\"\n"}

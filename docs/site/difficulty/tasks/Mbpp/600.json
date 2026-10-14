@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/600", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to check whether the given number is even or not.\nassert is_Even(1) == False\n\"\"\"\n"}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/398", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to compute the sum of digits of each number of a given list.\nassert sum_of_digits([10,2,56])==14\n\"\"\"\n"}

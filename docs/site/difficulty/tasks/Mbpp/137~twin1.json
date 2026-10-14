@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/137~twin1", "benchmark": "wave 2", "text": "\"\"\"\nWrite a function that computes the ratio of the count of zero elements to the count of non-zero elements in an array of integers.\nassert math.isclose(zero_count([0, 1, 2, -1, -5, 6, 0, -3, -2, 3, 4, 6, 8]), 0.181818, rel_tol=0.001)\n\"\"\""}

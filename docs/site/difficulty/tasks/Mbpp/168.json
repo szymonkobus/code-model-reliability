@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/168", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to count the number of occurrences of a number in a given list.\nassert frequency([1,2,3], 4) == 0\n\"\"\"\n"}

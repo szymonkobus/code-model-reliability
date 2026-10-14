@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/432~twin1", "benchmark": "wave 2", "text": "\"\"\"\nAn architect sketching a trapezium-shaped courtyard needs one more measurement before the drawing is complete: the length of the shape's median. Write a function to find the median length of a trapezium.\nassert median_trapezium(15,25,35)==20\n\"\"\""}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/639", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to sum the length of the names of a given list of names after removing the names that start with a lowercase letter.\nassert sample_nam(['sally', 'Dylan', 'rebecca', 'Diana', 'Joanne', 'keith'])==16\n\"\"\"\n"}

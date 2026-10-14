@@ -1,1 +1,0 @@
-{"task_id": "evoeval/subtle_22", "benchmark": "wave 2", "text": "\nfrom typing import List, Any\n\n\ndef filter_even_integers(values: List[Any]) -> List[int]:\n    \"\"\" Filter given list of any python values only for even integers\n    >>> filter_even_integers(['a', 3.14, 5, 6])\n    [6]\n    >>> filter_even_integers([1, 2, 3, 'abc', {}, []])\n    [2]\n    \"\"\"\n"}

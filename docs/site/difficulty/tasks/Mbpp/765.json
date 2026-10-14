@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/765", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find nth polite number. geeksforgeeks.org/n-th-polite-number/\nassert is_polite(7) == 11\n\"\"\"\n"}

@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/608", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find nth bell number.\nassert bell_Number(2) == 2\n\"\"\"\n"}

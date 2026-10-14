@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/305", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to return two words from a list of words starting with letter 'p'.\nassert start_withp([\"Python PHP\", \"Java JavaScript\", \"c c++\"])==('Python', 'PHP')\n\"\"\"\n"}

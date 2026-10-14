@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/436", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to return the negative numbers in a list.\nassert neg_nos([-1,4,5,-6]) == [-1,-6]\n\"\"\"\n"}

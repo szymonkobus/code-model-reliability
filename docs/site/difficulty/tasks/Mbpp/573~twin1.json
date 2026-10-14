@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/573~twin1", "benchmark": "wave 2", "text": "\"\"\"\nHey, could you write a python function for me? I've got a list of numbers, and I want to calculate the product of the unique numbers in it.\nassert unique_product([10, 20, 30, 40, 20, 50, 60, 40]) ==  720000000\n\"\"\""}

@@ -1,0 +1,20 @@
+# The generation environment for the open-weight arms: the inference engine and tokenizer library at the pins every
+# published attempt was produced with, and the packages the judge harness imports on the generation path. The
+# harness itself is installed by environment.sh with --no-deps at its pinned commit: its optional provider
+# dependencies conflict with the inference engine's.
+vllm==0.26.0
+transformers==5.15.0
+wget>=3.2
+tempdir>=0.7.1
+multipledispatch>=0.6.0
+appdirs>=1.4.4
+numpy>=1.19.5
+tqdm>=4.56.0
+termcolor>=2.0.0
+fire>=0.6.0
+openai>=1.11.1
+tree_sitter>=0.22.0
+tree-sitter-python>=0.21.0
+rich>=12.3.0
+datasets>=2.21.0
+psutil>=5.9.0

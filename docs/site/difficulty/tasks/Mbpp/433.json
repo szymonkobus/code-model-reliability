@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/433", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to check whether the entered number is greater than the elements of the given array.\nassert check_greater([1, 2, 3, 4, 5], 4) == False\n\"\"\"\n"}

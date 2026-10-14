@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/106", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to append the given list to the given tuples.\nassert add_lists([5, 6, 7], (9, 10)) == (9, 10, 5, 6, 7)\n\"\"\"\n"}

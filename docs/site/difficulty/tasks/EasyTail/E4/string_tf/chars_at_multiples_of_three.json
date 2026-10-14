@@ -1,1 +1,0 @@
-{"task_id": "EasyTail/E4/string_tf/chars_at_multiples_of_three", "benchmark": "wave 2", "text": "def chars_at_multiples_of_three(s):\n    \"\"\"Return the characters of s at the indices that are multiples of 3 (0, 3, 6, ...), in order, as a string.\n    >>> chars_at_multiples_of_three('')\n    ''\n    >>> chars_at_multiples_of_three('a')\n    'a'\n    \"\"\"\n"}

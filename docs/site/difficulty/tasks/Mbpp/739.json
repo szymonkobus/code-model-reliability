@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/739", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the index of smallest triangular number with n digits. \nassert find_Index(2) == 4\n\"\"\"\n"}

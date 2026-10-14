@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/96", "benchmark": "mbpp", "text": "\"\"\"\nWrite a python function to find the number of divisors of a given integer.\nassert divisor(15) == 4\n\"\"\"\n"}

@@ -1,1 +1,0 @@
-{"task_id": "EasyTail/E4/count_class/count_hex_letter_chars", "benchmark": "wave 2", "text": "def count_hex_letter_chars(s):\n    \"\"\"Count how many characters of s are hexadecimal letter characters (a-f or A-F). Return the count as an int.\n    >>> count_hex_letter_chars('')\n    0\n    >>> count_hex_letter_chars('aA zZ 09 !?')\n    2\n    \"\"\"\n"}

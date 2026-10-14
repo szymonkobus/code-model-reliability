@@ -1,1 +1,0 @@
-{"task_id": "Mbpp/260", "benchmark": "mbpp", "text": "\"\"\"\nWrite a function to find the nth newman–shanks–williams prime number.\nassert newman_prime(3) == 7\n\"\"\"\n"}
