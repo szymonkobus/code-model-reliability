@@ -114,6 +114,8 @@ def cmd_build(args):
     print(f"built {len(reqs)} requests ({len(ids)} tasks, models {models}) -> {wd}/requests.jsonl")
 
 
+LABEL = None
+
 def submit_chunk(wd, state, chunk, note):
     payload = "".join(json.dumps(r) + "\n" for r in chunk).encode()
     up = api("POST", "/files", timeout=600,
@@ -123,9 +125,10 @@ def submit_chunk(wd, state, chunk, note):
         "input_file_id": up["id"],
         "endpoint": "/v1/chat/completions",
         "completion_window": "24h",
+        **({"metadata": {"description": f"{LABEL} {wd.name}"}} if LABEL else {}),
     }).json()
     state["batches"].append({"id": b["id"], "input_file_id": up["id"],
-                             "note": note, "n": len(chunk)})
+                             "note": note, "n": len(chunk), **({"label": LABEL} if LABEL else {})})
     save_state(wd, state)
     with open(wd / "submitted.txt", "a") as f:
         f.write("".join(r["custom_id"] + "\n" for r in chunk))
@@ -281,7 +284,9 @@ def main():
     p.add_argument("--n", type=int, default=1)
     p.add_argument("--sample-start", type=int, default=0)
     p.add_argument("--n-override", type=int, default=None)
+    p.add_argument("--label", default=None, help="batch label token (a frame's TOKEN) written into each batch's metadata description")
     args = p.parse_args()
+    global LABEL; LABEL = args.label or None
     globals()[f"cmd_{args.cmd}"](args)
 
 

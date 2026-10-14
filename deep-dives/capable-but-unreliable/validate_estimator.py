@@ -2,12 +2,12 @@
 # requires-python = ">=3.10"
 # dependencies = ["numpy"]
 # ///
-"""Synthetic boards built on the real frame (real 46-arm capabilities,
+"""Synthetic boards built on the real frame (real 46-model capabilities,
 real per-task board failure rates on the real easy bands, n=128):
 
-  log easy-rate of arm m on pool p =
+  log easy-rate of model m on pool p =
       alpha_p + beta * cap_m + tau_m + gamma_mp
-  per-(arm, task) rate = pool rate shaped by the task's real relative
+  per-(model, task) rate = pool rate shaped by the task's real relative
       difficulty, times a log-normal pair-task wobble (creates the
       task-lottery component); counts ~ Binomial(128, rate).
 
@@ -158,7 +158,7 @@ for p in POOL:
         ys.append(y_of(b[p]))
     eps_true[p] = float(np.mean(np.var(np.array(ys), axis=0)))
 
-print(f"frame: {M} arms; ground truth V_tau={V_TAU_TRUE} "
+print(f"frame: {M} models; ground truth V_tau={V_TAU_TRUE} "
       f"V_gamma={V_GAMMA_TRUE} V_eps(MC)="
       f"he {eps_true['he']:.3f} / mbpp {eps_true['mbpp']:.3f}")
 

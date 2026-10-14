@@ -95,7 +95,7 @@ deep-dives/      scripts of the studies behind the published numbers, one folder
 
 ## Status of this import
 
-Snapshot taken on 16 September 2026 by an allowlist copy and re-cut on 22 September: 2985 files, 128 MB.
+Snapshot taken on 16 September 2026 by an allowlist copy and re-cut on 22 September: 3030 files, 128 MB.
 Code is as it ran, with the environment it ran in read from variables and working notes removed. The project's
 operations code (landing loops, pollers, page composers, store readers) is not included. Scripts are included where they
 document a computation of record even when their inputs are not: a script that reads a fit's posterior draws, a study's

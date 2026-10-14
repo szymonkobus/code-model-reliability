@@ -28,7 +28,7 @@ for c in conds:
         out.append(f'<div class=row><div class=track><div class="bar {cls}" style="width:{pct:.1f}%" title="{html.escape(series)}: {html.escape(lab)}"></div></div><div class=val>{html.escape(lab)}</div></div>')
     out.append('</div>')
 out.append('<div class=axis><span>0%</span><span>25%</span><span>50% of attempts failed</span></div>')
-out.append('<div class=legend><span><i class="sw trap"></i>trap tasks: its ten worst easy tasks (the two worst twice), plus five further trap tasks for the third instruction</span><span><i class="sw ctrl"></i>control tasks: two it always passes</span></div>')
+out.append('<div class=legend><span title="its ten worst easy tasks (the two worst twice), plus five further trap tasks for the third instruction"><i class="sw trap"></i>trap tasks</span><span title="two it always passes"><i class="sw ctrl"></i>control tasks</span></div>')
 out.append('</div>')
 os.makedirs(os.path.join(HERE, "..", "site", "fig"), exist_ok=True)
 p = os.path.join(HERE, "..", "site", "fig", "fail_share.html")

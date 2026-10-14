@@ -105,6 +105,8 @@ def cmd_build(args):
     print(f"built {len(reqs)} requests ({len(ids)} tasks) -> {wd}/requests.jsonl")
 
 
+LABEL = None
+
 def submit_chunk(wd, state, chunk, model, note):
     c = client()
     tmp = wd / f"upload-{note}.jsonl"
@@ -112,11 +114,11 @@ def submit_chunk(wd, state, chunk, model, note):
         for r in chunk:
             f.write(json.dumps(r) + "\n")
     up = c.files.upload(file=str(tmp), config={"mime_type": "application/jsonl",
-                                               "display_name": f"{wd.name}-{note}"})
+                                               "display_name": f"{LABEL + '-' if LABEL else ''}{wd.name}-{note}"})
     job = c.batches.create(model=model, src=up.name,
-                           config={"display_name": f"{wd.name}-{note}"})
+                           config={"display_name": f"{LABEL + '-' if LABEL else ''}{wd.name}-{note}"})
     state["batches"].append({"name": job.name, "src": up.name,
-                             "note": note, "n": len(chunk)})
+                             "note": note, "n": len(chunk), **({"label": LABEL} if LABEL else {})})
     save_state(wd, state)
     with open(wd / "submitted.txt", "a") as f:
         f.write("".join(r["key"] + "\n" for r in chunk))
@@ -289,7 +291,9 @@ def main():
     p.add_argument("--n", type=int, default=1)
     p.add_argument("--sample-start", type=int, default=0)
     p.add_argument("--n-override", type=int, default=None)
+    p.add_argument("--label", default=None, help="batch label token (a frame's TOKEN) prefixed to the batch display names")
     args = p.parse_args()
+    global LABEL; LABEL = args.label or None
     globals()[f"cmd_{args.cmd}"](args)
 
 

@@ -17,6 +17,25 @@ todo = [p for p in payloads
         if not os.path.exists(f"{parts_dir}/{p['payload_id']}.json")]
 print(f'[plan] {len(payloads)} payloads, {len(todo)} to run', flush=True)
 
+def parse_result_stdout(out):
+    txt = out.lstrip()
+    try:
+        obj, _ = json.JSONDecoder().raw_decode(txt)
+        if isinstance(obj, dict):
+            return obj
+    except Exception:
+        pass
+    for line in reversed(txt.splitlines()):
+        line = line.strip()
+        if line.startswith('{') and line.endswith('}'):
+            try:
+                obj = json.loads(line)
+                if isinstance(obj, dict):
+                    return obj
+            except Exception:
+                continue
+    return None
+
 def run_one(p):
     pid = p['payload_id']
     pp = f'{parts_dir}/{pid}.json'
@@ -36,7 +55,12 @@ def run_one(p):
         err_pp = f'{parts_dir}/{pid}.err'
         open(err_pp, 'w').write(f'rc={r.returncode}\n{r.stderr[-3000:]}')
         return pid, f'rc={r.returncode}', time.time() - t0
-    res = json.loads(r.stdout)
+    res = parse_result_stdout(r.stdout)
+    if res is None:
+        open(f'{parts_dir}/{pid}.err', 'w').write(
+            f'BAD_STDOUT: no parseable result object in the runner stdout\n'
+            f'--- stdout head ---\n{r.stdout[:3000]}\n--- stderr tail ---\n{r.stderr[-2000:]}')
+        return pid, 'BAD_STDOUT', time.time() - t0
     tmp = pp + '.tmp'
     json.dump(res, open(tmp, 'w'))
     os.replace(tmp, pp)

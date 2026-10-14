@@ -1,7 +1,7 @@
 {
- "n_arms_published": 59,
- "n_models": 51,
- "n_registry_rows": 176,
+ "n_arms_published": 170,
+ "n_models": 162,
+ "n_registry_rows": 305,
  "attempts_per_task_wave1": 128,
  "wave1_kept": 431,
  "fit_board_top_arms": 59,
@@ -57,6 +57,6 @@
  "refit_hours_median": 5.0,
  "refit_hours_max": 16.1,
  "refit_note": "sampling time recorded in the fits' posterior summaries (runtime_seconds_mcmc), four chains on four CPU cores",
- "tree_files": 2985,
+ "tree_files": 3030,
  "tree_mb": 128
 }

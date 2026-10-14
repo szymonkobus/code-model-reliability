@@ -29,6 +29,19 @@ SHORT = {'Qwen/Qwen3-32B-Thinking': 'Qwen3-32B thinking', 'Qwen/Qwen2.5-0.5B-Ins
          'deepseek-ai/deepseek-coder-1.3b-instruct': 'DeepSeek-Coder 1.3B', 'deepseek-ai/DeepSeek-R1-0528': 'DeepSeek-R1', 'Qwen/Qwen3-0.6B': 'Qwen3-0.6B',
          'openai/gpt-5-mini': 'GPT-5 mini', 'openai/gpt-5-nano': 'GPT-5 nano', 'Qwen/Qwen3-8B': 'Qwen3-8B', 'Qwen/Qwen2.5-7B-Instruct': 'Qwen2.5-7B'}
 def lg(p): p = min(max(p / 100.0, 1e-6), 1 - 1e-6); return math.log(p / (1 - p))
+import os as _os, numpy as _np
+MX, MY = (_os.environ.get('MODES') or 'logit:logit').split(':')
+DEFAULT = (MX == 'logit' and MY == 'logit'); SUF = '' if DEFAULT else f'__x-{MX}__y-{MY}'
+def _to_pct(z): return 100.0 / (1.0 + _np.exp(-_np.asarray(z, float)))
+def _to_lg(p): p = _np.clip(_np.asarray(p, float) / 100.0, 1e-6, 1 - 1e-6); return _np.log(p / (1 - p))
+NTX = [10, 20, 30, 40, 50, 60, 70, 80, 90]; NTY = [5, 10, 15, 20, 25, 30, 35, 40, 45]
+def axis_modes(ax, fs=None):
+    """apply the axis modes to an axes whose data are logit: a normal axis gets the percent function scale and linear percent ticks"""
+    if MX == 'normal':
+        ax.set_xscale('function', functions=(_to_pct, _to_lg)); ax.set_xticks([lg(t) for t in NTX]); ax.set_xticklabels([f"{t:g}" for t in NTX])
+    if MY == 'normal':
+        ax.set_yscale('function', functions=(_to_pct, _to_lg)); ax.set_yticks([lg(t) for t in NTY]); ax.set_yticklabels([f"{t:g}" for t in NTY])
+    if fs is not None: ax.tick_params(labelsize=fs)
 def fmt_bad(b):
     p = 100 * b
     return f"{p:.2g}%" if p < 1 else (f"{p:.0f}%" if p >= 9.5 else f"{p:.1f}%")
@@ -48,7 +61,8 @@ def base_axes(fig, rect, phone=True):
     ax.tick_params(length=0, labelsize=fs)
     ax.set_xlabel('capability: difficulty (%) at which the arm fails half its attempts', color=INK2, fontsize=fs + 0.2)
     ax.set_ylabel('reliability: difficulty (%) at which it fails 1 attempt in 100', color=INK2, fontsize=fs + 0.2)
-    ax.set_aspect('equal', adjustable='datalim')
+    axis_modes(ax)
+    if DEFAULT: ax.set_aspect('equal', adjustable='datalim')   # equal logit units; on a percent axis the function scale sets the look
     return ax
 
 def grey_arms(ax, skip, label_gpt5=False, phone=True, nano_above=False):
@@ -296,7 +310,7 @@ def gated_figure(phone=True):
             for e in gf:
                 hollow = e.get('status') != 'point'
                 ax.plot(lg(e['cap_pct']), lg(e['rel_pct']), marker='D', ms=3.6 if phone else 4.4, mfc=SURFACE if hollow else col, mec=col if hollow else SURFACE, mew=0.9, ls='none', zorder=6)
-                D_LAB = {} if phone else {12: ((-7, 0), 'right'), 18: ((7, 0), 'left')}   # the labelled d values and the free side of each point; the 25% endpoint has no free side (the caption carries it), none fit on the phone
+                D_LAB = {} if phone else {12: ((7, 0), 'left'), 18: ((7, 0), 'left')}
                 if m == LABEL_ARM and e['d_pct'] in D_LAB:
                     off, ha = D_LAB[e['d_pct']]
                     ax.annotate(f"{e['d_pct']}%", (lg(e['cap_pct']), lg(e['rel_pct'])), xytext=off, textcoords='offset points', ha=ha, va='center', fontsize=8.4 if phone else 9.6, color=INK2, zorder=6)
@@ -345,6 +359,7 @@ def check_figure():
             ax.plot(lg(r['cap_pct']), lg(r['rel_pct']), marker='o', ms=8, mfc=SURFACE if think else c2, mec=c2, mew=1.6, ls='none', zorder=6)
         ax.set_xlim(lg(4.2), lg(96.5)); ax.set_ylim(lg(0.14), lg(45))
         ax.set_xticks([lg(t) for t in XT]); ax.set_xticklabels([f"{t:g}" for t in XT]); ax.set_yticks([lg(t) for t in YT]); ax.set_yticklabels([f"{t:g}" for t in YT])
+        axis_modes(ax, fs=8.6)
         ax.grid(True, color=GRID, linewidth=0.6); ax.set_axisbelow(True); ax.tick_params(length=0, labelsize=8.6)
         for s in ('top', 'right'): ax.spines[s].set_visible(False)
         ax.set_title(f"{SHORT.get(S)} + {SHORT.get(W)}: {len(els)} fitted", fontsize=9.2, color=INK2, loc='left')
@@ -356,21 +371,22 @@ def check_figure():
 
 def save_fig(fig, stem):
     fig.savefig(stem + '.svg', facecolor=SURFACE); fig.savefig(stem + '.png', facecolor=SURFACE, dpi=160)
-    if not stem.endswith('-phone'):
+    if not stem.endswith('-phone') and DEFAULT:
         os.makedirs(os.path.join(SITE, 'slides'), exist_ok=True); fig.savefig(os.path.join(SITE, 'slides', os.path.basename(stem) + '-print.png'), facecolor=SURFACE, dpi=300)
     plt.close(fig)
 
 NOISE_PAIR = 2
 for pi, pair in enumerate(F['pairs']['pairs']):
     for phone in (True, False):
-        fig = (noise_figure if pi == NOISE_PAIR else pair_figure)(pi, pair, phone=phone); stem = os.path.join(SITE, f'figure-pair{pi}' + ('-phone' if phone else '-wide'))
+        fig = (noise_figure if pi == NOISE_PAIR else pair_figure)(pi, pair, phone=phone); stem = os.path.join(SITE, f'figure-pair{pi}{SUF}' + ('-phone' if phone else '-wide'))
         save_fig(fig, stem)
 for phone in (True, False):
-    fig = empty_figure(NOISE_PAIR, F['pairs']['pairs'][NOISE_PAIR], phone=phone); stem = os.path.join(SITE, 'figure-pair3' + ('-phone' if phone else '-wide'))
+    fig = empty_figure(NOISE_PAIR, F['pairs']['pairs'][NOISE_PAIR], phone=phone); stem = os.path.join(SITE, 'figure-pair3' + SUF + ('-phone' if phone else '-wide'))
     save_fig(fig, stem)
     for name, fn in (('figure-sabotage', sabotage_figure), ('figure-sharpen', sharpen_figure), ('figure-gated', gated_figure)):
-        fig = fn(phone=phone); stem = os.path.join(SITE, name + ('-phone' if phone else '-wide'))
+        fig = fn(phone=phone); stem = os.path.join(SITE, name + SUF + ('-phone' if phone else '-wide'))
         save_fig(fig, stem)
-fig = check_figure(); stem = os.path.join(SITE, 'figure-check')
-save_fig(fig, stem)
+if DEFAULT:
+    fig = check_figure(); stem = os.path.join(SITE, 'figure-check')
+    save_fig(fig, stem)
 print('figures written; fitted points', F['n_landed'], 'of', F['n_elements'])

@@ -35,7 +35,7 @@ def cmd_build(args):
         # 5-family rejects temperature (400) and needs its thinking card explicit;
         # haiku keeps the T=0.8 convention. Cards match the chart-arm registry.
         five_family = model.startswith(("claude-sonnet-5", "claude-opus-5",
-                                        "claude-fable-5", "claude-opus-4-6"))
+                                        "claude-fable-5", "claude-opus-4-6", "claude-haiku-5-5"))
         thinking_card = isinstance(params.get("thinking"), dict) and \
             params["thinking"].get("type") in ("enabled", "adaptive")
         if five_family:
@@ -61,7 +61,7 @@ def cmd_build(args):
                 f"{tid}: stop_sequences must be a non-empty list of strings"
             thinking_on = args.thinking or (
                 isinstance(params.get("thinking"), dict)
-                and params["thinking"].get("type") != "disabled")
+                and params["thinking"].get("type") in ("enabled", "adaptive"))
             assert not thinking_on, \
                 f"{tid}: stops are forbidden on thinking cards (recorded protocol)"
         assert not {"top_p", "top_k", "system"} & params.keys(), \
@@ -145,16 +145,19 @@ def cmd_fetch(args):
                 text = "".join(blk.text for blk in m.content if blk.type == "text")
                 thinking_chars = sum(len(getattr(blk, "thinking", "") or "")
                                      for blk in m.content if blk.type == "thinking")
+                thinking = [(getattr(blk, "thinking", "") or "") for blk in m.content if blk.type == "thinking"]
+                redacted = sum(1 for blk in m.content if blk.type == "redacted_thinking")
                 out.write(json.dumps({
-                    "custom_id": res.custom_id, "model": m.model,
+                    "custom_id": res.custom_id, "model": m.model, "message_id": getattr(m, "id", None),
                     "stop_reason": m.stop_reason, "text": text,
                     "thinking_chars": thinking_chars,
+                    "thinking": thinking, "redacted_thinking_blocks": redacted, "batch": b["id"],
                     "usage": {"input_tokens": m.usage.input_tokens,
                               "output_tokens": m.usage.output_tokens},
                 }) + "\n")
                 seen.add(res.custom_id)
                 n_new += 1
-            b["fetched"] = True
+            b["fetched"] = True; b["created_at"] = str(getattr(r, "created_at", None) or ""); b["ended_at"] = str(getattr(r, "ended_at", None) or ""); b["fetched_at"] = __import__("time").strftime("%Y-%m-%dT%H:%M:%SZ", __import__("time").gmtime())
             save_state(wd, state)
     if errored:
         (wd / "errored.jsonl").write_text("".join(json.dumps(e) + "\n" for e in errored))
@@ -207,10 +210,12 @@ def cmd_export(args):
                     "task_id": tid, "sample": s, "text": r["text"],
                     "stop_reason": r["stop_reason"],
                     "thinking_chars": r.get("thinking_chars", 0),
+                    "thinking": r.get("thinking"), "redacted_thinking_blocks": r.get("redacted_thinking_blocks"), "batch": r.get("batch"),
                     "tokens": r["usage"]["output_tokens"],
                     "output_tokens": r["usage"]["output_tokens"],
                     "input_tokens": r["usage"]["input_tokens"],
                     "model": r["model"],
+                    "message_id": r.get("message_id"),
                 }) + "\n")
                 n_written += 1
     print(f"wrote {out_path}: {n_written} completions | missing {len(missing)} | "

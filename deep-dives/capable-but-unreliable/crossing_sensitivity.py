@@ -2,7 +2,7 @@
 # requires-python = ">=3.10"
 # dependencies = ["numpy"]
 # ///
-"""How many tasks set an arm's 1% crossing? For each measurable arm:
+"""How many tasks set an model's 1% crossing? For each measurable model:
 the number of kept tasks at or below its reliability crossing (in
 difficulty) on which it fails at least once in 128 attempts — these are
 the failures the 1% level is read from — and the share of its failing
@@ -42,6 +42,6 @@ out = {"n_arms": len(per), "tasks_failed_at_or_below_median": float(np.median(n)
        "share_of_failing_attempts_median": float(np.median([p["share_of_all_failing_attempts"] for p in per.values()])),
        "per_arm": per}
 json.dump(out, open(D / "crossing_sensitivity.json", "w"), indent=1)
-print(f"{len(per)} arms: tasks failed at/below the 1% crossing — median {out['tasks_failed_at_or_below_median']:.0f} "
+print(f"{len(per)} models: tasks failed at/below the 1% crossing — median {out['tasks_failed_at_or_below_median']:.0f} "
       f"(IQR {out['tasks_failed_at_or_below_p25']:.0f}-{out['tasks_failed_at_or_below_p75']:.0f}); "
-      f"they carry a median {out['share_of_failing_attempts_median']:.1%} of an arm's failing attempts")
+      f"they carry a median {out['share_of_failing_attempts_median']:.1%} of an model's failing attempts")

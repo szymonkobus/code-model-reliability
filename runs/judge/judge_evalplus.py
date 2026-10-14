@@ -111,7 +111,7 @@ if INPUTS_MODE == "typed":
 elif INPUTS_MODE:
     raise SystemExit(f"judge_evalplus.py: unknown JUDGE_INPUTS={INPUTS_MODE!r} (only 'typed' is supported)")
 
-if PREAMBLE_MODE == "imports" or PLUS_FILTER == "bool" or INPUTS_MODE == "typed" or FULL_OVERRIDE:
+if PREAMBLE_MODE in ("imports", "imports+typing", "typing") or PLUS_FILTER == "bool" or INPUTS_MODE == "typed" or FULL_OVERRIDE:
     import evalplus.evaluate as _E
     _ORIG_TRUSTED_EXEC = _E.trusted_exec
     def _forked_trusted_exec(*_a, **_k):
@@ -165,6 +165,15 @@ if PREAMBLE_MODE == "imports" or PLUS_FILTER == "bool" or INPUTS_MODE == "typed"
         from evalplus.data.utils import CACHE_DIR as _CACHE_DIR
         _orig_gt = _E.get_groundtruth
 
+        def _load_override_like_evalplus(_path):
+            from evalplus.data.utils import stream_jsonl as _sjl
+            _probs = {r["task_id"]: r for r in _sjl(_path)}
+            _ds = _sys.argv[_sys.argv.index("--dataset") + 1] if "--dataset" in _sys.argv else ""
+            if _ds == "mbpp":
+                from evalplus.data.mbpp import mbpp_deserialize_inputs as _mdi
+                for _t, _p in _probs.items():
+                    _p["base_input"] = _mdi(_t, _p["base_input"]); _p["plus_input"] = _mdi(_t, _p["plus_input"])
+            return _probs
         def _derived_groundtruth(problems, hashcode, tasks_only_output_not_none):
             global GT_PROVENANCE
             derived_path = _os.path.join(_CACHE_DIR, f"{hashcode}.pkl")
@@ -172,29 +181,29 @@ if PREAMBLE_MODE == "imports" or PLUS_FILTER == "bool" or INPUTS_MODE == "typed"
             for tag in ("-boolfiltered", "-typed"): base_hash = base_hash.replace(tag, "")
             orig_path = _os.path.join(_CACHE_DIR, f"{base_hash}.pkl")
             _fresh_ref = False
+            _KEEP_REF = (derived_path == orig_path) and _os.path.exists(derived_path)
             if FULL_OVERRIDE:
                 # scoped judging: the reference is the FULL leg's original cache (md5 of the full override file = evalplus's key)
                 with open(FULL_OVERRIDE, "rb") as _fh: full_hash = _hashlib.md5(_fh.read()).hexdigest()
                 orig_path = _os.path.join(_CACHE_DIR, f"{full_hash}.pkl")
-                if _os.path.exists(derived_path) and not _os.path.exists(derived_path + ".derived"):
+                _KEEP_REF = (derived_path == orig_path) and _os.path.exists(derived_path)   # v2 untagged-keep: computed once orig_path is final, before any remove
+                if _os.path.exists(derived_path) and not _os.path.exists(derived_path + ".derived") and not _KEEP_REF:
                     try: _os.remove(derived_path)   # a fresh recompute under the trimmed key (pre-fix v17.32 judging): never trust it
                     except Exception: pass
-                if not _os.path.exists(orig_path):
-                    from evalplus.data.utils import stream_jsonl as _sj
-                    full_problems = {r["task_id"]: r for r in _sj(FULL_OVERRIDE)}
+                if not _os.path.exists(orig_path) and not _KEEP_REF:
+                    full_problems = _load_override_like_evalplus(FULL_OVERRIDE)   # desfix-v2: as evalplus's loader for this --dataset, never the raw stream
                     print(f"GROUND TRUTH: no original cache for the full leg ({full_hash[:12]}) — computing it once from the full override ({len(full_problems)} tasks); the scoped cache derives from it")
                     _orig_gt(full_problems, full_hash, tasks_only_output_not_none)   # evalplus caches <full_hash>.pkl = the reference for this override
                     _fresh_ref = True
             if _os.path.exists(derived_path) and _os.path.exists(derived_path + ".derived"):
                 GT_PROVENANCE = "derived-from-original"
                 return _orig_gt(problems, hashcode, tasks_only_output_not_none)
-            if _os.path.exists(derived_path):
+            if _os.path.exists(derived_path) and not _KEEP_REF:
                 try: _os.remove(derived_path)
                 except Exception: pass
             if not _os.path.exists(orig_path):
                 if KEPT_PLUS_IDX or INPUTS_MODE == "typed":
-                    from evalplus.data.utils import stream_jsonl as _sj_raw
-                    _raw = {r["task_id"]: r for r in _sj_raw(_ovp)}
+                    _raw = _load_override_like_evalplus(_ovp)   # desfix-v2
                     print(f"GROUND TRUTH: no original cache for this override ({base_hash[:12]}) — computing the reference from the RAW override ({len(_raw)} tasks, unfiltered inputs); this judging derives from it", flush=True)
                     _orig_gt(_raw, base_hash, tasks_only_output_not_none)   # evalplus writes CACHE_DIR/<base_hash>.pkl = orig_path
                     if not _os.path.exists(orig_path):
@@ -221,8 +230,7 @@ if PREAMBLE_MODE == "imports" or PLUS_FILTER == "bool" or INPUTS_MODE == "typed"
                     # a poisoned reference entry (written from filtered problems by a pre-fix launcher): HEAL it from the raw override's
                     # problem — original inputs, timings measured now — write the reference back atomically, then derive as usual.
                     if _RAW_PROBS is None:
-                        from evalplus.data.utils import stream_jsonl as _sj_raw
-                        _RAW_PROBS = {r["task_id"]: r for r in _sj_raw(FULL_OVERRIDE or _ovp)}
+                        _RAW_PROBS = _load_override_like_evalplus(FULL_OVERRIDE or _ovp)   # desfix-v2
                     _rp = _RAW_PROBS.get(t)
                     if _rp is None:
                         print(f"GROUND TRUTH: cache entry misaligned for {t} and no raw problem to heal from — recomputed fresh on the judged inputs", flush=True)
@@ -246,39 +254,45 @@ if PREAMBLE_MODE == "imports" or PLUS_FILTER == "bool" or INPUTS_MODE == "typed"
                     plus, _ = _E.trusted_exec(p["prompt"] + p["canonical_solution"], p["plus_input"], p["entry_point"], record_time=True, output_not_none=onn)
                 assert len(plus) == len(p["plus_input"]) == len(plus_time) and len(base) == len(p["base_input"]) == len(base_time), f"derived ground truth misaligned for {t}"
                 out[t] = {"base": base, "base_time": base_time, "plus": plus, "plus_time": plus_time}
-            if _HEALED[0]:   # persist healed reference entries (poisoned by a pre-fix launcher) so later judgings derive with pinned timings
+            if _HEALED[0] and not _KEEP_REF:   # persist healed reference entries (poisoned by a pre-fix launcher) so later judgings derive with pinned timings; v2 untagged-keep: never on the shared reference itself
                 try:
                     with open(orig_path + ".heal.tmp", "wb") as f: _pickle.dump(od, f)
                     _os.replace(orig_path + ".heal.tmp", orig_path)
                     print(f"GROUND TRUTH: {_HEALED[0]} reference entries healed and written back to {orig_path}", flush=True)
                 except Exception as _he: print(f"GROUND TRUTH: healed entries not written back ({_he})", flush=True)
+            elif _HEALED[0]: print(f"GROUND TRUTH: {_HEALED[0]} healed entries used in memory only (shared reference kept as it stands)", flush=True)
             _os.makedirs(_CACHE_DIR, exist_ok=True)
-            with open(derived_path + ".tmp", "wb") as f: _pickle.dump(out, f)
-            _os.replace(derived_path + ".tmp", derived_path)
-            open(derived_path + ".derived", "w").write(f"derived from {_os.path.basename(orig_path)} at {__import__('time').strftime('%Y-%m-%dT%H:%M:%SZ', __import__('time').gmtime())}; kept-plus-indices for {len(KEPT_PLUS_IDX)} filtered tasks; typed outputs recomputed with original timings\n")
+            if not _KEEP_REF:   # v2 untagged-keep: nothing is written on the shared reference path
+                with open(derived_path + ".tmp", "wb") as f: _pickle.dump(out, f)
+                _os.replace(derived_path + ".tmp", derived_path)
+                open(derived_path + ".derived", "w").write(f"derived from {_os.path.basename(orig_path)} at {__import__('time').strftime('%Y-%m-%dT%H:%M:%SZ', __import__('time').gmtime())}; kept-plus-indices for {len(KEPT_PLUS_IDX)} filtered tasks; typed outputs recomputed with original timings\n")
             GT_PROVENANCE = "fresh-as-original" if _fresh_ref else "derived-from-original"
             print(f"GROUND TRUTH: derived from the original cache {_os.path.basename(orig_path)} (timings kept for every kept input){' — reference computed fresh just now' if _fresh_ref else ''}")
+            if _KEEP_REF: print("GROUND TRUTH: shared reference kept as it stands (untagged judging: no remove, no recompute, no write on the reference path)", flush=True)
             return out
 
         _E.get_groundtruth = _derived_groundtruth
     _orig_load = _E.load_solutions
 
     def _load_with_preamble(*a, **kw):
-        if PREAMBLE_MODE != "imports":
+        if PREAMBLE_MODE not in ("imports", "imports+typing", "typing"):
             yield from _orig_load(*a, **kw); return
+        typing_mode = PREAMBLE_MODE in ("imports+typing", "typing")
+        if typing_mode and not hasattr(_pt, "apply_typing"): raise SystemExit(f"judge_evalplus.py: JUDGE_PREAMBLE={PREAMBLE_MODE!r} needs preamble_transform V5-typing (apply_typing) — the copy here has no such function")
         n_pre = 0; n_tasks = sum(1 for p in _PROBLEMS.values() if _pt.leading_imports(p.get("prompt", "")))
         for s in _orig_load(*a, **kw):
             p = _PROBLEMS.get(s.get("task_id"))
             if p is not None and "solution" in s:
-                new = _pt.apply(p.get("prompt", ""), s["solution"])
+                new = _pt.apply_typing(p.get("prompt", ""), s["solution"], with_imports=(PREAMBLE_MODE == "imports+typing")) if typing_mode else _pt.apply(p.get("prompt", ""), s["solution"])
                 if new != s["solution"]:
                     s = dict(s); s["solution"] = new; n_pre += 1
             yield s
-        print(f"PREAMBLE imports ({PREAMBLE_RULE}, sha {PREAMBLE_SHA[:12]}): {n_tasks} of {len(_PROBLEMS)} problems carry leading import lines; {n_pre} attempts judged with the preamble")
+        if typing_mode: print(f"PREAMBLE {PREAMBLE_MODE} ({getattr(_pt, 'RULE_TYPING', 'V5-typing')}; imports rule {PREAMBLE_RULE}; sha {PREAMBLE_SHA[:12]}): {n_tasks} of {len(_PROBLEMS)} problems carry leading import lines; {n_pre} attempts judged with the typing prelude{' + imports preamble' if PREAMBLE_MODE == 'imports+typing' else ''}")
+        else: print(f"PREAMBLE imports ({PREAMBLE_RULE}, sha {PREAMBLE_SHA[:12]}): {n_tasks} of {len(_PROBLEMS)} problems carry leading import lines; {n_pre} attempts judged with the preamble")
 
     _E.load_solutions = _load_with_preamble
 elif PREAMBLE_MODE:
-    raise SystemExit(f"judge_evalplus.py: unknown JUDGE_PREAMBLE={PREAMBLE_MODE!r} (only 'imports' is supported)")
+    raise SystemExit(f"judge_evalplus.py: unknown JUDGE_PREAMBLE={PREAMBLE_MODE!r} (supported: 'imports', 'imports+typing', 'typing')")
 
 COMPARE_MODE = _os.environ.get("JUDGE_COMPARE", "")
 if COMPARE_MODE == "normalized-v1":

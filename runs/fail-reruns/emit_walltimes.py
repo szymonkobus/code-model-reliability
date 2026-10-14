@@ -28,7 +28,8 @@ for pp in sorted(glob.glob(f'{W}/parts/*.json')):
                    'n_timeout': s.get('n_timeout', 0),
                    'exec_error_class': (s['exec_error'].split('(')[0]
                                         if s.get('exec_error') else None)}
-with gzip.open(f'{W}/out/shape_walltimes.jsonl.gz', 'wt') as f:
+with gzip.open(f'{W}/out/shape_walltimes.jsonl.gz.tmp', 'wt') as f:
     for k in sorted(rows):
         f.write(json.dumps(rows[k]) + '\n')
+os.replace(f'{W}/out/shape_walltimes.jsonl.gz.tmp', f'{W}/out/shape_walltimes.jsonl.gz')
 print('walltime rows:', len(rows))

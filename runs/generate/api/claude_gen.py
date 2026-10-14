@@ -79,6 +79,36 @@ ARMS = {
                     thinking={"type": "adaptive", "display": "summarized"},
                     output_config={"effort": "high"}),
     ),
+    "haiku55": dict(
+        model="claude-haiku-5-5",
+        chart_name="claude-haiku-5-5",
+        temp_label="1.0",  # sampling params not settable; provider default
+        params=dict(max_tokens=4096, thinking={"type": "disabled"},
+                    stop_sequences=EOS_STOPS),
+    ),
+    "haiku55-thinking": dict(
+        model="claude-haiku-5-5",
+        chart_name="claude-haiku-5-5-thinking",
+        temp_label="1.0",
+        params=dict(max_tokens=36864,
+                    thinking={"type": "adaptive", "display": "summarized"},
+                    output_config={"effort": "high"}),
+    ),
+    "sonnet55": dict(
+        model="claude-sonnet-5-5",
+        chart_name="claude-sonnet-5-5",
+        temp_label="1.0",  # sampling params not settable; provider default
+        params=dict(max_tokens=4096, thinking={"type": "between_tools"},
+                    stop_sequences=EOS_STOPS),
+    ),
+    "sonnet55-thinking": dict(
+        model="claude-sonnet-5-5",
+        chart_name="claude-sonnet-5-5-thinking",
+        temp_label="1.0",
+        params=dict(max_tokens=36864,
+                    thinking={"type": "adaptive", "display": "summarized"},
+                    output_config={"effort": "high"}),
+    ),
     "haiku-greedy": dict(
         model="claude-haiku-4-5-20251001",
         chart_name="claude-haiku-4-5",
@@ -165,11 +195,10 @@ def cmd_build(args):
 
 
 def client():
-    import anthropic
-    key = os.environ.get("ANTHROPIC_API_KEY")
-    if key:
-        return anthropic.Anthropic(api_key=key)
-    sys.exit("No API key found: set ANTHROPIC_API_KEY in the environment.")
+    _d = str(Path(__file__).resolve().parent)
+    if _d not in sys.path: sys.path.insert(0, _d)
+    from wif_client import client as _wif_client
+    return _wif_client("batch")
 
 
 def submitted_ids(wd):

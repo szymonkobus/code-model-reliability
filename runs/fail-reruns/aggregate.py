@@ -4,6 +4,10 @@ from collections import Counter, defaultdict
 W = 'runs/fail-reruns'
 os.makedirs(f'{W}/out', exist_ok=True)
 
+def _atomic_dump(obj, path, **kw):
+    with open(path + '.tmp', 'w') as f: json.dump(obj, f, **kw)
+    os.replace(path + '.tmp', path)
+
 def load_plusfilter():
     p = f'{W}/out/plusfilter.json'
     if not os.path.exists(p): return None
@@ -45,9 +49,10 @@ for pp in glob.glob(f'{W}/parts/*.json'):
         vec[k] = fp
         rank[k] = rk
 
-with gzip.open(f'{W}/out/fullset_vectors.jsonl.gz', 'wt') as f:
+with gzip.open(f'{W}/out/fullset_vectors.jsonl.gz.tmp', 'wt') as f:
     for (t, sh), fp in sorted(vec.items()):
         f.write(json.dumps({'task_id': t, 'shape': sh, 'fingerprint': fp}) + '\n')
+os.replace(f'{W}/out/fullset_vectors.jsonl.gz.tmp', f'{W}/out/fullset_vectors.jsonl.gz')
 
 # attempts -> per-(cell,task) fingerprint counters
 att = defaultdict(list)  # (cell, task) -> [(sample, shape)]
@@ -93,9 +98,10 @@ for key in order:
         'shape': t['shape'], 'modal_fp': modal_fp,
         'outcome_entropy_bits': t['outcome_entropy_bits']})
     rows_done += 1
-with open(f'{W}/out/consistency_tasks_fullset.jsonl', 'w') as f:
+with open(f'{W}/out/consistency_tasks_fullset.jsonl.tmp', 'w') as f:
     for r in out_rows:
         f.write(json.dumps(r) + '\n')
+os.replace(f'{W}/out/consistency_tasks_fullset.jsonl.tmp', f'{W}/out/consistency_tasks_fullset.jsonl')
 
 # board: fail-weighted aggregates per cell (their exact fields)
 ref_board = json.load(open('deep-dives/rare-failures/meta/consistency_board.json'))
@@ -119,7 +125,7 @@ for cell, rs in sorted(by_cell.items()):
         'renyi2_bits_fp': round(-math.log2(max(fw(lambda r: r['fp']['collision']), 1e-12)), 4),
         'mean_outcome_entropy_bits': ref.get('mean_outcome_entropy_bits'),
     }
-json.dump({'generated': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'), 'method':
+_atomic_dump({'generated': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'), 'method':
            'FULL fail-set fingerprint (exact per-test outcome vector from '
            're-execution of every failing alpha-shape against all base+plus '
            'tests; census harness semantics: 10s/call, 4GB RLIMIT, '
@@ -127,15 +133,19 @@ json.dump({'generated': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'
            'rare-failures); per-task collision prob (unbiased, n>=2) and '
            'modal share; fail-weighted per-arm aggregation',
            'arms': arms},
-          open(f'{W}/out/consistency_board_fullset.json', 'w'), indent=1)
+          f'{W}/out/consistency_board_fullset.json', indent=1)
 
-# coverage
+scope_cells = {k[0] for k in att}
+rows_total = sum(1 for k in order if k[0] in scope_cells)
+pending_cells = sorted({k[0] for k in order if k[0] not in scope_cells})
 total_units = 0
 for line in gzip.open(f'{W}/units.jsonl.gz', 'rt'): total_units += 1
 cov = {'executed_units': len(vec), 'total_units': total_units,
-       'rows_complete': rows_done, 'rows_total': len(order),
+       'rows_complete': rows_done, 'rows_total': rows_total,
        'cells': len(by_cell),
+       'their_rows': len(order), 'their_cells': len({k[0] for k in order}),
+       'pending_cells': pending_cells, 'pending_rows': len(order) - rows_total,
        'plusfilter_active': PLUSFILTER is not None,
        'abort_reexec_tasks': sorted(ABORT_REEXEC)}
-json.dump(cov, open(f'{W}/out/coverage.json', 'w'), indent=1)
+_atomic_dump(cov, f'{W}/out/coverage.json', indent=1)
 print(cov)
