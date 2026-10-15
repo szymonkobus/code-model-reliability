@@ -10,7 +10,8 @@
  "axis": "the mean over the panel arms of each arm's failure rate on the task, shrunk by one pseudo-observation of half a failure and half a pass over the task's attempts, on the logit scale; the panel every arm with attempts on at least 90% of the set's tasks",
  "engine": {
   "sha256_12": {
-   "414898ce61cd": 63
+   "414898ce61cd": 58,
+   "69c4e1f76b02": 5
   },
   "pins": {
    "numpy": "2.4.6",
