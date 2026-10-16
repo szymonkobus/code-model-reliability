@@ -107,7 +107,9 @@ _BANDS = [
     # a failure count outside the four shapes takes the nearest shape, with the dot
     ("fails 1–3/32", re.compile(r"fails?\s*1\s*" + _DASH + r"\s*3\s*(?:/|of)\s*32\b", re.I), "circle"),
     ("fails 1–7/8", re.compile(r"solves sometimes|fails?\s*1\s*" + _DASH + r"\s*7\s*(?:/|of)\s*8\b", re.I), "diamond"),
-    # "all tasks" is the training set only in its own forms; "drawn from all tasks" names the pool a set was drawn from
+    # "all tasks" is the training set only in its own forms (the run on every task with one redraw); the default draw, every
+    # task eligible and the set re-drawn every 25 steps by the posterior rule, carries no word in a name of record, and its
+    # earlier words ("drawn from all tasks", "open draw"; aliases now) are cell words like any other, never this band
     ("all tasks", re.compile(r"(?:^|\bon\s+|,\s*|·\s*)all tasks\b", re.I), "diamond"),
 ]
 _VARIANTS = [
@@ -115,7 +117,7 @@ _VARIANTS = [
     ("0 redraws", re.compile(r"\b(?:0|zero|no)\s+re-?draws?\b", re.I)),
     ("1 redraw", re.compile(r"\b(?:1|one)\s+re-?draws?\b", re.I)),
     ("2 redraws", re.compile(r"\b(?:2|two)\s+re-?draws?\b", re.I)),
-    ("*", re.compile(r"re-?drawn\s+every\s+(?!25\b)\d+(?:\s+steps?)?", re.I)),
+    ("*", re.compile(r"re-?draw(?:n)?\s+every\s+\d+(?:\s+steps?)?", re.I)),   # a set re-drawn within the band, at any cadence
     ("*", re.compile(r"\bdrawn from [^,·(]+", re.I)),
     ("*", re.compile(r"\b(?:[A-Za-z][\w-]*\s+)?penalty(?:\s+×\s?\d+)?\b", re.I)),
     ("32 answers", re.compile(r"(?:/|of)\s*32\b", re.I)),
@@ -131,9 +133,12 @@ def run_marks(name: str) -> RunMarks | None:
     """The marks encoded in a training run's name of record, or None when the name is not a run's (a released model).
 
     The shape is the failure count the run trains on (circle: fails 1–2 of 8; square: 3–5 of 8; triangle: 6–7 of 8;
-    diamond: all tasks; a count outside these takes the nearest shape with the dot). The dot stands for any departure
-    from the plain recipe: another re-draw cadence or a fixed set, a penalty, a teacher's answers, a count outside the
-    four shapes. The treatment (reinforcement learning or a fine-tune) sets the line's pattern."""
+    diamond: all tasks; a count outside these takes the nearest shape with the dot). The plain recipe is the default
+    draw (every task eligible, the set re-drawn every 25 steps by the posterior rule) and nothing else, and a name of
+    record says nothing of it; the dot stands for any departure the name carries: a named draw (a fixed set, a set
+    re-drawn within the band at a cadence, a redraw count), a penalty, a KL term or an entropy hold, a teacher's
+    answers, a count outside the four shapes. The treatment (reinforcement learning or a fine-tune) sets the line's
+    pattern."""
     s = re.sub(r"\s+", " ", re.sub("[⁠​﻿]", "", str(name or "")))
     band = shape = None
     for b, rx, sh in _BANDS:
@@ -149,7 +154,7 @@ def run_marks(name: str) -> RunMarks | None:
     if len(cell_parts) >= 2:
         for p in (_STEP_TAIL.sub("", x.strip()).strip() for x in re.split(r",\s*", cell_parts[1])):
             if (not p or len(p) > 40 or re.match(r"^(?:RL|fine-?tune|sft)$", p, re.I) or re.match(r"^\d+\s+steps?$", p, re.I)
-                    or re.match(r"^\(?(?:step|checkpoint)\s*\d+\)?$", p, re.I) or re.match(r"^re-?drawn\s+every\s+25(?:\s+steps?)?$", p, re.I)):
+                    or re.match(r"^\(?(?:step|checkpoint)\s*\d+\)?$", p, re.I)):
                 continue
             if any(rx.search(p) for _, rx, _ in _BANDS) or any(rx.search(p) for _, rx in _VARIANTS):
                 continue

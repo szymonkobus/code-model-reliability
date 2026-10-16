@@ -71,12 +71,22 @@ CASES = [
     ("DeepSeek-Coder 6.7B · RL, fails 1–2/8, 2 redraws · 250 steps", "fails 1–2/8", "circle", True, "RL"),
     ("DeepSeek-Coder 6.7B · RL, fails 1–2/8 · 250 steps", "fails 1–2/8", "circle", False, "RL"),
     ("DeepSeek-Coder 6.7B · RL, fails 1–3/32, 1 redraw · 250 steps", "fails 1–3/32", "circle", True, "RL"),
-    ("R1-Distill Qwen 7B (thinking) · RL, fails 1–2/8, length penalty · 100 steps", "fails 1–2/8", "circle", True, "RL"),
+    # every other run names its draw: a set drawn once is "fixed", a set re-drawn within the band names its cadence
+    ("R1-Distill Qwen 7B (thinking) · RL, fails 1–2/8, fixed · 100 steps", "fails 1–2/8", "circle", True, "RL"),
+    ("R1-Distill Qwen 7B (thinking) · RL, fails 1–2/8, fixed, length penalty · 75 steps", "fails 1–2/8", "circle", True, "RL"),
+    ("R1-Distill Qwen 7B (thinking) · RL, fails 1–2/8, redraw every 25, KL · 50 steps", "fails 1–2/8", "circle", True, "RL"),
+    ("R1-Distill Qwen 7B (thinking) · RL, fails 1–2/8, redraw every 25, KL ×5 from step 50 · 100 steps", "fails 1–2/8", "circle", True, "RL"),
+    ("R1-Distill Qwen 7B (thinking) · RL, fails 1–2/8, redraw every 50, KL · 250 steps", "fails 1–2/8", "circle", True, "RL"),
+    ("R1-Distill Qwen 7B (thinking) · RL, fails 1–7/8, fixed, KL · 50 steps", "fails 1–7/8", "diamond", True, "RL"),
+    ("DeepSeek-Coder 6.7B · RL, fails 1–2/8, redraw every 25 · 250 steps", "fails 1–2/8", "circle", True, "RL"),
+    # the two default-draw runs: the draw carries no word; the KL term and the entropy hold (H) are the dot
+    ("R1-Distill Qwen 7B (thinking) · RL, fails 1–2/8, KL · 150 steps", "fails 1–2/8", "circle", True, "RL"),
+    ("R1-Distill Qwen 7B (thinking) · RL, fails 1–7/8, H, KL · 150 steps", "fails 1–7/8", "diamond", True, "RL"),
+    # earlier forms, aliases now ("KL penalty" before the word penalty was dropped; "drawn from all tasks" and "open draw", the
+    # default draw's earlier words): a cell word the grammar does not know is a variant, so these read with the dot as they did
     ("R1-Distill Qwen 7B (thinking) · RL, fails 1–7/8, fixed, KL penalty · 50 steps", "fails 1–7/8", "diamond", True, "RL"),
     ("R1-Distill Qwen 7B (thinking) · RL, fails 1–2/8, drawn from all tasks, KL penalty · 50 steps", "fails 1–2/8", "circle", True, "RL"),
-    ("R1-Distill Qwen 7B (thinking) · RL, fails 1–7/8, drawn from all tasks, entropy control, KL penalty · 50 steps", "fails 1–7/8", "diamond", True, "RL"),
-    ("R1-Distill Qwen 7B (thinking) · RL, fails 1–7/8, fixed, KL · 50 steps", "fails 1–7/8", "diamond", True, "RL"),   # the KL variant without the word penalty
-    ("R1-Distill Qwen 7B (thinking) · RL, fails 1–2/8, KL · 100 steps", "fails 1–2/8", "circle", True, "RL"),
+    ("R1-Distill Qwen 7B (thinking) · RL, fails 1–7/8, open draw, H, KL · 50 steps", "fails 1–7/8", "diamond", True, "RL"),
     ("DeepSeek-Coder 6.7B · fine-tune, fails 1–2/8, Gemma 4 12B · 240 steps", "fails 1–2/8", "circle", True, "fine-tune"),
     ("DeepSeek-Coder 6.7B · fine-tune, fails 1–2/8, Qwen3 14B passing answers · 240 steps", "fails 1–2/8", "circle", True, "fine-tune"),
 ]
@@ -88,6 +98,22 @@ def test_run_marks_read_the_name_of_record(name, band, shape, dot, treatment):
     assert m is not None
     assert (m.band, m.shape, m.dot, m.treatment) == (band, shape, dot, treatment)
     assert m.thinking == ("(thinking)" in name)
+
+
+def test_run_marks_read_a_named_draw_and_leave_the_default_draw_unsaid():
+    """The default draw carries no word: a default-draw run's variants are the terms its name carries beyond the band and
+    the treatment (the KL term, the entropy hold H), read from the name's cell, never from a list of known words. A set
+    re-drawn within the band names its cadence ("redraw every N", 25 included, either spelling) and a set drawn once says
+    "fixed"; each is the dot. A step a term names ("KL ×5 from step 50") is not the position's step, which the tail carries."""
+    m = run_marks("R1-Distill Qwen 7B (thinking) · RL, fails 1–7/8, H, KL · 150 steps")
+    assert m.variants == ["the tasks it solves sometimes", "H", "KL"] and m.steps == 150
+    assert run_marks("R1-Distill Qwen 7B (thinking) · RL, fails 1–2/8, KL · 150 steps").variants == ["KL"]
+    m = run_marks("R1-Distill Qwen 7B (thinking) · RL, fails 1–2/8, redraw every 25, KL ×5 from step 50 · 100 steps")
+    assert m.variants == ["redraw every 25", "KL ×5 from step 50"] and m.steps == 100 and m.dot
+    assert run_marks("DeepSeek-Coder 6.7B · RL, fails 1–2/8, redraw every 25 · 250 steps").variants == ["redraw every 25"]
+    assert run_marks("R1-Distill Qwen 7B (thinking) · RL, fails 1–2/8, re-drawn every 25 · 100 steps").variants == ["re-drawn every 25"]
+    assert run_marks("R1-Distill Qwen 7B (thinking) · RL, fails 1–2/8, fixed · 100 steps").variants == ["fixed"]
+    assert not run_marks("DeepSeek-Coder 6.7B · RL, fails 1–2/8 · 250 steps").dot
 
 
 def test_run_marks_know_the_teacher_and_the_step():

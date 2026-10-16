@@ -25,7 +25,9 @@ Conventions that hold everywhere:
 - Every file a stage writes names what it was produced from: the set and its hash, the arm, and the settings that
   can move a result, in a sidecar beside the data or a header inside it.
 - A date in a published file is a day, written year-month-day. No file carries a clock stamp, a host, a path
-  outside the repository, a key or a credential.
+  outside the repository, a key or a credential. A compressed file's header carries no clock either, so its bytes
+  stand from build to build while its content stands. The citation's `date-released` is the day the published
+  content last changed: a refresh that changes nothing else carries the previous day forward.
 - Difficulty is on one scale in logit units (`_z` columns; larger is harder): the logit of the panel-average
   failure rate on the task with one Jeffreys pseudo-observation, not standardised; where a difficulty is printed as
   a percentage it is 100 times the logistic of the z value, written 0 to 100%.
@@ -59,7 +61,8 @@ count. The texts and tests of wave 1 come from the judge harness at its pinned c
 rule in `docs/judging.md`), the removed argument lists per task, since wave 1 ships as ids.
 
 `data/tasks/wave-2/tasks-part-NN.jsonl.gz`, `data/tasks/wave-2-parked/tasks-part-NN.jsonl.gz` — one JSON object
-per line, the judged content of a task:
+per line, the judged content of a task (the gzip header written without a clock, so a part's bytes and the sha256
+its folder's `manifest.json` records stand from build to build while its records stand):
 
 | field | meaning |
 |---|---|
