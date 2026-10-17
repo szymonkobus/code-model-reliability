@@ -64,6 +64,10 @@ CARDS = {
     "claude-sonnet-5-5-thinking": Card(
         "claude-sonnet-5-5-thinking_batch", "claude-sonnet-5-5", {**THINKING, **ADAPTIVE}, "thinking", "1.0",
     ),
+    "claude-opus-5-5-thinking": Card(
+        "claude-opus-5-5-thinking_batch", "claude-opus-5-5", {**THINKING, **ADAPTIVE}, "thinking", "1.0",
+        "the service offers this model no form without thinking, so it is the one Opus 5.5 arm",
+    ),
 }
 """The published arms' cards by arm name. An arm's id is the key the fit's files were produced under: the model
 name with its thinking form and the batch token. The plain cards first carried the closing-fence stop as well;
