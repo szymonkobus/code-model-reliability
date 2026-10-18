@@ -31,6 +31,7 @@ claude-haiku-4-5-thinking	claude-haiku-4-5-thinking_batch	claude-haiku-4-5-think
 claude-haiku-4-5	claude-haiku-4-5_batch	claude-haiku-4-5	Haiku 4.5	Claude
 claude-haiku-5-5-thinking	claude-haiku-5-5-thinking_batch	claude-haiku-5-5	Haiku 5.5 (thinking)	Claude
 claude-haiku-5-5	claude-haiku-5-5_batch	claude-haiku-5-5	Haiku 5.5	Claude
+claude-opus-5-5-thinking	claude-opus-5-5-thinking_batch	claude-opus-5-5-thinking	Opus 5.5 (thinking)	Claude
 claude-opus-5-thinking	claude-opus-5-thinking_batch	claude-opus-5	Opus 5 (thinking)	Claude
 claude-opus-5	claude-opus-5_batch	claude-opus-5	Opus 5	Claude
 claude-sonnet-5-5-thinking	claude-sonnet-5-5-thinking_batch	claude-sonnet-5-5	Sonnet 5.5 (thinking)	Claude

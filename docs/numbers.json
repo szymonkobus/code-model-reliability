@@ -9,11 +9,11 @@
  "n_wave2_pointers": 95,
  "n_wave2_parked_text": 654,
  "n_wave2_parked_pointers": 239,
- "fit": "e0f5112bec34",
- "n_arms": 63,
+ "fit": "3076d2cb247c",
+ "n_arms": 64,
  "n_tasks_fit": 1297,
- "n_cells": 75305,
- "n_attempts_million": "8.1",
+ "n_cells": 76591,
+ "n_attempts_million": "8.3",
  "n_kept_12": 1288,
  "n_tasks_fit_not_kept": 9,
  "tasks_fit_not_kept": [
@@ -64,5 +64,5 @@
   }
  ],
  "version": "2.0.0",
- "date": "2026-10-17"
+ "date": "2026-10-18"
 }

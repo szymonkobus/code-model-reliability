@@ -49,3 +49,4 @@
 {"active_params_b": 8.2, "family": "Qwen3", "mode": null, "model_id": "Qwen/Qwen3-8B", "name": "Qwen3 8B", "rank": 41, "total_params_b": 8.2}
 {"active_params_b": 14.8, "family": "Qwen3", "mode": null, "model_id": "Qwen/Qwen3-14B", "name": "Qwen3 14B", "rank": 51, "total_params_b": 14.8}
 {"active_params_b": 32.8, "family": "Qwen3", "mode": null, "model_id": "Qwen/Qwen3-32B", "name": "Qwen3 32B", "rank": 61, "total_params_b": 32.8}
+{"active_params_b": null, "family": "Claude", "mode": "thinking", "model_id": "claude-opus-5-5-thinking", "name": "Opus 5.5 (thinking)", "rank": 6, "total_params_b": null}

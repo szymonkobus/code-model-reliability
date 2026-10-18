@@ -3,8 +3,8 @@
  "files": {
   "humaneval": {
    "file": "wave1_humaneval.csv.gz",
-   "sha256": "1cf995c28cc15a98fccdc5c46819f87296fd6c78e4e9ad1fa75a5e64850beb30",
-   "bytes": 3359700,
+   "sha256": "7a71ff73f4ac973d3c6590a59d7d0000a39143580284def628a3f761129b55a3",
+   "bytes": 3406776,
    "fields": [
     "arm",
     "task_id",
@@ -12,8 +12,8 @@
     "base_status",
     "plus_status"
    ],
-   "arms": 63,
-   "rows": 1168768,
+   "arms": 64,
+   "rows": 1187200,
    "per_arm": [
     {
      "arm": "Qwen--Qwen2.5-0.5B-Instruct_temp_0.8",
@@ -240,6 +240,13 @@
      "published_cells_without_rows": []
     },
     {
+     "arm": "claude-opus-5-5-thinking_batch",
+     "tasks": 144,
+     "rows": 18432,
+     "published_attempts": 18432,
+     "published_cells_without_rows": []
+    },
+    {
      "arm": "claude-opus-5-thinking_batch",
      "tasks": 145,
      "rows": 18560,
@@ -460,8 +467,8 @@
   },
   "mbpp": {
    "file": "wave1_mbpp.csv.gz",
-   "sha256": "11a795429dd0998c0f10ccc3f571a652a9899c3c63a914c2d06182a972b13e38",
-   "bytes": 6551617,
+   "sha256": "41378d9b3a59d10ff142a3d1710834c18c261cb9893659e6779084dea80c4ea3",
+   "bytes": 6652108,
    "fields": [
     "arm",
     "task_id",
@@ -469,8 +476,8 @@
     "base_status",
     "plus_status"
    ],
-   "arms": 62,
-   "rows": 2269696,
+   "arms": 63,
+   "rows": 2306304,
    "per_arm": [
     {
      "arm": "Qwen--Qwen2.5-0.5B-Instruct_temp_0.8",
@@ -684,6 +691,13 @@
     },
     {
      "arm": "claude-haiku-5-5_batch",
+     "tasks": 286,
+     "rows": 36608,
+     "published_attempts": 36608,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "claude-opus-5-5-thinking_batch",
      "tasks": 286,
      "rows": 36608,
      "published_attempts": 36608,
