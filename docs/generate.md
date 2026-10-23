@@ -28,7 +28,9 @@ written for this project where it cannot:
 The thinking forms sample with the makers' recommended settings (temperature 0.6, top-p 0.95; top-k 20 and
 min-p 0 for the two-phase form). The provider arms sample as each provider allows: one model at temperature 0.8
 with top-p unset, the rest under the provider's default sampling, thinking at the provider's forced temperature or
-under adaptive thinking at high effort; their cards are in `generate/api/*.py`. Every difference between the open-weight
+under adaptive thinking at high effort; two models answered once per task with reasoning at high effort under one
+36,864-token limit for reasoning and answer (GPT-6 Astra through the OpenAI batch interface, Muse Wonder live through
+OpenRouter pinned to its maker's endpoint); their cards are in `generate/api/*.py`. Every difference between the open-weight
 arms and the API arms is in the open: the opening of the model's turn, the sampling, the serving stack.
 
 The stop strings end an answer where its program ends: the end-of-text markers, the first line of a
@@ -87,7 +89,8 @@ cmr generate answer-phase --model <model> --tasks <set> --source <single-phase r
 published fit and no other (a published arm without a row fails the build). An arm's id in the
 table is the key the fit's files were produced under: the model stem, the form token and the temperature for the
 open-weight arms (with the `@768-marker` suffix on the two generation-prompt variants), and the model name with the
-batch token for the provider arms (`claude-sonnet-5_batch`); no table composes an id of its own. `cluster/generate.sbatch` is the Slurm form of one run; everything
+batch token for the provider arms (`claude-sonnet-5_batch`; the arm served live through OpenRouter carries its
+serving token instead, `muse-wonder-1.0_meta`); no table composes an id of its own. `cluster/generate.sbatch` is the Slurm form of one run; everything
 about the machine is set inside it. A provider arm runs through the batch cycle:
 
 ```
@@ -97,6 +100,9 @@ cmr generate api status   --provider anthropic --card claude-sonnet-5 --state st
 cmr generate api fetch    --provider anthropic --card claude-sonnet-5 --state state/sonnet
 cmr generate api finalize --provider anthropic --card claude-sonnet-5 --state state/sonnet --tasks data/tasks/wave2 --out out/wave2/claude-sonnet-5_batch
 ```
+
+`--provider openrouter` runs the same steps live: `submit` sends the requests at a bounded concurrency and keeps
+their answers in a file under the answers directory, `status` and `fetch` read it.
 
 The keys come from the environment (`ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `GEMINI_API_KEY`) and nothing else.
 

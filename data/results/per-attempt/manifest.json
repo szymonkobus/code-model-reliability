@@ -3,8 +3,8 @@
  "files": {
   "humaneval": {
    "file": "wave1_humaneval.csv.gz",
-   "sha256": "7a71ff73f4ac973d3c6590a59d7d0000a39143580284def628a3f761129b55a3",
-   "bytes": 3406776,
+   "sha256": "d71c79443a48cd4b440c63ceab91a0986e7c9d6aeb45b3120d1fd5311656b474",
+   "bytes": 3468148,
    "fields": [
     "arm",
     "task_id",
@@ -12,8 +12,8 @@
     "base_status",
     "plus_status"
    ],
-   "arms": 64,
-   "rows": 1187200,
+   "arms": 71,
+   "rows": 1208368,
    "per_arm": [
     {
      "arm": "Qwen--Qwen2.5-0.5B-Instruct_temp_0.8",
@@ -212,6 +212,34 @@
      "published_cells_without_rows": []
     },
     {
+     "arm": "Skywork--Skywork-OR1-7B_think_temp_0.6",
+     "tasks": 144,
+     "rows": 4608,
+     "published_attempts": 4608,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "XiaomiMiMo--MiMo-7B-RL_think_temp_0.6",
+     "tasks": 144,
+     "rows": 4608,
+     "published_attempts": 4608,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "XiaomiMiMo--MiMo-7B-SFT_think_temp_0.6",
+     "tasks": 144,
+     "rows": 4608,
+     "published_attempts": 4608,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "claude-fable-5-1-thinking_live",
+     "tasks": 144,
+     "rows": 4608,
+     "published_attempts": 4608,
+     "published_cells_without_rows": []
+    },
+    {
      "arm": "claude-haiku-4-5-thinking_batch",
      "tasks": 145,
      "rows": 18560,
@@ -401,6 +429,13 @@
      "published_cells_without_rows": []
     },
     {
+     "arm": "gemini-4-argon_batch",
+     "tasks": 144,
+     "rows": 144,
+     "published_attempts": 144,
+     "published_cells_without_rows": []
+    },
+    {
      "arm": "google--gemma-4-12B-it_temp_0.8@768-marker",
      "tasks": 145,
      "rows": 18560,
@@ -426,6 +461,13 @@
      "tasks": 145,
      "rows": 18560,
      "published_attempts": 18816,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "gpt-6-astra_batch",
+     "tasks": 144,
+     "rows": 1296,
+     "published_attempts": 1296,
      "published_cells_without_rows": []
     },
     {
@@ -457,6 +499,13 @@
      "published_cells_without_rows": []
     },
     {
+     "arm": "muse-wonder-1.0_meta",
+     "tasks": 144,
+     "rows": 1296,
+     "published_attempts": 144,
+     "published_cells_without_rows": []
+    },
+    {
      "arm": "zai-org--GLM-4.7-Flash_temp_0.8",
      "tasks": 145,
      "rows": 18560,
@@ -467,8 +516,8 @@
   },
   "mbpp": {
    "file": "wave1_mbpp.csv.gz",
-   "sha256": "41378d9b3a59d10ff142a3d1710834c18c261cb9893659e6779084dea80c4ea3",
-   "bytes": 6652108,
+   "sha256": "ff740f69506fe14429e99c5b9b4b1dcc2213143fc323874cc10b701f5cef10f5",
+   "bytes": 6780108,
    "fields": [
     "arm",
     "task_id",
@@ -476,8 +525,8 @@
     "base_status",
     "plus_status"
    ],
-   "arms": 63,
-   "rows": 2306304,
+   "arms": 70,
+   "rows": 2348346,
    "per_arm": [
     {
      "arm": "Qwen--Qwen2.5-0.5B-Instruct_temp_0.8",
@@ -666,6 +715,34 @@
      "tasks": 286,
      "rows": 36608,
      "published_attempts": 37088,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "Skywork--Skywork-OR1-7B_think_temp_0.6",
+     "tasks": 286,
+     "rows": 9152,
+     "published_attempts": 9152,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "XiaomiMiMo--MiMo-7B-RL_think_temp_0.6",
+     "tasks": 286,
+     "rows": 9152,
+     "published_attempts": 9152,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "XiaomiMiMo--MiMo-7B-SFT_think_temp_0.6",
+     "tasks": 286,
+     "rows": 9152,
+     "published_attempts": 9152,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "claude-fable-5-1-thinking_live",
+     "tasks": 286,
+     "rows": 9152,
+     "published_attempts": 9152,
      "published_cells_without_rows": []
     },
     {
@@ -858,6 +935,13 @@
      "published_cells_without_rows": []
     },
     {
+     "arm": "gemini-4-argon_batch",
+     "tasks": 286,
+     "rows": 286,
+     "published_attempts": 286,
+     "published_cells_without_rows": []
+    },
+    {
      "arm": "google--gemma-4-12B-it_temp_0.8@768-marker",
      "tasks": 286,
      "rows": 36608,
@@ -886,6 +970,13 @@
      "published_cells_without_rows": []
     },
     {
+     "arm": "gpt-6-astra_batch",
+     "tasks": 286,
+     "rows": 2574,
+     "published_attempts": 2574,
+     "published_cells_without_rows": []
+    },
+    {
      "arm": "moonshotai--Kimi-Dev-72B_temp_0.8",
      "tasks": 286,
      "rows": 36608,
@@ -911,6 +1002,13 @@
      "tasks": 286,
      "rows": 36608,
      "published_attempts": 37088,
+     "published_cells_without_rows": []
+    },
+    {
+     "arm": "muse-wonder-1.0_meta",
+     "tasks": 286,
+     "rows": 2574,
+     "published_attempts": 286,
      "published_cells_without_rows": []
     },
     {

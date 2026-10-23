@@ -187,3 +187,12 @@ GEMINI_LITE_WAVE1_LIMIT = 2048
 
 GEMINI_WAVE2_LIMIT = 16384
 """The output limit of the Gemini arms on wave 2."""
+
+ONE_ANSWER_LIMIT = 36864
+"""The output limit of the two provider arms that answered once per task (GPT-6 Astra and Muse Wonder): reasoning
+and answer under one limit, the same on both waves."""
+
+ONE_ANSWER_REDRAW_LIMIT = 128_000
+"""The limit under which a one-answer attempt cut at ONE_ANSWER_LIMIT with no answer text was redrawn once; a redraw
+the provider served stands as the attempt, where it served none the cut first attempt stands, and an attempt cut
+with an answer text stands as drawn."""

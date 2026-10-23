@@ -57,6 +57,10 @@
  ],
  "positioned_only": [
   "Qwen--Qwen3-30B-A3B_think_temp_0.6",
+  "Skywork--Skywork-OR1-7B_think_temp_0.6",
+  "XiaomiMiMo--MiMo-7B-RL_think_temp_0.6",
+  "XiaomiMiMo--MiMo-7B-SFT_think_temp_0.6",
+  "claude-fable-5-1-thinking_live",
   "claude-haiku-5-5-thinking_batch",
   "claude-haiku-5-5_batch",
   "claude-opus-5-5-thinking_batch",
@@ -67,8 +71,11 @@
   "deepseek-ai--DeepSeek-V3-0324_temp_0.8",
   "deepseek-ai--DeepSeek-V3.2_temp_0.6",
   "deepseek-ai--DeepSeek-V3.2_think_temp_0.6",
+  "gemini-4-argon_batch",
+  "gpt-6-astra_batch",
   "moonshotai--Kimi-K2-Instruct_temp_0.8",
-  "moonshotai--Kimi-Linear-48B-A3B-Instruct_temp_0.8"
+  "moonshotai--Kimi-Linear-48B-A3B-Instruct_temp_0.8",
+  "muse-wonder-1.0_meta"
  ],
  "excluded_from_voting": [],
  "coverage": {
@@ -100,6 +107,10 @@
   "Qwen--Qwen3-8B_temp_0.8": 1.0,
   "Qwen--Qwen3-8B_think_temp_0.6": 1.0,
   "Qwen--Qwen3-Coder-30B-A3B-Instruct_temp_0.8": 0.9992,
+  "Skywork--Skywork-OR1-7B_think_temp_0.6": 0.9931,
+  "XiaomiMiMo--MiMo-7B-RL_think_temp_0.6": 0.9931,
+  "XiaomiMiMo--MiMo-7B-SFT_think_temp_0.6": 0.9931,
+  "claude-fable-5-1-thinking_live": 0.9907,
   "claude-haiku-4-5-thinking_batch": 1.0,
   "claude-haiku-4-5_batch": 1.0,
   "claude-haiku-5-5-thinking_batch": 0.9931,
@@ -127,14 +138,17 @@
   "deepseek-ai--deepseek-coder-6.7b-instruct_temp_0.8": 1.0,
   "gemini-3.5-flash-lite_batch": 1.0,
   "gemini-3.6-flash_batch": 1.0,
+  "gemini-4-argon_batch": 0.9931,
   "google--gemma-4-12B-it_temp_0.8@768-marker": 0.9985,
   "google--gemma-4-31B-it_temp_0.8@768-marker": 1.0,
   "gpt-5-mini_batch": 1.0,
   "gpt-5-nano_batch": 0.9992,
+  "gpt-6-astra_batch": 0.9931,
   "moonshotai--Kimi-Dev-72B_temp_0.8": 0.9653,
   "moonshotai--Kimi-K2-Instruct_temp_0.8": 0.6253,
   "moonshotai--Kimi-Linear-48B-A3B-Instruct_temp_0.8": 0.5636,
   "moonshotai--Moonlight-16B-A3B-Instruct_temp_0.8": 0.9931,
+  "muse-wonder-1.0_meta": 0.9931,
   "zai-org--GLM-4.7-Flash_temp_0.8": 0.9938
  }
 }

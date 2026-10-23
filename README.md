@@ -9,8 +9,8 @@ Both are read from a Bayesian failure-against-difficulty curve fitted to many ju
 task sets, wave 1 (the kept tasks of two public Python benchmarks) and wave 2 (new tasks built for the whole
 difficulty range), together wave 1+2. A model runs every task many times, every attempt is judged by executable
 tests, the judged counts per task are the cells the curve is fitted to, and the two crossings are read from the
-curve. The published fit covers 64 arms (a model under one generation protocol) on 1,297 tasks,
-76,591 cells and 8.3 million attempts.
+curve. The published fit covers 71 arms (a model under one generation protocol) on 1,297 tasks,
+85,604 cells and 8.4 million attempts.
 
 Every number in this file is written by the build from the data it ships beside; `docs/numbers.json` lists them.
 
@@ -73,7 +73,7 @@ table in `DATA-LICENSE.md`.
 Shipped, under `data/`: the task sets as above; the arm registry (every published arm with its model, protocol,
 judging settings and extractor), the models, the protocol table and the names of record of the models trained in
 this project whose arms the published fit carries — no arm outside the published fit appears in any table, so every
-row leads to a published result; the published fit, `data/results/published/3076d2cb247c/`: its cells (failures out of attempts per arm and task), the
+row leads to a published result; the published fit, `data/results/published/4c1c72dd8c1b/`: its cells (failures out of attempts per arm and task), the
 difficulty scale with its panel, the crossings table, the gates, and a draw-free summary per arm (the fitted curve
 with its band, the per-level crossings and their densities) that the figures and pages read; and the verdict files
 of record of every published arm on the wave 1 tasks of the published fit, `data/results/per-attempt/`, one row per
@@ -93,7 +93,7 @@ not permit republishing them, which ship as pointers.
    `crossings.csv`, for example `Qwen--Qwen2.5-7B-Instruct_temp_0.8`:
    ```
    pip install -e '.[fit]'
-   cmr fit inputs --cells data/results/published/3076d2cb247c/cells.csv --axis data/results/published/3076d2cb247c/axis.csv --fit-dir fits/mine
+   cmr fit inputs --cells data/results/published/4c1c72dd8c1b/cells.csv --axis data/results/published/4c1c72dd8c1b/axis.csv --fit-dir fits/mine
    cmr fit run --inputs fits/mine/inputs/<arm>.npz --out fits/mine/posterior_summary_<arm>.json --eiv on
    cmr fit crossings --results fits/mine --out-dir fits/mine
    ```

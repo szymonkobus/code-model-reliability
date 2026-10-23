@@ -16,12 +16,16 @@ from typing import Iterator
 
 from .records import iter_jsonl
 
-STATUS_MEANING = {
+STATUS_MEANING = {   # the ten values of the certificates' status contract, every one whether or not a task carries it today
     "complete-for-admission": "certified with a complete test set",
     "retracted-to-reserve": "certified, then set aside from the measured pool",
     "withdrawn": "removed after certification",
     "excluded-provisional-tier1": "held out of the measured pool pending a check",
+    "excluded-provisional-tier2": "held out of the measured pool pending a lesser check",
+    "blocked-tier1-split": "blocked by an unresolved defect-label disagreement",
     "awaiting-components": "certification incomplete",
+    "awaiting-label": "certification incomplete: no audit label yet",
+    "held-tuple-risk": "held while a type question in its expected outputs was open",
     "held-empty-tests": "no usable tests",
 }
 

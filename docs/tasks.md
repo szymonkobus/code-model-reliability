@@ -148,8 +148,10 @@ by status and audit label (`fit_keep_set`), the audit label with the review roun
 was aimed at, the conversion method with the reference's origin, and the provenance block. The statuses:
 `complete-for-admission` (certified with a complete test set), `retracted-to-reserve` (certified, then set aside from
 the measured pool), `withdrawn` (removed after certification), `excluded-provisional-tier1` (held out pending a
-check), `awaiting-components` (certification incomplete) and `held-empty-tests` (no usable tests). Set membership is
-not in the certificates: it is the list in `sets.json`.
+check), `excluded-provisional-tier2` (held out pending a lesser check), `blocked-tier1-split` (blocked by an unresolved
+defect-label disagreement), `awaiting-components` (certification incomplete), `awaiting-label` (certification
+incomplete: no audit label yet), `held-tuple-risk` (held while a type question in its expected outputs was open) and
+`held-empty-tests` (no usable tests). Set membership is not in the certificates: it is the list in `sets.json`.
 
 ## The audit
 

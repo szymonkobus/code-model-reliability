@@ -1,11 +1,12 @@
 """The Gemini arms: the cards the published attempts were drawn with, and the batch wire format of the Google GenAI SDK.
 
-Both arms sample at temperature 0.8 (the open-weight arms' temperature) with the provider's default thinking setting
+The two Gemini 3 arms sample at temperature 0.8 (the open-weight arms' temperature) with the provider's default thinking setting
 (the plain arm has no thinking; the thinking arm thinks at the provider's default). On wave 1 the first draw ran
 under an output limit of 2,048 (plain arm) or 10,240 (thinking arm) and the attempts it cut were redrawn under
 16,384; on wave 2 the limit was 16,384. A batch job carries one model, so a run submits one card at a time.
 
 Reads ``GEMINI_API_KEY`` from the environment. Writes nothing itself; see ``batch``.
+The Gemini 4 Argon arm is the one-answer arm: thinking level high, no temperature sent, the service's own output limit as its cap.
 """
 
 from __future__ import annotations
@@ -18,6 +19,9 @@ from typing import Iterable, List
 from .. import settings as S
 from .batch import Card, Provider, Result
 
+GEMINI_4_OUTPUT_LIMIT = 32768
+"""Gemini 4 Argon's output limit as the service states it (output_token_limit in the model's metadata); the one-answer arm sends it as its cap."""
+
 CARDS = {
     "gemini-3.5-flash-lite": Card("gemini-3.5-flash-lite_batch", "gemini-3.5-flash-lite",
                                   {"max_output_tokens": S.GEMINI_WAVE2_LIMIT, "temperature": S.TEMPERATURE}, "plain", "0.8",
@@ -25,6 +29,11 @@ CARDS = {
     "gemini-3.6-flash": Card("gemini-3.6-flash_batch", "gemini-3.6-flash",
                              {"max_output_tokens": S.GEMINI_WAVE2_LIMIT, "temperature": S.TEMPERATURE}, "thinking", "0.8",
                              f"wave 1 first draw at {S.GEMINI_WAVE1_LIMIT}, cut attempts redrawn at {S.API_REDRAW_LIMIT}; thinking at the provider's default"),
+    "gemini-4-argon": Card("gemini-4-argon_batch", "gemini-4-argon",
+                           {"max_output_tokens": GEMINI_4_OUTPUT_LIMIT, "thinking_config": {"thinking_level": "high"}}, "thinking", "1.0",
+                           f"one answer per task on both waves at thinking level high under the provider's default sampling (no temperature sent); "
+                           f"the output limit is the service's own ({GEMINI_4_OUTPUT_LIMIT}), so there is no redraw step; one reply the service returned without a "
+                           f"candidate on the first request was asked once more the same day and that answer stands"),
 }
 
 TERMINAL = {"JOB_STATE_SUCCEEDED", "JOB_STATE_FAILED", "JOB_STATE_CANCELLED", "JOB_STATE_EXPIRED"}

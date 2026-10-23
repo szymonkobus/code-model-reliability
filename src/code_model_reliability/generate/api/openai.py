@@ -1,9 +1,11 @@
 """The OpenAI arms: the cards the published attempts were drawn with, and the Batch API wire format.
 
-The two arms are reasoning models that take no temperature or top-p; they sample under the provider's defaults
-and their reasoning tokens count against the output limit (``max_completion_tokens``). On wave 1 the first draw
-ran under a limit of 10,240 and the attempts it cut were redrawn under 16,384; on wave 2 the limit was 36,864.
-No stop strings.
+The three arms are reasoning models that take no temperature or top-p; they sample under the provider's defaults
+and their reasoning tokens count against the output limit (``max_completion_tokens``). For the two GPT-5 arms, on
+wave 1 the first draw ran under a limit of 10,240 and the attempts it cut were redrawn under 16,384; on wave 2 the
+limit was 36,864. GPT-6 Astra answered once per task on both waves under 36,864 with reasoning effort high; no
+attempt reached that limit, so none was redrawn (a cut attempt would have been redrawn once at 128,000). No stop
+strings.
 
 Reads ``OPENAI_API_KEY`` from the environment. Writes nothing itself; see ``batch``.
 """
@@ -24,6 +26,9 @@ CARDS = {
     "gpt-5-nano": Card("gpt-5-nano_batch", "gpt-5-nano-2025-08-07",
                        {"max_completion_tokens": S.OPENAI_WAVE2_LIMIT}, "thinking", "1.0",
                        f"wave 1 first draw at {S.OPENAI_WAVE1_LIMIT}, cut attempts redrawn at {S.API_REDRAW_LIMIT}"),
+    "gpt-6-astra": Card("gpt-6-astra_batch", "gpt-6-astra",
+                        {"max_completion_tokens": S.ONE_ANSWER_LIMIT, "reasoning_effort": "high"}, "thinking", "1.0",
+                        f"one answer per task on both waves at reasoning effort high; a cut attempt would have been redrawn once at {S.ONE_ANSWER_REDRAW_LIMIT}, none was cut"),
 }
 
 ENDPOINT = "/v1/chat/completions"

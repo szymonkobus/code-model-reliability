@@ -13,7 +13,7 @@
     "Qwen3": {"hue": "#5257e6", "ladder": [0.63, 0.55, 0.47, 0.40, 0.32, 0.24, 0.12], "match": "qwen[-\\s]?3(?![.\\d])(?![-\\s]?coder)"},
     "Qwen3-Coder": {"hue": "#4066bf", "ladder": [0.57], "match": "qwen[-\\s]?3[-\\s]?coder"},
     "Qwen3.5": {"hue": "#1a8fdc", "ladder": [0.50], "match": "qwen[-\\s]?3\\.5"},
-    "Claude": {"hue": "#1baf7a", "ladder": [0.36, 0.325, 0.29, 0.255, 0.22, 0.185], "match": "claude|\\bhaiku\\b|\\bsonnet\\b|\\bopus\\b|\\bfable\\b"},
+    "Claude": {"hue": "#1baf7a", "ladder": [0.36, 0.325, 0.29, 0.255, 0.22, 0.185, 0.15], "match": "claude|\\bhaiku\\b|\\bsonnet\\b|\\bopus\\b|\\bfable\\b"},
     "GLM": {"hue": "#8a7ba8", "ladder": null, "match": "\\bglm\\b"},
     "Kimi": {"hue": "#0e8291", "ladder": [0.37, 0.34, 0.31, 0.27, 0.24], "match": "\\bkimi\\b|moonshot|moonlight"},
     "DeepSeek-Coder": {"hue": "#b32fd6", "ladder": [0.63, 0.52, 0.40], "match": "deepseek[-\\s]?coder(?![-\\s]?v2)"},

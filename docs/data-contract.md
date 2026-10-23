@@ -180,7 +180,11 @@ published fit does not carry has no registry row, no protocol row, no name and n
 else ran on this project's machines, so every row of every table leads to a published result. The population is read
 once, from the fit of record, by every exporter.
 
-`registry/arms.jsonl` — the one list of arms, one row each after a header row with the schema name and the row count:
+`registry/arms.jsonl` — the one list of arms, one row each after a header row with the schema name and the row count.
+Two arms, GPT-6 Astra and Muse Wonder, were read once per task on every set (the registry of record keeps their rows
+under its one-answer kind, `greedy-gate`, and admits them to the published fit by a decision of the project); their rows carry
+`attempts_per_task` 1 on each set and their curves rest on one attempt a task, so a difference between them and an
+arm with 128 or 32 attempts per task is a difference in attempts, not only in the model:
 
 | field | meaning |
 |---|---|
@@ -215,8 +219,9 @@ the judge reads them from there and keeps no copy.
 `registry/protocols.tsv` — one row per arm, the protocol it was run under: the model id, form, protocol token,
 back end, prompt style, temperature, top_p, top_k, min_p, the output limit and the first pass's shorter limit
 where there was one, the thinking and answer budgets, the model's context length, the stop strings (a JSON list in
-one cell), the request geometry and the attempts per task on each set. Built at every build from the registry and
-the back ends' cards; `cmr generate --arm <arm>` runs an arm from its row.
+one cell), the request geometry and the attempts per task on each set (1 on both sets for the two arms read once
+per task). Built at every build from the registry and the back ends' cards; `cmr generate --arm <arm>` runs an arm
+from its row.
 
 `registry/arm_map.tsv` — model stem to arm id, the one curated map the registry builder uses.
 

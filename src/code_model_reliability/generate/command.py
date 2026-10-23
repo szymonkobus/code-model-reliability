@@ -80,7 +80,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     api = sub.add_parser("api", help="the batch cycle for a provider arm")
     api.add_argument("step", choices=["build", "submit", "status", "fetch", "resubmit", "finalize"])
-    api.add_argument("--provider", required=True, choices=["anthropic", "openai", "gemini"])
+    api.add_argument("--provider", required=True, choices=["anthropic", "openai", "gemini", "openrouter"])
     api.add_argument("--card", required=True, help="the arm's card name (see each provider module)")
     api.add_argument("--state", required=True, help="the state directory for this arm and set")
     api.add_argument("--tasks", default=None)
@@ -210,6 +210,10 @@ def _provider(name: str):
         from .api.openai import OpenAI
 
         return OpenAI()
+    if name == "openrouter":
+        from .api.openrouter import OpenRouter
+
+        return OpenRouter()
     from .api.gemini import Gemini
 
     return Gemini()

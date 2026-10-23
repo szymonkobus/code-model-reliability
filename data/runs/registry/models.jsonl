@@ -50,3 +50,10 @@
 {"active_params_b": 14.8, "family": "Qwen3", "mode": null, "model_id": "Qwen/Qwen3-14B", "name": "Qwen3 14B", "rank": 51, "total_params_b": 14.8}
 {"active_params_b": 32.8, "family": "Qwen3", "mode": null, "model_id": "Qwen/Qwen3-32B", "name": "Qwen3 32B", "rank": 61, "total_params_b": 32.8}
 {"active_params_b": null, "family": "Claude", "mode": "thinking", "model_id": "claude-opus-5-5-thinking", "name": "Opus 5.5 (thinking)", "rank": 6, "total_params_b": null}
+{"active_params_b": null, "family": "GPT-6", "mode": "thinking", "model_id": "openai/gpt-6-astra", "name": "GPT-6 Astra (thinking)", "rank": 20, "total_params_b": null}
+{"active_params_b": null, "family": "Muse", "mode": "thinking", "model_id": "meta/muse-wonder-1.0", "name": "Muse Wonder (thinking)", "rank": 10, "total_params_b": null}
+{"active_params_b": 7.0, "family": "MiMo", "mode": "thinking", "model_id": "XiaomiMiMo/MiMo-7B-SFT", "name": "MiMo 7B SFT (thinking)", "rank": 10, "total_params_b": 7.0}
+{"active_params_b": 7.0, "family": "MiMo", "mode": "thinking", "model_id": "XiaomiMiMo/MiMo-7B-RL", "name": "MiMo 7B RL (thinking)", "rank": 20, "total_params_b": 7.0}
+{"active_params_b": 7.0, "family": "Skywork-OR1", "mode": "thinking", "model_id": "Skywork/Skywork-OR1-7B", "name": "Skywork-OR1 7B (thinking)", "rank": 10, "total_params_b": 7.0}
+{"active_params_b": null, "family": "Claude", "mode": "thinking", "model_id": "claude-fable-5-1-thinking", "name": "Fable 5.1 (thinking)", "rank": 7, "total_params_b": null}
+{"active_params_b": null, "family": "Gemini", "mode": "thinking", "model_id": "google/gemini-4-argon", "name": "Gemini 4 Argon (thinking)", "rank": 30, "total_params_b": null}

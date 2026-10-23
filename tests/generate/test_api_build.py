@@ -7,7 +7,7 @@ import pathlib
 import pytest
 
 from code_model_reliability.generate import settings as S
-from code_model_reliability.generate.api import anthropic, batch, gemini, openai
+from code_model_reliability.generate.api import anthropic, batch, gemini, openai, openrouter
 from code_model_reliability.generate.taskset import load_tasks
 
 FIXTURES = pathlib.Path(__file__).resolve().parents[1] / "fixtures" / "generate"
@@ -26,7 +26,11 @@ def test_request_ids():
     (anthropic.Anthropic, "claude-sonnet-5"),
     (anthropic.Anthropic, "claude-haiku-4-5-thinking"),
     (openai.OpenAI, "gpt-5-mini"),
+    (openai.OpenAI, "gpt-6-astra"),
     (gemini.Gemini, "gemini-3.6-flash"),
+    (gemini.Gemini, "gemini-4-argon"),
+    (anthropic.Anthropic, "claude-fable-5-1-thinking"),
+    (openrouter.OpenRouter, "muse-wonder"),
 ])
 def test_build_writes_one_request_per_attempt(tmp_path, provider_cls, card_name):
     provider = provider_cls()
@@ -61,6 +65,25 @@ def test_openai_request_shape():
     assert r["method"] == "POST" and r["url"] == "/v1/chat/completions"
     assert r["body"] == {"model": "gpt-5-nano-2025-08-07", "messages": [{"role": "user", "content": "MESSAGE"}], "max_completion_tokens": 36864}
     assert openai._finish("length", None) == "length" and openai._finish("stop", "no") == "refusal"
+    astra = p.build_request("x__s000", p.card("gpt-6-astra"), "MESSAGE")
+    assert astra["body"] == {"model": "gpt-6-astra", "messages": [{"role": "user", "content": "MESSAGE"}],
+                             "max_completion_tokens": 36864, "reasoning_effort": "high"}
+    assert p.card("gpt-6-astra").arm == "gpt-6-astra_batch" and p.card("gpt-6-astra").output_limit() == 36864
+
+
+def test_openrouter_request_shape():
+    p = openrouter.OpenRouter()
+    card = p.card("muse-wonder")
+    r = p.build_request("x__s000", card, "MESSAGE")
+    assert r["method"] == "POST" and r["url"] == "/v1/chat/completions"
+    assert r["body"] == {"model": "meta/muse-wonder", "messages": [{"role": "user", "content": "MESSAGE"}],
+                         "max_tokens": 36864, "reasoning": {"effort": "high"}}
+    wire = openrouter.wire_body(r)
+    assert wire["provider"] == {"order": ["meta"], "allow_fallbacks": False, "require_parameters": True, "data_collection": "deny"}
+    assert wire["usage"] == {"include": True} and wire["stream"] is True and "temperature" not in wire
+    assert card.arm == "muse-wonder-1.0_meta" and card.form == "thinking" and card.output_limit() == 36864
+    assert openrouter._finish("length", None) == "length" and openrouter._finish("stop", "no") == "refusal"
+    assert p.status("answers:/nonexistent/answers.jsonl") == "failed"
 
 
 def test_gemini_request_shape():
@@ -70,6 +93,16 @@ def test_gemini_request_shape():
     assert r["request"]["contents"] == [{"role": "user", "parts": [{"text": "MESSAGE"}]}]
     assert r["request"]["generation_config"] == {"max_output_tokens": 16384, "temperature": 0.8}
     assert gemini._finish("MAX_TOKENS") == "length" and gemini._finish("SAFETY") == "refusal"
+    argon = p.card("gemini-4-argon")
+    assert argon.arm == "gemini-4-argon_batch" and argon.form == "thinking" and argon.output_limit() == 32768
+    assert p.build_request("y__s000", argon, "M")["request"]["generation_config"] == {"max_output_tokens": 32768, "thinking_config": {"thinking_level": "high"}}
+
+
+def test_fable_live_card():
+    card = anthropic.Anthropic().card("claude-fable-5-1-thinking")
+    assert card.arm == "claude-fable-5-1-thinking_live" and card.model == "claude-fable-5-1" and card.form == "thinking"
+    assert card.output_limit() == 36864 and card.params["thinking"] == {"type": "adaptive", "display": "summarized"} and card.params["output_config"] == {"effort": "high"}
+    assert "stop_sequences" not in card.params
 
 
 def test_finalize_refuses_an_incomplete_ledger(tmp_path):

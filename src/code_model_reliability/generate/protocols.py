@@ -22,9 +22,9 @@ FORMS = ("plain", "thinking", "completion")
 """The three forms (see the glossary): a chat model answering directly, a model reasoning before it answers, a
 base model continuing the bare prompt."""
 
-BACKENDS = ("vllm", "anthropic", "openai", "gemini", "standin")
-"""Where the attempts are produced: the inference engine on a GPU machine, one of three provider batch APIs, or the
-deterministic stand-in used by the tests."""
+BACKENDS = ("vllm", "anthropic", "openai", "gemini", "openrouter", "standin")
+"""Where the attempts are produced: the inference engine on a GPU machine, one of three provider batch APIs,
+OpenRouter's live API, or the deterministic stand-in used by the tests."""
 
 PROMPT_STYLES = (
     "chat",  # the harness's chat prompt: cut assistant message with the response sentence and an open fence

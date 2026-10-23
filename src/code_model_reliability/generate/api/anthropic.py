@@ -5,7 +5,8 @@ with top-p unset (the API refuses temperature and top-p together); its thinking 
 API forces for thinking (1.0) with an explicit 32,768-token budget; the Claude 5 family refuses temperature,
 top-p and top-k and samples under the provider's defaults, its thinking arms under adaptive thinking at high
 effort with the summarized trace returned. Plain arms stop at the end-of-text stop strings; thinking arms
-take no stop strings. Every arm's output limit is 4,096 (plain) or 36,864 (thinking).
+take no stop strings. Every arm's output limit is 4,096 (plain) or 36,864 (thinking). The Fable 5.1 thinking arm was drawn live through the Messages
+API with the same card and wire body, one request per attempt; its arm id carries the ``_live`` token in place of ``_batch``.
 
 Reads ``ANTHROPIC_API_KEY`` from the environment. Writes nothing itself; see ``batch``.
 """
@@ -67,6 +68,12 @@ CARDS = {
     "claude-opus-5-5-thinking": Card(
         "claude-opus-5-5-thinking_batch", "claude-opus-5-5", {**THINKING, **ADAPTIVE}, "thinking", "1.0",
         "the service offers this model no form without thinking, so it is the one Opus 5.5 arm",
+    ),
+    "claude-fable-5-1-thinking": Card(
+        "claude-fable-5-1-thinking_live", "claude-fable-5-1", {**THINKING, **ADAPTIVE}, "thinking", "1.0",
+        f"the same card sent live through the Messages API, one request per attempt, not through the batch interface (the arm id's _live token); "
+        f"adaptive thinking at high effort; no stop strings; 32 attempts per task on both waves; a first attempt cut at {S.API_THINKING_LIMIT} with no answer text "
+        f"was redrawn once at {S.ONE_ANSWER_REDRAW_LIMIT} (70 redraws, 6 still cut stand as drawn); the 169 answers the service refused on 14 tasks are read as no data",
     ),
 }
 """The published arms' cards by arm name. An arm's id is the key the fit's files were produced under: the model

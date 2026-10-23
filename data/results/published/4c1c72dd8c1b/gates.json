@@ -25,8 +25,8 @@
    }
   ]
  },
- "n_arms": 64,
- "n_pass": 33,
+ "n_arms": 71,
+ "n_pass": 40,
  "arms": {
   "Qwen--Qwen2.5-0.5B-Instruct_temp_0.8": {
    "divergences": 0,
@@ -921,6 +921,126 @@
     "regime": "extreme"
    }
   },
+  "Skywork--Skywork-OR1-7B_think_temp_0.6": {
+   "divergences": 0,
+   "divergence_share": 0.0,
+   "divergence_gate": "pass",
+   "engine_divergence_flag": "pass",
+   "rhat_gate": "pass",
+   "ess_gate": "pass",
+   "gates_failed": [],
+   "gate": "pass",
+   "crossing_rhat_d50": 1.0089,
+   "crossing_ess_d50": 663.9,
+   "crossing_rhat_d99": 1.0004,
+   "crossing_ess_d99": 7888.5,
+   "crossing_mixes_d50": true,
+   "crossing_mixes_d99": true,
+   "crossing_chain_spread_d50": 0.0023,
+   "crossing_chain_spread_d99": 0.0166,
+   "draws_basis": "full",
+   "parameter_rhat_max": 1.0038,
+   "parameter_ess_min": 1797.0,
+   "engine_rhat_gate": "pass",
+   "engine_ess_gate": "pass",
+   "chains_disagree_on": [],
+   "concentration": {
+    "share_top5pct_easy_third": 0.721,
+    "any_fail_share_easy_third": 0.1574,
+    "n_easy_third_tasks": 432,
+    "regime": "concentrated"
+   }
+  },
+  "XiaomiMiMo--MiMo-7B-RL_think_temp_0.6": {
+   "divergences": 0,
+   "divergence_share": 0.0,
+   "divergence_gate": "pass",
+   "engine_divergence_flag": "pass",
+   "rhat_gate": "pass",
+   "ess_gate": "pass",
+   "gates_failed": [],
+   "gate": "pass",
+   "crossing_rhat_d50": 1.0029,
+   "crossing_ess_d50": 1138.2,
+   "crossing_rhat_d99": 1.0006,
+   "crossing_ess_d99": 10069.3,
+   "crossing_mixes_d50": true,
+   "crossing_mixes_d99": true,
+   "crossing_chain_spread_d50": 0.0079,
+   "crossing_chain_spread_d99": 0.0081,
+   "draws_basis": "full",
+   "parameter_rhat_max": 1.002,
+   "parameter_ess_min": 2000.5,
+   "engine_rhat_gate": "pass",
+   "engine_ess_gate": "pass",
+   "chains_disagree_on": [],
+   "concentration": {
+    "share_top5pct_easy_third": 0.8523,
+    "any_fail_share_easy_third": 0.081,
+    "n_easy_third_tasks": 432,
+    "regime": "extreme"
+   }
+  },
+  "XiaomiMiMo--MiMo-7B-SFT_think_temp_0.6": {
+   "divergences": 0,
+   "divergence_share": 0.0,
+   "divergence_gate": "pass",
+   "engine_divergence_flag": "pass",
+   "rhat_gate": "pass",
+   "ess_gate": "pass",
+   "gates_failed": [],
+   "gate": "pass",
+   "crossing_rhat_d50": 1.0025,
+   "crossing_ess_d50": 1470.2,
+   "crossing_rhat_d99": 1.0002,
+   "crossing_ess_d99": 14163.3,
+   "crossing_mixes_d50": true,
+   "crossing_mixes_d99": true,
+   "crossing_chain_spread_d50": 0.0077,
+   "crossing_chain_spread_d99": 0.0181,
+   "draws_basis": "full",
+   "parameter_rhat_max": 1.0031,
+   "parameter_ess_min": 882.0,
+   "engine_rhat_gate": "pass",
+   "engine_ess_gate": "pass",
+   "chains_disagree_on": [],
+   "concentration": {
+    "share_top5pct_easy_third": 0.7263,
+    "any_fail_share_easy_third": 0.1505,
+    "n_easy_third_tasks": 432,
+    "regime": "concentrated"
+   }
+  },
+  "claude-fable-5-1-thinking_live": {
+   "divergences": 7,
+   "divergence_share": 0.000219,
+   "divergence_gate": "pass_with_note",
+   "engine_divergence_flag": "FAIL",
+   "rhat_gate": "pass",
+   "ess_gate": "pass",
+   "gates_failed": [],
+   "gate": "pass",
+   "crossing_rhat_d50": 1.0002,
+   "crossing_ess_d50": 10744.1,
+   "crossing_rhat_d99": 1.0004,
+   "crossing_ess_d99": 9966.7,
+   "crossing_mixes_d50": null,
+   "crossing_mixes_d99": true,
+   "crossing_chain_spread_d50": null,
+   "crossing_chain_spread_d99": 0.0119,
+   "draws_basis": "full",
+   "parameter_rhat_max": 1.0005,
+   "parameter_ess_min": 6322.3,
+   "engine_rhat_gate": "pass",
+   "engine_ess_gate": "pass",
+   "chains_disagree_on": [],
+   "concentration": {
+    "share_top5pct_easy_third": 1.0,
+    "any_fail_share_easy_third": 0.0047,
+    "n_easy_third_tasks": 429,
+    "regime": "extreme"
+   }
+  },
   "claude-haiku-4-5-thinking_batch": {
    "divergences": 0,
    "divergence_share": 0.0,
@@ -1758,6 +1878,36 @@
     "regime": "extreme"
    }
   },
+  "gemini-4-argon_batch": {
+   "divergences": 0,
+   "divergence_share": 0.0,
+   "divergence_gate": "pass",
+   "engine_divergence_flag": "pass",
+   "rhat_gate": "pass",
+   "ess_gate": "pass",
+   "gates_failed": [],
+   "gate": "pass",
+   "crossing_rhat_d50": 0.9999,
+   "crossing_ess_d50": 26838.5,
+   "crossing_rhat_d99": 1.0,
+   "crossing_ess_d99": 32054.9,
+   "crossing_mixes_d50": null,
+   "crossing_mixes_d99": true,
+   "crossing_chain_spread_d50": null,
+   "crossing_chain_spread_d99": 0.0217,
+   "draws_basis": "full",
+   "parameter_rhat_max": 1.0003,
+   "parameter_ess_min": 8539.5,
+   "engine_rhat_gate": "pass",
+   "engine_ess_gate": "pass",
+   "chains_disagree_on": [],
+   "concentration": {
+    "share_top5pct_easy_third": null,
+    "any_fail_share_easy_third": 0.0,
+    "n_easy_third_tasks": 432,
+    "regime": "no easy-third failures"
+   }
+  },
   "google--gemma-4-12B-it_temp_0.8@768-marker": {
    "divergences": 0,
    "divergence_share": 0.0,
@@ -1881,6 +2031,36 @@
     "regime": "concentrated"
    }
   },
+  "gpt-6-astra_batch": {
+   "divergences": 0,
+   "divergence_share": 0.0,
+   "divergence_gate": "pass",
+   "engine_divergence_flag": "pass",
+   "rhat_gate": "pass",
+   "ess_gate": "pass",
+   "gates_failed": [],
+   "gate": "pass",
+   "crossing_rhat_d50": 1.0,
+   "crossing_ess_d50": 31131.1,
+   "crossing_rhat_d99": 1.0001,
+   "crossing_ess_d99": 22298.0,
+   "crossing_mixes_d50": null,
+   "crossing_mixes_d99": true,
+   "crossing_chain_spread_d50": null,
+   "crossing_chain_spread_d99": 0.0229,
+   "draws_basis": "full",
+   "parameter_rhat_max": 1.0004,
+   "parameter_ess_min": 9723.9,
+   "engine_rhat_gate": "pass",
+   "engine_ess_gate": "pass",
+   "chains_disagree_on": [],
+   "concentration": {
+    "share_top5pct_easy_third": null,
+    "any_fail_share_easy_third": 0.0,
+    "n_easy_third_tasks": 432,
+    "regime": "no easy-third failures"
+   }
+  },
   "moonshotai--Kimi-Dev-72B_temp_0.8": {
    "divergences": 0,
    "divergence_share": 0.0,
@@ -2002,6 +2182,36 @@
     "any_fail_share_easy_third": 0.4339,
     "n_easy_third_tasks": 431,
     "regime": "concentrated"
+   }
+  },
+  "muse-wonder-1.0_meta": {
+   "divergences": 0,
+   "divergence_share": 0.0,
+   "divergence_gate": "pass",
+   "engine_divergence_flag": "pass",
+   "rhat_gate": "pass",
+   "ess_gate": "pass",
+   "gates_failed": [],
+   "gate": "pass",
+   "crossing_rhat_d50": 1.0001,
+   "crossing_ess_d50": 24025.9,
+   "crossing_rhat_d99": 1.0001,
+   "crossing_ess_d99": 29968.8,
+   "crossing_mixes_d50": true,
+   "crossing_mixes_d99": true,
+   "crossing_chain_spread_d50": 0.0091,
+   "crossing_chain_spread_d99": 0.0348,
+   "draws_basis": "full",
+   "parameter_rhat_max": 1.0006,
+   "parameter_ess_min": 9901.6,
+   "engine_rhat_gate": "pass",
+   "engine_ess_gate": "pass",
+   "chains_disagree_on": [],
+   "concentration": {
+    "share_top5pct_easy_third": 1.0,
+    "any_fail_share_easy_third": 0.0023,
+    "n_easy_third_tasks": 432,
+    "regime": "extreme"
    }
   },
   "zai-org--GLM-4.7-Flash_temp_0.8": {
