@@ -3,8 +3,8 @@
  "files": {
   "humaneval": {
    "file": "wave1_humaneval.csv.gz",
-   "sha256": "d71c79443a48cd4b440c63ceab91a0986e7c9d6aeb45b3120d1fd5311656b474",
-   "bytes": 3468148,
+   "sha256": "ac4610a0bda6fff63768e22a155b76d2fd8f116bd6aabd28a4233bb95b553083",
+   "bytes": 3490872,
    "fields": [
     "arm",
     "task_id",
@@ -13,7 +13,7 @@
     "plus_status"
    ],
    "arms": 71,
-   "rows": 1208368,
+   "rows": 1216144,
    "per_arm": [
     {
      "arm": "Qwen--Qwen2.5-0.5B-Instruct_temp_0.8",
@@ -431,7 +431,7 @@
     {
      "arm": "gemini-4-argon_batch",
      "tasks": 144,
-     "rows": 144,
+     "rows": 4608,
      "published_attempts": 144,
      "published_cells_without_rows": []
     },
@@ -466,7 +466,7 @@
     {
      "arm": "gpt-6-astra_batch",
      "tasks": 144,
-     "rows": 1296,
+     "rows": 4608,
      "published_attempts": 1296,
      "published_cells_without_rows": []
     },
@@ -502,7 +502,7 @@
      "arm": "muse-wonder-1.0_meta",
      "tasks": 144,
      "rows": 1296,
-     "published_attempts": 144,
+     "published_attempts": 1296,
      "published_cells_without_rows": []
     },
     {
@@ -516,8 +516,8 @@
   },
   "mbpp": {
    "file": "wave1_mbpp.csv.gz",
-   "sha256": "ff740f69506fe14429e99c5b9b4b1dcc2213143fc323874cc10b701f5cef10f5",
-   "bytes": 6780108,
+   "sha256": "b66494641888680b33be0dbb2ce8cdabdc4558b390848dca0fdacac4abeca253",
+   "bytes": 6824147,
    "fields": [
     "arm",
     "task_id",
@@ -526,7 +526,7 @@
     "plus_status"
    ],
    "arms": 70,
-   "rows": 2348346,
+   "rows": 2363790,
    "per_arm": [
     {
      "arm": "Qwen--Qwen2.5-0.5B-Instruct_temp_0.8",
@@ -937,7 +937,7 @@
     {
      "arm": "gemini-4-argon_batch",
      "tasks": 286,
-     "rows": 286,
+     "rows": 9152,
      "published_attempts": 286,
      "published_cells_without_rows": []
     },
@@ -972,7 +972,7 @@
     {
      "arm": "gpt-6-astra_batch",
      "tasks": 286,
-     "rows": 2574,
+     "rows": 9152,
      "published_attempts": 2574,
      "published_cells_without_rows": []
     },
@@ -1008,7 +1008,7 @@
      "arm": "muse-wonder-1.0_meta",
      "tasks": 286,
      "rows": 2574,
-     "published_attempts": 286,
+     "published_attempts": 2574,
      "published_cells_without_rows": []
     },
     {

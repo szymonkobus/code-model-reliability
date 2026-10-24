@@ -9,11 +9,11 @@
  "n_wave2_pointers": 95,
  "n_wave2_parked_text": 654,
  "n_wave2_parked_pointers": 239,
- "fit": "4c1c72dd8c1b",
+ "fit": "3938c4cf0afa",
  "n_arms": 71,
  "n_tasks_fit": 1297,
  "n_cells": 85604,
- "n_attempts_million": "8.4",
+ "n_attempts_million": "8.5",
  "n_kept_12": 1288,
  "n_tasks_fit_not_kept": 9,
  "tasks_fit_not_kept": [
@@ -64,5 +64,5 @@
   }
  ],
  "version": "2.0.0",
- "date": "2026-10-23"
+ "date": "2026-10-24"
 }

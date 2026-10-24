@@ -1,5 +1,5 @@
 {
- "pattern": "<base> · <training>, <task set>[, <re-draw word>][, <variant words>] · N steps (DECISION 218); a re-draw every 25 steps is the default and is not said; the base model's own row is '<base> · checkpoint 0' with the chip 'checkpoint 0'",
+ "pattern": "<base> · RL[, <caveats>] · N steps (the project owner's 16:43 UK 23 Oct 2026 naming rule (the words record 2026-10-23-1543Z-terminal-go-weekend-run.md) and post-training-lead's call of 16:47 UK (the default the 1-2/8 H run's recipe, chip 'RL')): the default recipe — RL on the tasks failed 1–2 times in 8, redrawn every 25, with the entropy term H and KL — is 'RL' alone; every other run carries only the caveats that set it apart from the default, in as few words as can tell it apart; a family that predates a default term says so once in _family_words and its chips carry the rest; the base model's own row is '<base> · checkpoint 0' with the chip 'checkpoint 0'; was DECISION 218's pattern (a re-draw every 25 steps the default and not said)",
  "slug_rule": "lower case; every run of characters that is not a letter or a digit becomes one hyphen; no leading or trailing hyphen",
  "runs": {},
  "bases": {
